@@ -1,0 +1,6 @@
+vanfleet-dev log
+
+7-25-22
+1st log entry. The journey begins. 
+1: Completed lesson 1 and 2 from code camp responisve web design course. 
+2: Added sun animation to space shooter game.
