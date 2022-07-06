@@ -9,9 +9,9 @@ Game development
 Open Source software
 
 ### Education and Projects:
-The [log.txt](https://github.com/vanfleet-dev/vanfleet-dev/blob/main/log.txt) file contains daily updates on education and lessons. As well as progress updates on other software realted projects.
+This [log.txt](https://github.com/vanfleet-dev/vanfleet-dev/blob/main/log.txt) file contains daily updates on education and lessons. As well as progress updates on other software realted projects.
 
-The folders contain the results of lessons and practise sessions. 
+The folders in [vanfleet-dev](https://github.com/vanfleet-dev/vanfleet-dev/commits?author=vanfleet-dev) contain the results of lessons and practise sessions. 
 
 ### Contact:
 
