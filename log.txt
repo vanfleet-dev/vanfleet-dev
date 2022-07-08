@@ -7,3 +7,6 @@ vanfleet-dev log
 7-6-22
 1: Completed lesson 3 from code camp responsive web design course.
 2: Added new background for space shooter game.
+7-7-22
+1: Completed lesson 4 form code camp responsive web design course.
+2: Added an orbiting planet system with sats to the space shooter game.   
