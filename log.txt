@@ -10,3 +10,6 @@ vanfleet-dev log
 7-7-22
 1: Completed lesson 4 form code camp responsive web design course.
 2: Added an orbiting planet system with sats to the space shooter game.   
+7-8-22
+1: Completed certification project 1 from code camps responsive web design course.
+2: Added two more planets and moved all orbit code to gameworld.gd in space shooter game.
