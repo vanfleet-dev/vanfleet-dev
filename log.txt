@@ -15,4 +15,7 @@ vanfleet-dev log
 2: Added two more planets and moved all orbit code to gameworld.gd in space shooter game.
 7-9-22
 1: Completed lesson 5 form code camp responsive web design course.
-2: Added lighting over sun sprite. added occluders to twin 1 and space station. 
+2: Added lighting over sun sprite. Added occluders to twin 1 and space station. 
+7-11-22
+1: Completed lesson 6 and 7 form code camp responsive web design course.
+2: Added new ship sprites for player an enemy. added animations and particle effects to ships.
