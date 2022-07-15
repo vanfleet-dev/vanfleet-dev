@@ -1,28 +1,43 @@
 vanfleet-dev log
 
-7-5-22
-1st log entry. The journey begins. 
-1: Completed lesson 1 and 2 from code camp responisve web design course. 
-2: Added sun animation to space shooter game.
-7-6-22
-1: Completed lesson 3 from code camp responsive web design course.
-2: Added new background for space shooter game.
-7-7-22
-1: Completed lesson 4 form code camp responsive web design course.
-2: Added an orbiting planet system with sats to the space shooter game.   
-7-8-22
-1: Completed certification project 1 from code camps responsive web design course.
-2: Added two more planets and moved all orbit code to gameworld.gd in space shooter game.
-7-9-22
-1: Completed lesson 5 form code camp responsive web design course.
-2: Added lighting over sun sprite. Added occluders to twin 1 and space station. 
-7-11-22
-1: Completed lesson 6 and 7 form code camp responsive web design course.
-2: Added new ship sprites for player an enemy. added animations and particle effects to ships.
+7-14-22
+1: Completed lesson 10 for code camp responsive web design course.
+2: Added new explosion sprite and animation to space game.
+3: Added new thruster auio loop for testing changes to remove clipping and popping.
+
+7-13-22
+1: Completed cert project 2 and lesson 9 for code camp responsive web design course. 
+2: Added new asteroid sprites and changed asteroid settings in space game.
+
 7-12-22
 1: Completed lesson 8 form code camp responsive web design course.
 2: Increased the number of enemy spawners in space shooter game.
 3: Added a bug report for an audio clipping issue I discovered when working on the player ship in the shooter game. 
-7-13-22
-1: Completed cert project 2 and lesson 9 for code camp responsive web design course. 
-2: Added new asteroid sprites and changed asteroid settings in space game.
+
+
+7-11-22
+1: Completed lesson 6 and 7 form code camp responsive web design course.
+2: Added new ship sprites for player an enemy. added animations and particle effects to ships.
+
+7-9-22
+1: Completed lesson 5 form code camp responsive web design course.
+2: Added lighting over sun sprite. Added occluders to twin 1 and space station. 
+
+
+7-8-22
+1: Completed certification project 1 from code camps responsive web design course.
+2: Added two more planets and moved all orbit code to gameworld.gd in space shooter game.
+
+7-7-22
+1: Completed lesson 4 form code camp responsive web design course.
+2: Added an orbiting planet system with sats to the space shooter game. 
+
+
+7-6-22
+1: Completed lesson 3 from code camp responsive web design course.
+2: Added new background for space shooter game.
+
+7-5-22
+1st log entry. The journey begins. 
+1: Completed lesson 1 and 2 from code camp responisve web design course. 
+2: Added sun animation to space shooter game.
