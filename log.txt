@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+7-15-22
+1: Completed lesson 11 for code camp responsive web design course.
+2: Changed settings for player and enemy ship physics in space game. 
+
 7-14-22
 1: Completed lesson 10 for code camp responsive web design course.
 2: Added new explosion sprite and animation to space game.
