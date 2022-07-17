@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+7-16-22
+1: Completed cert project 3 and sections 1-36 of lesson 12 for code camp responsive web design course.
+2: Add a second gun to the player ship, added new sprite for player projectiles, and continued to change settings for player ship.
+
 7-15-22
 1: Completed lesson 11 for code camp responsive web design course.
 2: Changed settings for player and enemy ship physics in space game. 
