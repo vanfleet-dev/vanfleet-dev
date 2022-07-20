@@ -1,5 +1,10 @@
 vanfleet-dev log
 
+7-19-22
+1: Completed lesson 12 for code camp responsive web design course.
+2: Changed the audio for the projectiles and removed the laser in space game. 
+3: Reviewing pull request for changed made to audio system for main player ship thruster vfx.
+
 7-18-22
 1: Completed sections 37-85 of lesson 12 for code camp responsive web design course.
 2: Made changes to enemy ship stats and settings. changed enemy projectile sprite. 
