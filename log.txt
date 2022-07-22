@@ -1,7 +1,11 @@
 vanfleet-dev log
 
+7-21-22
+1: Completed lesson 13 for code camp responsive web design course.
+2: Cleaned up directory in space game.
+
 7-20-22
-1: Completed sections 1-42 of lesson 13 code camp responsive web design course.
+1: Completed sections 1-42 of lesson 13 for code camp responsive web design course.
 2: Tested thruster audio changes. Merged pull request with audio changes
 3: Closed audio clipping bug report.
 
