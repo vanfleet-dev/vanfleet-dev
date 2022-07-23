@@ -1,0 +1,12 @@
+@media screen and (min-width: 769px) {
+    position: absolute;
+}
+header {
+    display: flex;
+}
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

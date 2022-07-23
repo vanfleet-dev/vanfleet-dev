@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+7-22-22
+1: Completed cert project 4 for code camp responsive web design course.
+2: changed sprites and balanced player / enemy stats.
+
 7-21-22
 1: Completed lesson 13 for code camp responsive web design course.
 2: Cleaned up directory in space game.
