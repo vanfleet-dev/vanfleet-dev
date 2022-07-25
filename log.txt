@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+7-24-22
+1: Completed lesson 14 for code camp responsive web design course.
+2: Changed the progress bars for hp and sotrage in space game. 
+
 7-22-22
 1: Completed cert project 4 for code camp responsive web design course.
 2: changed sprites and balanced player / enemy stats.
