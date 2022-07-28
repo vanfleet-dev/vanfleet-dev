@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+7-27-22
+1: Completed lesson 15 and cert project 5 for code camp responsive web design course.
+2: Changed docking behavior and added new planet sprite.
+
 7-26-22
 1: Completed sections 31-67 of lesson 15 for code camp responsive web design course.
 2: Redesinged the main screen for space game.
