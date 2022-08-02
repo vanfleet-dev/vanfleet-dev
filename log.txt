@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+8-1-22
+1: Completed a self guided lesson on SCSS from a tutorial video. Generated a practise based on the lesson content. 
+2: Changed animations, sprites, and settings for the map and HUD in space game. 
+
 7-27-22
 1: Completed lesson 15 and cert project 5 for code camp responsive web design course.
 2: Changed docking behavior and added new planet sprite.

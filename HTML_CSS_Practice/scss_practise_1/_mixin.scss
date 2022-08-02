@@ -1,0 +1,15 @@
+/*mixin is a variable containing a group of properties. 
+Add "@include <MixInName>;" to include the properties in 
+the target selector*/
+
+@mixin FlexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: $direction;
+}
+
+@mixin Padding1 {
+    padding: 10%;
+}
+

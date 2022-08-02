@@ -1,0 +1,10 @@
+/*any file with "_" as the 1st char is an external scss file. 
+add with "@import" to the top of the master scss file.*/
+
+/* add variables with "$" */
+$PrimaryButton: orange;
+$PrimaryBackground: navy;
+$SecondaryBackground: orangered;
+$PrimaryHover: yellow;
+$PrimaryTextColor: orangered;
+$SecondaryTextColor: navy;

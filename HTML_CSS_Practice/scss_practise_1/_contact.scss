@@ -1,0 +1,16 @@
+
+.contact {
+    @include FlexCenter(column);
+    @include Padding1();
+    button {
+        background: $PrimaryButton;
+        padding: 10%;
+        color: $SecondaryTextColor;
+        &:hover {
+            background: $PrimaryHover;
+        }
+    }
+    h1, p {
+        color: $PrimaryTextColor;
+    }
+}

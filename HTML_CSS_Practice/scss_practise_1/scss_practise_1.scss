@@ -1,0 +1,67 @@
+/* video tutorial scss https://youtu.be/Zz6eOVaaelI */
+
+
+/* import an external scss style file with "@import" */
+
+@import "variables";
+@import "mixin";
+@import "contact";
+
+
+
+body {
+    background-color:$PrimaryBackground;
+}
+
+header {
+    /* "@include" is used to import a "@mixin" variable. See "_mixin.scss" */
+    @include FlexCenter(row);
+    /* add variables with "$" see variables page for definitions*/
+    background-color:$SecondaryBackground;
+    color: $SecondaryTextColor;
+    /* nested selectors to skip writing out full path "header button {}" in a 
+    new seperater selector*/
+    h1 {
+        @include Padding1();
+    }
+    button {
+        @include Padding1();
+        /*sass can except calcuations*/
+        width: 100% - 75%;
+        background: $PrimaryButton;
+        color: $SecondaryTextColor;
+        /* include properties to the body of selector with "&" */
+        &:hover {
+            background: $PrimaryHover;
+        }
+        &::after {
+            content: " :)";
+        } 
+    }
+}
+
+.form {
+    /**/
+    @extend header;
+    @include FlexCenter(column);
+    input {
+        color: $PrimaryTextColor;
+        background-color: $PrimaryBackground
+    }
+}
+
+
+/*move code to new files see file: "_contact.scss"*/
+// .contact {
+//     padding: 10%;
+//     button {
+//         background: $PrimaryButton;
+//         padding: 10%;
+//         color: $SecondaryTextColor;
+//     }
+//     h1, p {
+//         color: $PrimaryTextColor;
+//     }
+// }
+
+

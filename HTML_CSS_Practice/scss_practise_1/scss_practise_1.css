@@ -1,0 +1,74 @@
+/* video tutorial scss https://youtu.be/Zz6eOVaaelI */
+/* import an external scss style file with "@import" */
+/*any file with "_" as the 1st char is an external scss file. 
+add with "@import" to the top of the master scss file.*/
+/* add variables with "$" */
+/*mixin is a variable containing a group of properties. 
+Add "@include <MixInName>;" to include the properties in 
+the target selector*/
+.contact {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  padding: 10%;
+}
+.contact button {
+  background: orange;
+  padding: 10%;
+  color: navy;
+}
+.contact button:hover {
+  background: yellow;
+}
+.contact h1, .contact p {
+  color: orangered;
+}
+
+body {
+  background-color: navy;
+}
+
+header, .form {
+  /* "@include" is used to import a "@mixin" variable. See "_mixin.scss" */
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: row;
+  /* add variables with "$" see variables page for definitions*/
+  background-color: orangered;
+  color: navy;
+  /* nested selectors to skip writing out full path "header button {}" in a 
+  new seperater selector*/
+}
+header h1, .form h1 {
+  padding: 10%;
+}
+header button, .form button {
+  padding: 10%;
+  /*sass can except calcuations*/
+  width: 25%;
+  background: orange;
+  color: navy;
+  /* include properties to the body of selector with "&" */
+}
+header button:hover, .form button:hover {
+  background: yellow;
+}
+header button::after, .form button::after {
+  content: " :)";
+}
+
+.form {
+  /**/
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+}
+.form input {
+  color: orangered;
+  background-color: navy;
+}
+
+/*move code to new files see file: "_contact.scss"*//*# sourceMappingURL=scss_practise_1.css.map */
