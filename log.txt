@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+8-2-22
+1: Began working on portfolio web site. 
+2: Recolored all the sprites in the space game with a new smaller color pallette. 
+
 8-1-22
 1: Completed a self guided lesson on SCSS from a tutorial video. Generated a practise based on the lesson content. 
 2: Changed animations, sprites, and settings for the map and HUD in space game. 
