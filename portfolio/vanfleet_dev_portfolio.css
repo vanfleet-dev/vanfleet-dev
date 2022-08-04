@@ -53,6 +53,80 @@ img {
   vertical-align: middle;
 }
 
+.nav-1-container .nav-1 {
+  position: fixed;
+  right: 1.5rem;
+  top: 1rem;
+  color: #ffffb2;
+  -ms-writing-mode: tb-rl;
+      writing-mode: tb-rl;
+  font-size: 3rem;
+}
+.nav-1-container .nav-1 .nav-1-link {
+  padding: 1.5rem;
+}
+.nav-1-container .nav-1 .nav-1-link .num-rotate {
+  color: #cc7048;
+  font-size: 2rem;
+  -ms-writing-mode: lr-tb;
+      writing-mode: lr-tb;
+}
+.nav-1-container .nav-1 .nav-1-link:hover {
+  color: #90d59c;
+}
+
+.nav-2-container .nav-2 {
+  position: fixed;
+  left: 2rem;
+  bottom: 1rem;
+  color: #ffffb2;
+  font-size: 2rem;
+  -ms-writing-mode: tb-rl;
+      writing-mode: tb-rl;
+}
+.nav-2-container .nav-2 .nav-2-link {
+  padding: 2rem;
+}
+.nav-2-container .nav-2 .nav-2-link:hover {
+  color: #90d59c;
+}
+
+.intro {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 10rem;
+  padding-bottom: 20rem;
+}
+.intro .intro-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.intro .intro-container .intro-content {
+  position: relative;
+  grid-column-start: 3;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  text-align: left;
+}
+.intro .intro-container .intro-content .intro-1 {
+  font-size: 12rem;
+  color: #ffffb2;
+}
+.intro .intro-container .intro-content .intro-2 {
+  margin: 2rem 1rem;
+  font-size: 3rem;
+  color: #90d59c;
+}
+.intro .intro-container .intro-content .intro-3 {
+  margin: 2rem 1rem;
+  font-size: 2rem;
+  padding-top: 0.3rem;
+  color: #68a8ab;
+}
+
 .footer {
   margin: 2rem;
   font-size: 1.3rem;

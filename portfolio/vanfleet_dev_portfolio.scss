@@ -104,15 +104,98 @@ img {
 
 // nav right
 
+.nav-1-container {
+  .nav-1 {
+    position: fixed;
+    right: 1.5rem;
+    top: 1rem;
+    color: $color-8;
+    writing-mode: tb-rl;
+    font-size: 3rem;
+
+    .nav-1-link {
+      padding: 1.5rem;
+  
+      .num-rotate {
+        color: $color-4;
+        font-size: 2rem;
+        writing-mode: lr-tb;
+
+      }
+
+      &:hover {
+        color: $color-7;
+      }
+    }
+  }
+}
+
+
 // icons left
+
+.nav-2-container {
+  .nav-2 {
+    position: fixed;
+    left: 2rem;
+    bottom: 1rem;
+    color: $color-8;
+    font-size: 2rem;
+    writing-mode: tb-rl;
+  
+    .nav-2-link {
+      padding: 2rem;
+
+      &:hover {
+        color: $color-7;
+      }
+    }
+  }
+}
 
 //sections////////////////////////////////////////////////////////////////////////
 
 // intro
 
+.intro {
+  @include section-setup();
+  padding-top: 10rem;
+  padding-bottom: 20rem;
+
+  .intro-container {
+    @include grid-setup();
+        
+    .intro-content {
+      @include grid-position (3, 9, 1, -1);
+      text-align: left;
+
+      .intro-1 {
+        font-size: 12rem;
+        color: $color-8;
+      }
+  
+      .intro-2 {
+        margin: 2rem 1rem;
+        font-size: 3rem;
+        color: $color-7;
+      }
+  
+      .intro-3 {
+        margin: 2rem 1rem;
+        font-size: 2rem;
+        padding-top: .3rem;
+        color: $color-6;
+      }
+    }
+  }
+}
+
 // about
 
 // contact
+
+// projects
+
+//footer
 
 .footer {
   margin: 2rem;
