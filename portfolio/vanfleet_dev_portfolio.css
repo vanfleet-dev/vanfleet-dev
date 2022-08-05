@@ -127,6 +127,167 @@ img {
   color: #68a8ab;
 }
 
+.about {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 20rem;
+  padding-bottom: 60rem;
+}
+.about .about-title {
+  padding-top: 3rem;
+  padding-bottom: 10rem;
+  margin: 5rem;
+  font-weight: normal;
+  font-size: 3.5rem;
+  color: #ffffb2;
+}
+.about .about-title .section-num {
+  color: #cc7048;
+}
+.about .about-container {
+  position: absolute;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.about .about-container .about-orbit-content {
+  position: relative;
+  grid-column-start: 3;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+.about .about-container .about-orbit-content .orbit {
+  padding: 23rem;
+  width: 600px;
+  height: 600px;
+  border: 2px solid #775b5b;
+  border-radius: 50%;
+  -webkit-animation-name: orbit;
+          animation-name: orbit;
+  -webkit-animation-duration: 36s;
+          animation-duration: 36s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.about .about-container .about-orbit-content .orbit .devicon-javascript-plain {
+  position: absolute;
+  margin: 6rem;
+  padding: 2rem;
+  font-size: 5.5rem;
+  color: #ffffb2;
+  border: 1px solid #d7B550;
+  border-radius: 50%;
+  -webkit-animation-name: orbit-reverse;
+          animation-name: orbit-reverse;
+  -webkit-animation-duration: 36s;
+          animation-duration: 36s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  right: 57rem;
+}
+.about .about-container .about-orbit-content .orbit .devicon-css3-plain-wordmark {
+  position: absolute;
+  margin: 9rem;
+  padding: 2rem;
+  font-size: 4rem;
+  color: #ffffb2;
+  border: 1px solid #68a8ab;
+  border-radius: 50%;
+  -webkit-animation-name: orbit-reverse;
+          animation-name: orbit-reverse;
+  -webkit-animation-duration: 36s;
+          animation-duration: 36s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  left: 57rem;
+}
+.about .about-container .about-orbit-content .orbit .devicon-html5-plain-wordmark {
+  position: absolute;
+  margin: 8rem;
+  padding: 2rem;
+  font-size: 4rem;
+  color: #ffffb2;
+  border: 1px solid #cc7048;
+  border-radius: 50%;
+  -webkit-animation-name: orbit-reverse;
+          animation-name: orbit-reverse;
+  -webkit-animation-duration: 36s;
+          animation-duration: 36s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  bottom: 57rem;
+}
+.about .about-container .about-orbit-content .orbit .devicon-sass-original {
+  position: absolute;
+  margin: 5.5rem;
+  padding: 2rem;
+  font-size: 5rem;
+  color: #ffffb2;
+  border: 1px solid #cc7048;
+  border-radius: 50%;
+  -webkit-animation-name: orbit-reverse;
+          animation-name: orbit-reverse;
+  -webkit-animation-duration: 36s;
+          animation-duration: 36s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  top: 57rem;
+}
+.about .about-container .about-text-content {
+  position: relative;
+  grid-column-start: 3;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+.about .about-container .about-text-content .about-text {
+  padding: 10rem;
+  max-width: 600px;
+  max-height: 600px;
+  position: absolute;
+  font-size: 1.4rem;
+  color: #ffffb2;
+}
+.about .about-container .about-text-content .about-text::first-letter {
+  margin-right: 1rem;
+  float: left;
+  font-size: 3rem;
+  color: #90d59c;
+}
+
+@-webkit-keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes orbit-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes orbit-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
 .footer {
   margin: 2rem;
   font-size: 1.3rem;

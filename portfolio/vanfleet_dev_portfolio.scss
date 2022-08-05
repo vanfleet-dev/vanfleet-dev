@@ -98,6 +98,24 @@ img {
   margin: auto;
 }
 
+// about mixin
+@mixin orbit-setup($color-var, $font-size-orbit-var, $margin-orbit-var) {
+  position: absolute;
+  margin: $margin-orbit-var;
+  padding: 2rem;
+  font-size: $font-size-orbit-var;
+  color: $color-8;
+  border: 1px solid $color-var;
+  border-radius: 50%;
+}
+
+@mixin orbit-animation() {
+  animation-name: orbit-reverse;
+  animation-duration: 36s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+} 
+
 // logo & nav ////////////////////////////////////////////////////////////////////
 
 // logo 
@@ -190,6 +208,100 @@ img {
 }
 
 // about
+
+.about {
+  @include section-setup();
+  padding-top: 20rem;
+  padding-bottom: 60rem;
+
+  .about-title {
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+    margin: 5rem;
+    font-weight: normal;
+    font-size: 3.5rem;
+    color: $color-8;
+
+    .section-num {
+      color: $color-4;
+    }
+  }
+
+  .about-container {
+    position: absolute;
+    @include grid-setup();
+
+    .about-orbit-content {
+      @include grid-position (3, 9, 1, -1);
+
+      .orbit {
+        padding: 23rem;
+        width: 600px;
+        height: 600px;
+        border: 2px solid $color-3;
+        border-radius: 50%;
+        /// interpolate "orbit-#{PUT A NUMBER HERE}" and give each orbit animation its own 
+        /// orbit like orbit-1, orbit-2, etc. make orbit animation classes "part 1 and part 2".
+        animation-name: orbit;
+        animation-duration: 36s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        /////
+        .devicon-javascript-plain {
+          @include orbit-setup($color-5, 5.5rem, 6rem);
+          @include orbit-animation();
+          right: 57rem;
+        }
+
+        .devicon-css3-plain-wordmark {
+          @include orbit-setup($color-6, 4rem, 9rem);
+          @include orbit-animation();
+          left: 57rem;
+        }
+
+        .devicon-html5-plain-wordmark {
+          @include orbit-setup($color-4, 4rem, 8rem);
+          @include orbit-animation();
+          bottom: 57rem;
+        }
+        
+        .devicon-sass-original {
+          @include orbit-setup($color-4, 5rem, 5.5rem);
+          @include orbit-animation();
+          top: 57rem;
+        }
+      }
+    }
+
+    .about-text-content {
+      @include grid-position (3, 9, 1, -1);
+
+      .about-text {
+        padding: 10rem;
+        max-width: 600px;
+        max-height: 600px;
+        position: absolute;
+        font-size: 1.4rem;
+        color: $color-8;
+  
+        &::first-letter {
+          margin-right: 1rem;
+          float: left;
+          font-size: 3rem;
+          color: $color-7;
+        }
+      }
+    }
+  }
+}
+
+@keyframes orbit {
+  to { transform: rotate(360deg) }
+}
+
+@keyframes orbit-reverse {
+  to { transform: rotate(-360deg) }
+}
 
 // contact
 

@@ -1,11 +1,15 @@
 vanfleet-dev log
 
+8-4-22
+1: Added about section to portfolio website. 
+2: Added proximity based audio to enemy ships and background audio to space game.
+
 8-3-22
-1: Continued working on portfolio website.
+1: Added intro section and nav bars to portfolio website. 
 2: Redesigned the upgrade menu in space game. 
 
 8-2-22
-1: Began working on portfolio web site. 
+1: Began working on a portfolio web site. Added a footer, globals, color pallette, mixins for section setup, grids, & breakpoints.
 2: Recolored all the sprites in the space game with a new smaller color pallette. 
 
 8-1-22
