@@ -116,6 +116,92 @@ img {
   animation-timing-function: linear;
 } 
 
+// project template mixin
+@mixin project-template($project-color-var, $text-align-var, $content-align-start-var, $content-align-end-var, $justify-content-var, $left-or-right-var) {
+  .project {
+    margin: 5rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      align-items: flex-start;
+    }
+
+    .project-content {
+      position: relative;
+      grid-column-start: $content-align-start-var;
+      grid-column-end: $content-align-end-var;
+      grid-row: 1 / -1;
+    
+      @include tablet {
+        grid-column: 1 / -1;
+        padding: 3.5rem;
+      }
+    
+      .project-label {
+        color: $color-8;
+        text-align: $text-align-var;
+      }
+
+      .project-title {
+        font-weight: normal;
+        font-size: 3rem;
+        margin: 1rem 0 2rem;
+        color: $project-color-var;
+        text-align: $text-align-var;
+      }
+
+      .project-details {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        color: $color-1;
+
+        @include tablet {
+          color: $color-8;
+        }
+    
+        p {
+          background-color: $color-8;
+          padding: 1.5rem 1.5rem;
+          border-bottom: 4px solid $project-color-var;
+          border-#{$left-or-right-var}: 3px solid $project-color-var;
+
+          filter: brightness(.95);
+          
+          @include tablet {
+            background-color: transparent;
+            padding: 1.5rem 0;
+            border: none;
+          }
+        }
+
+        ul {
+          display: flex;
+          margin-top: 1.5rem;
+          align-items: center;
+          justify-content: $justify-content-var;
+    
+          li {
+            margin: 1.5rem;
+            color: $project-color-var;
+
+            .project-github {
+              font-size: 2rem;
+
+              &:hover {
+                color: $color-7;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // logo & nav ////////////////////////////////////////////////////////////////////
 
 // logo 
@@ -303,9 +389,9 @@ img {
   to { transform: rotate(-360deg) }
 }
 
-// contact
-
 // projects
+
+// contact
 
 //footer
 
