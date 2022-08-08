@@ -202,6 +202,59 @@ img {
   }
 }
 
+// project image mixin
+@mixin project-img-template ($project-color-var, $content-align-var-start, $content-align-var-end, $left-or-right-var) {
+  .project-img {
+    position: relative;
+    z-index: -1;
+    background: $project-color-var;
+    border-bottom: 1px solid $project-color-var;
+    border-#{$left-or-right-var}: 1px solid $project-color-var;
+    border-radius: 2px;
+    grid-column-start: $content-align-var-start;
+    grid-column-end: $content-align-var-end;
+    grid-row: 1 / -1;
+
+    @media screen and (max-width: 768px) {
+      height: 100%;
+    }
+    @include tablet {
+      grid-column: 1 / -1;
+      opacity: 0.25;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      background-color: $project-color-var; //picture vfx
+      opacity: calc(20%); //picture vfx
+      mix-blend-mode: screen;
+      border-radius: 2px;
+    }
+
+    img {
+      border-radius: 2px;
+      position: relative;
+      mix-blend-mode: multiply;
+      filter: grayscale(10%) contrast(1); //picture vfx
+      border: 1px solid $color-1;
+        
+      @media screen and (max-width: 768px) {
+        object-fit: cover;
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+}
+
 // logo & nav ////////////////////////////////////////////////////////////////////
 
 // logo 
@@ -390,6 +443,48 @@ img {
 }
 
 // projects
+.projects {
+  padding-top: 30rem;
+  @include section-setup();
+
+  .projects-title {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    margin: 5rem;
+    font-weight: normal;
+    font-size: 3.5rem;
+    color: $color-8;
+    
+    .section-num {
+      color: $color-4;
+    }
+  }
+
+  .project-container-1 {
+    @include section-setup();
+    @include project-template ($color-5, none, 5, 9, none, left);
+    @include project-img-template ($color-5, 8, -1, left);
+  }
+
+  .project-container-2 {
+    @include section-setup();
+    @include project-template ($color-4, end, 5, 9, end, right);
+    @include project-img-template ($color-4, 1, 6, right);
+  }
+
+  .project-container-3 {
+    @include section-setup();
+    @include project-template ($color-5, none, 5, 9, none, left);
+    @include project-img-template ($color-5, 8, -1, left);
+  }
+
+  .project-container-4 {
+    @include section-setup();
+    @include project-template ($color-4, end, 5, 9, end, right);
+    @include project-img-template ($color-4, 1, 6, right);
+  }
+}
+  
 
 // contact
 

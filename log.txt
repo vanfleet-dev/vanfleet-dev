@@ -1,7 +1,10 @@
 vanfleet-dev log
+8-6-22
+1: Finished project section for portfolio website. Finished the second mixin and added the project section selectors to the body. 
+2: Fixed orbits and repositioned planets and sats. resized asteroids.
 
 8-5-22
-1: Added part of the project section to portfolio website. html is finished and one of the two mixin's is done.
+1: Added part of the project section to portfolio website. HTML is finished and one of the two mixin's is done.
 2: Changed docking sprites and parameters, finished adding backgournd audio to main scene, increase enemy spawn rate.
 
 8-4-22
