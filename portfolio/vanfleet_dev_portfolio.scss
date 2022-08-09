@@ -8,6 +8,10 @@ $color-6: #68a8ab;
 $color-7: #90d59c;
 $color-8: #ffffb2;
 
+//logo
+$stripe-height: 4px;
+$negative-space-height: 12px; 
+
 * {
 margin: 0;
 padding: 0;
@@ -258,6 +262,46 @@ img {
 // logo & nav ////////////////////////////////////////////////////////////////////
 
 // logo 
+
+.sun-container {
+  padding: 3rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: left;
+
+  .sun-logo {
+    display: block;
+    position: relative;
+    transform: translateY(-#{$negative-space-height / 2});
+    width: 16vmin;
+    height: calc(16vmin + #{$negative-space-height});
+    animation: sun-move-up linear .8s infinite;
+    -webkit-mask-image: repeating-linear-gradient(to top, $color-1 0 $stripe-height, transparent 0 $negative-space-height);
+  
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 100%;
+      padding-bottom: 100%;
+      background-size: 100%;
+      background-image: linear-gradient(to bottom, $color-4, $color-5, $color-8, $color-7, $color-6);
+      animation: sun-move-down linear .8s infinite;
+      border-radius: 50%;
+    }
+  }
+}
+
+@keyframes sun-move-up {
+  from {top: $negative-space-height};
+  to {top:0 };
+  }
+  
+  @keyframes sun-move-down {
+  from {top:0 };
+  to {top:$negative-space-height};
+  }
+  
 
 // nav right
 

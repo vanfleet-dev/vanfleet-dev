@@ -53,6 +53,68 @@ img {
   vertical-align: middle;
 }
 
+.sun-container {
+  padding: 3rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: left;
+}
+.sun-container .sun-logo {
+  display: block;
+  position: relative;
+  transform: translateY(-6px);
+  width: 16vmin;
+  height: calc(16vmin + 12px);
+  -webkit-animation: sun-move-up linear 0.8s infinite;
+          animation: sun-move-up linear 0.8s infinite;
+  -webkit-mask-image: repeating-linear-gradient(to top, #2a242b 0 4px, transparent 0 12px);
+}
+.sun-container .sun-logo::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: 100%;
+  background-image: linear-gradient(to bottom, #cc7048, #d7B550, #ffffb2, #90d59c, #68a8ab);
+  -webkit-animation: sun-move-down linear 0.8s infinite;
+          animation: sun-move-down linear 0.8s infinite;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes sun-move-up {
+  from {
+    top: 12px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes sun-move-up {
+  from {
+    top: 12px;
+  }
+  to {
+    top: 0;
+  }
+}
+@-webkit-keyframes sun-move-down {
+  from {
+    top: 0;
+  }
+  to {
+    top: 12px;
+  }
+}
+@keyframes sun-move-down {
+  from {
+    top: 0;
+  }
+  to {
+    top: 12px;
+  }
+}
 .nav-1-container .nav-1 {
   position: fixed;
   right: 1.5rem;

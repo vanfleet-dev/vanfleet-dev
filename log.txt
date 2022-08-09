@@ -1,4 +1,9 @@
 vanfleet-dev log
+
+8-7-22
+1: Added an animated logo to the portfolio site. 
+2: Added audio feedback when player is hit. Increased enemy leash distance. removed orbit, occluder, and repositioned station in space game.  
+
 8-6-22
 1: Finished project section for portfolio website. Finished the second mixin and added the project section selectors to the body. 
 2: Fixed orbits and repositioned planets and sats. resized asteroids.
