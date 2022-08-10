@@ -895,6 +895,129 @@ img {
   }
 }
 
+.contact {
+  max-width: 1200px;
+  margin: auto;
+}
+.contact .contact-title {
+  margin: 5rem;
+  font-weight: normal;
+  font-size: 3.5rem;
+  color: #ffffb2;
+}
+.contact .contact-title .section-num {
+  color: #cc7048;
+}
+.contact .contact-container {
+  padding-top: 10rem;
+  padding-bottom: 30rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.contact .contact-container .contact-email-content {
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  text-align: center;
+}
+.contact .contact-container .contact-email-content .email-label {
+  color: #cc7048;
+  font-size: 3rem;
+}
+.contact .contact-container .contact-email-content .email-icon {
+  height: 20rem;
+  margin-top: 4rem;
+  margin-left: 4.5rem;
+  color: #ffffb2;
+  fill: currentcolor;
+}
+.contact .contact-container .contact-email-content .email-icon:hover {
+  color: #90d59c;
+}
+.contact .contact-container .contact-form-content {
+  position: relative;
+  grid-column-start: 7;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+.contact .contact-container .contact-form-content .form-label {
+  padding-bottom: 6rem;
+  color: #cc7048;
+  font-size: 3rem;
+}
+.contact .contact-container .contact-form-content .email-input {
+  margin: 3rem 0;
+}
+.contact .contact-container .contact-form-content .email-input input {
+  font-size: 1.6rem;
+  padding: 1rem;
+  display: block;
+  width: 30rem;
+  height: 3rem;
+  border: none;
+  border-bottom: 1px solid #775b5b;
+  background-color: #2a242b;
+  color: #ffffb2;
+  resize: none;
+}
+.contact .contact-container .contact-form-content .email-input input:focus {
+  font-size: 1.6rem;
+  color: #ffffb2;
+  outline: none;
+  border-bottom: 1px solid #90d59c;
+}
+.contact .contact-container .contact-form-content .email-input label {
+  padding-bottom: 1rem;
+  color: #ffffb2;
+  font-size: 2rem;
+}
+.contact .contact-container .contact-form-content .text-input {
+  margin: 3rem 0;
+}
+.contact .contact-container .contact-form-content .text-input textarea {
+  font-size: 1.6rem;
+  padding: 1rem;
+  display: block;
+  width: 50rem;
+  height: 15rem;
+  border: none;
+  border: 1px solid #775b5b;
+  background-color: #2a242b;
+  color: #ffffb2;
+  resize: none;
+}
+.contact .contact-container .contact-form-content .text-input textarea:focus {
+  font-size: 1.6rem;
+  color: #ffffb2;
+  outline: none;
+  border: 1px solid #90d59c;
+}
+.contact .contact-container .contact-form-content .text-input label {
+  padding-bottom: 1rem;
+  color: #ffffb2;
+  font-size: 2rem;
+}
+.contact .contact-container .contact-form-content .text-input ::-webkit-scrollbar {
+  width: 10px;
+}
+.contact .contact-container .contact-form-content .submit-form .submit-button {
+  width: 20rem;
+  height: 3rem;
+  color: #ffffb2;
+  background-color: #2a242b;
+  border: 1px solid #775b5b;
+}
+.contact .contact-container .contact-form-content .submit-form .submit-button:hover {
+  color: #90d59c;
+  background-color: #68a8ab;
+  border: 1px solid #90d59c;
+}
+
 .footer {
   margin: 2rem;
   font-size: 1.3rem;

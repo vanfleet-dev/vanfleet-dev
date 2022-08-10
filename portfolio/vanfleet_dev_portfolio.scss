@@ -259,6 +259,35 @@ img {
   }
 }
 
+// contact form mixin
+@mixin input-setup ($input-or-textarea-var, $width-var, $height-var, $border-var){
+  #{$input-or-textarea-var} {
+    font-size: 1.6rem;
+    padding: 1rem;
+    display: block;
+    width: $width-var;
+    height: $height-var;
+    border: none;
+    #{$border-var}: 1px solid $color-3;
+    background-color: $color-1;
+    color: $color-8;
+    resize: none;
+    
+    &:focus {
+      font-size: 1.6rem;
+      color: $color-8;
+      outline: none;
+      #{$border-var}: 1px solid $color-7;
+    }
+  }
+
+  label {
+    padding-bottom: 1rem;
+    color: $color-8; 
+    font-size: 2rem;
+  }
+}
+
 // logo & nav ////////////////////////////////////////////////////////////////////
 
 // logo 
@@ -531,6 +560,91 @@ img {
   
 
 // contact
+
+.contact {
+  max-width: 1200px;
+  margin: auto;
+  
+  .contact-title {
+    margin: 5rem;
+    font-weight: normal;
+    font-size: 3.5rem;
+    color: $color-8;
+
+   .section-num {
+      color: $color-4;
+    }
+  } 
+
+  .contact-container {
+    padding-top: 10rem;
+    padding-bottom: 30rem;
+    @include grid-setup();
+
+    .contact-email-content {
+      @include grid-position (1, 5, 1, -1);
+      text-align: center;
+
+      .email-label {
+        color: $color-4;
+        font-size: 3rem;
+      }
+
+      .email-icon {
+        height: 20rem;
+        margin-top: 4rem;
+        margin-left: 4.5rem;
+        color: $color-8;
+        fill: currentcolor;
+
+        &:hover {
+          color: $color-7;
+        }
+      }
+    }
+
+    .contact-form-content {
+      @include grid-position (7, -1, 1, -1);
+
+      .form-label {
+        padding-bottom: 6rem;
+        color: $color-4;
+        font-size: 3rem;
+      }
+      
+      .email-input {
+        margin: 3rem 0;
+        @include input-setup(input, 30rem, 3rem, border-bottom);
+      
+      }
+    
+      .text-input {  
+        margin: 3rem 0;
+        @include input-setup(textarea, 50rem, 15rem, border);
+        
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+      }
+
+      .submit-form {
+        .submit-button {
+          width: 20rem;
+          height: 3rem;
+          color: $color-8;
+          background-color: $color-1;
+          border: 1px solid $color-3;
+
+          &:hover {
+            color: $color-7;
+            background-color: $color-6;
+            border: 1px solid $color-7;
+          }
+        }
+      }
+    }
+  } 
+}
 
 //footer
 
