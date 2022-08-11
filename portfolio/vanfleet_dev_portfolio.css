@@ -192,7 +192,7 @@ img {
 .about {
   max-width: 1200px;
   margin: auto;
-  padding-top: 20rem;
+  padding-top: 30rem;
   padding-bottom: 60rem;
 }
 .about .about-title {
@@ -237,7 +237,7 @@ img {
 }
 .about .about-container .about-orbit-content .orbit .devicon-javascript-plain {
   position: absolute;
-  margin: 6rem;
+  margin: 17rem;
   padding: 2rem;
   font-size: 5.5rem;
   color: #ffffb2;
@@ -255,7 +255,7 @@ img {
 }
 .about .about-container .about-orbit-content .orbit .devicon-css3-plain-wordmark {
   position: absolute;
-  margin: 9rem;
+  margin: 16rem;
   padding: 2rem;
   font-size: 4rem;
   color: #ffffb2;
@@ -273,7 +273,7 @@ img {
 }
 .about .about-container .about-orbit-content .orbit .devicon-html5-plain-wordmark {
   position: absolute;
-  margin: 8rem;
+  margin: 14rem;
   padding: 2rem;
   font-size: 4rem;
   color: #ffffb2;
@@ -291,7 +291,7 @@ img {
 }
 .about .about-container .about-orbit-content .orbit .devicon-sass-original {
   position: absolute;
-  margin: 5.5rem;
+  margin: 16rem;
   padding: 2rem;
   font-size: 5rem;
   color: #ffffb2;
@@ -315,7 +315,7 @@ img {
   grid-row-end: -1;
 }
 .about .about-container .about-text-content .about-text {
-  padding: 10rem;
+  padding: 11rem;
   max-width: 600px;
   max-height: 600px;
   position: absolute;
@@ -909,7 +909,7 @@ img {
   color: #cc7048;
 }
 .contact .contact-container {
-  padding-top: 10rem;
+  padding-top: 30rem;
   padding-bottom: 30rem;
   display: grid;
   grid-gap: 1rem;

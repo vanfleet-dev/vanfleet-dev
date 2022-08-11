@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+8-10-22
+1: Setup seperate documents for globals / mixins and cleaned up spacing in portfolio website. 
+2: Added new mining animation to space game. 
+
 8-9-22
 1: Added contact section to portfolio website. 
 2: Cleaned up space game directories. 
