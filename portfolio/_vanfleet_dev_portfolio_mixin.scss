@@ -10,6 +10,8 @@
   
   @mixin grid-position ($col-start, $col-end, $row-start, $row-end) {
     position: relative;
+    align-self: center;
+    justify-self: center;
     grid-column-start: $col-start;
     grid-column-end: $col-end;
     grid-row-start: $row-start;
@@ -31,13 +33,13 @@
   
   // about mixin
   @mixin orbit-setup($color-var, $font-size-orbit-var, $margin-orbit-var) {
-    position: absolute;
-    margin: $margin-orbit-var;
-    padding: 2rem;
-    font-size: $font-size-orbit-var;
-    color: $color-8;
-    border: 1px solid $color-var;
     border-radius: 50%;
+    border: 1px solid $color-var;
+    position: absolute;
+    color: $color-8;
+    padding: 2rem;
+    margin: $margin-orbit-var;
+    font-size: $font-size-orbit-var;
   }
   
   @mixin orbit-animation() {

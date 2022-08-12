@@ -1,16 +1,12 @@
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -56,18 +52,14 @@ img {
 .sun-container {
   padding: 3rem;
   padding-top: 2rem;
-  display: flex;
-  justify-content: left;
 }
 .sun-container .sun-logo {
-  display: block;
   position: relative;
-  transform: translateY(-6px);
-  width: 16vmin;
-  height: calc(16vmin + 12px);
-  -webkit-animation: sun-move-up linear 0.8s infinite;
-          animation: sun-move-up linear 0.8s infinite;
-  -webkit-mask-image: repeating-linear-gradient(to top, #2a242b 0 4px, transparent 0 12px);
+  width: 16rem;
+  height: 16rem;
+  -webkit-animation: sun-move-up linear 1.3s infinite;
+          animation: sun-move-up linear 1.3s infinite;
+  -webkit-mask-image: repeating-linear-gradient(to top, #2a242b 0 3px, transparent 0 16px);
 }
 .sun-container .sun-logo::before {
   display: block;
@@ -77,14 +69,14 @@ img {
   padding-bottom: 100%;
   background-size: 100%;
   background-image: linear-gradient(to bottom, #cc7048, #d7B550, #ffffb2, #90d59c, #68a8ab);
-  -webkit-animation: sun-move-down linear 0.8s infinite;
-          animation: sun-move-down linear 0.8s infinite;
+  -webkit-animation: sun-move-down linear 1.3s infinite;
+          animation: sun-move-down linear 1.3s infinite;
   border-radius: 50%;
 }
 
 @-webkit-keyframes sun-move-up {
   from {
-    top: 12px;
+    top: 16px;
   }
   to {
     top: 0;
@@ -93,7 +85,7 @@ img {
 
 @keyframes sun-move-up {
   from {
-    top: 12px;
+    top: 16px;
   }
   to {
     top: 0;
@@ -104,7 +96,7 @@ img {
     top: 0;
   }
   to {
-    top: 12px;
+    top: 16px;
   }
 }
 @keyframes sun-move-down {
@@ -112,7 +104,7 @@ img {
     top: 0;
   }
   to {
-    top: 12px;
+    top: 16px;
   }
 }
 .nav-1-container .nav-1 {
@@ -167,6 +159,8 @@ img {
 }
 .intro .intro-container .intro-content {
   position: relative;
+  align-self: center;
+  justify-self: center;
   grid-column-start: 3;
   grid-column-end: 9;
   grid-row-start: 1;
@@ -193,10 +187,10 @@ img {
   max-width: 1200px;
   margin: auto;
   padding-top: 30rem;
-  padding-bottom: 60rem;
+  padding-bottom: 30rem;
 }
 .about .about-title {
-  padding-top: 3rem;
+  padding-top: 4rem;
   padding-bottom: 10rem;
   margin: 5rem;
   font-weight: normal;
@@ -207,7 +201,6 @@ img {
   color: #cc7048;
 }
 .about .about-container {
-  position: absolute;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(12, 1fr);
@@ -215,13 +208,14 @@ img {
 }
 .about .about-container .about-orbit-content {
   position: relative;
+  align-self: center;
+  justify-self: center;
   grid-column-start: 3;
   grid-column-end: 9;
   grid-row-start: 1;
   grid-row-end: -1;
 }
 .about .about-container .about-orbit-content .orbit {
-  padding: 23rem;
   width: 600px;
   height: 600px;
   border: 2px solid #775b5b;
@@ -236,13 +230,13 @@ img {
           animation-timing-function: linear;
 }
 .about .about-container .about-orbit-content .orbit .devicon-javascript-plain {
-  position: absolute;
-  margin: 17rem;
-  padding: 2rem;
-  font-size: 5.5rem;
-  color: #ffffb2;
-  border: 1px solid #d7B550;
   border-radius: 50%;
+  border: 1px solid #d7B550;
+  position: absolute;
+  color: #ffffb2;
+  padding: 2rem;
+  margin: 17rem;
+  font-size: 5.5rem;
   -webkit-animation-name: orbit-reverse;
           animation-name: orbit-reverse;
   -webkit-animation-duration: 36s;
@@ -254,13 +248,13 @@ img {
   right: 57rem;
 }
 .about .about-container .about-orbit-content .orbit .devicon-css3-plain-wordmark {
-  position: absolute;
-  margin: 16rem;
-  padding: 2rem;
-  font-size: 4rem;
-  color: #ffffb2;
-  border: 1px solid #68a8ab;
   border-radius: 50%;
+  border: 1px solid #68a8ab;
+  position: absolute;
+  color: #ffffb2;
+  padding: 2rem;
+  margin: 16rem;
+  font-size: 4rem;
   -webkit-animation-name: orbit-reverse;
           animation-name: orbit-reverse;
   -webkit-animation-duration: 36s;
@@ -272,13 +266,13 @@ img {
   left: 57rem;
 }
 .about .about-container .about-orbit-content .orbit .devicon-html5-plain-wordmark {
-  position: absolute;
-  margin: 14rem;
-  padding: 2rem;
-  font-size: 4rem;
-  color: #ffffb2;
-  border: 1px solid #cc7048;
   border-radius: 50%;
+  border: 1px solid #cc7048;
+  position: absolute;
+  color: #ffffb2;
+  padding: 2rem;
+  margin: 14rem;
+  font-size: 4rem;
   -webkit-animation-name: orbit-reverse;
           animation-name: orbit-reverse;
   -webkit-animation-duration: 36s;
@@ -290,13 +284,13 @@ img {
   bottom: 57rem;
 }
 .about .about-container .about-orbit-content .orbit .devicon-sass-original {
-  position: absolute;
-  margin: 16rem;
-  padding: 2rem;
-  font-size: 5rem;
-  color: #ffffb2;
-  border: 1px solid #cc7048;
   border-radius: 50%;
+  border: 1px solid #cc7048;
+  position: absolute;
+  color: #ffffb2;
+  padding: 2rem;
+  margin: 16rem;
+  font-size: 5rem;
   -webkit-animation-name: orbit-reverse;
           animation-name: orbit-reverse;
   -webkit-animation-duration: 36s;
@@ -309,16 +303,17 @@ img {
 }
 .about .about-container .about-text-content {
   position: relative;
+  align-self: center;
+  justify-self: center;
   grid-column-start: 3;
   grid-column-end: 9;
   grid-row-start: 1;
   grid-row-end: -1;
 }
 .about .about-container .about-text-content .about-text {
-  padding: 11rem;
-  max-width: 600px;
-  max-height: 600px;
-  position: absolute;
+  padding: 1rem;
+  width: 425px;
+  height: 425px;
   font-size: 1.4rem;
   color: #ffffb2;
 }
@@ -351,7 +346,6 @@ img {
   }
 }
 .projects {
-  padding-top: 30rem;
   max-width: 1200px;
   margin: auto;
 }
@@ -918,6 +912,8 @@ img {
 }
 .contact .contact-container .contact-email-content {
   position: relative;
+  align-self: center;
+  justify-self: center;
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;
@@ -940,6 +936,8 @@ img {
 }
 .contact .contact-container .contact-form-content {
   position: relative;
+  align-self: center;
+  justify-self: center;
   grid-column-start: 7;
   grid-column-end: -1;
   grid-row-start: 1;

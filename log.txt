@@ -1,5 +1,10 @@
 vanfleet-dev log
 
+8-11-22
+1: Continued to clean up portfolio. Restructured about section formating.
+2: Added about seciton and sun logo to codepens.  
+3: Added new thruster vfx and audio effects for player ship in space game. 
+
 8-10-22
 1: Setup seperate documents for globals / mixins and cleaned up spacing in portfolio website. 
 2: Added new mining animation to space game. 

@@ -9,22 +9,18 @@ $color-7: #90d59c;
 $color-8: #ffffb2;
 
 //logo
-$stripe-height: 4px;
-$negative-space-height: 12px; 
-
-* {
-margin: 0;
-padding: 0;
-}
+$stripe-height: 3px;
+$negative-space-height: 16px; 
 
 *, 
 *::before, 
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth;
 
