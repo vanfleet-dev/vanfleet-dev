@@ -1,5 +1,10 @@
 vanfleet-dev log
 
+8-12-22
+1: Completed lessons 1-19 for code camp's basic javascript course. 
+2: Setup Jupyter in vs code.
+3: Setup nodejs environment with javascript kernel for Juypter environment.
+
 8-11-22
 1: Continued to clean up portfolio. Restructured about section formating.
 2: Added about seciton and sun logo to codepens.  
