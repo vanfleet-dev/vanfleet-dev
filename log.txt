@@ -1,5 +1,8 @@
 vanfleet-dev log
 
+8-14-22
+1: Completed lessons 20-30 for code camp's basic javascript course. 
+
 8-12-22
 1: Completed lessons 1-19 for code camp's basic javascript course. 
 2: Setup Jupyter in vs code.
