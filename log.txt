@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+8-18-22
+1: Completed lessons 41-50 for code camp's basic javascript course.
+2: Began working on space shooter game webiste. 
+
 8-15-22
 1: Completed lessons 31-40 for code camps's basic javascript course. 
 
