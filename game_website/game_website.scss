@@ -1,19 +1,31 @@
-html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-  
-  ::selection {
-    background: yellow;
-  }
+// globals ////////////////////////////////////// 
+
+$spacing: 10rem;
+//$purple: #fff;
+$section-height: 10rem;
+
+$color-1: #e47d36;
+$color-2: #140f0c;
+$color-3: #6d5334;
+
+@font-face
+{
+    font-family: "Public Pixel";
+    src: url("./font/PublicPixel.ttf");
+}
+
+
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
   
   html,
   body {
+    font-size: 62.5%;
     width: 100%;
     height: 100%;
   }
@@ -22,12 +34,9 @@ html {
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: system, -apple-system, BlinkMacSystemFont, Roboto,
-      "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-    margin: 0;
-    background-color: #202124;
-    color: #fafafa;
-    font-size: 16px;
+    font-family: "Public Pixel";
+    background-color: $color-2;
+    color: $color-1;
     line-height: 1.5;
   }
   
@@ -39,51 +48,44 @@ html {
     transition: color 0.25s ease;
   }
   
-  p {
-    margin: 0;
-  }
-  
-  $spacing: 20px;
-  $purple: #fff;
-  $tab-height: 40px;
+/////////////////////////////////////////////////////
   
   .container {
     position: relative;
     margin: $spacing auto;
     padding: $spacing;
-    width: 500px;
+    width: 1200px;
     display: flex;
     align-items: flex-start;
   
-    .tabs {
+    .sections {
       display: block;
       position: relative;
       z-index: 3;
       width: max-content;
   
-      .tab {
+      .section {
         width: 100px;
-        height: $tab-height;
-        text-align: center;
-        font-weight: bold;
-        font-size: 14px;
-        padding: 10px 0;
+        height: $section-height;
+        text-align: left;
+        font-size: 2rem;
+        padding: 4rem 1rem;
         transition: all 0.25s ease;
-        border-left: 2px solid #5f6368;
-        color: #5f6368;
+        border-left: 2px solid $color-3;
+        color: $color-3;
   
         &:hover {
-          color: $purple;
+          color: $color-1;
         }
   
         &.active {
-          color: $purple;
+          color: $color-1;
         }
   
         @for $i from 1 through 3 {
-          &.tab-#{$i}.active {
+          &.section-#{$i}.active {
             & ~ .highlighter {
-              transform: translateY(#{($i*$tab-height) - $tab-height});
+              transform: translateY(#{($i*$section-height) - $section-height});
             }
           }
         }
@@ -92,31 +94,55 @@ html {
   
       .highlighter {
         display: block;
-        background: $purple;
-        width: 2px;
-        height: $tab-height;
+        background: $color-1;
+        width: 3px;
+        height: $section-height;
         position: absolute;
         top: 0;
         left: 0;
-        transform: translateY(0);
+        //transform: translateY(0);
         transition: transform 0.2s ease;
         transition-delay: 0.1s;
         z-index: 10;
       }
   
-      a:first-of-type {
-        border-top-left-radius: 2px;
-      }
-      a:last-of-type {
-        border-top-right-radius: 2px;
-      }
+    //   a:first-of-type {
+    //     border-top-left-radius: 2px;
+    //   }
+    //   a:last-of-type {
+    //     border-top-right-radius: 2px;
+    //   }
     }
   
     .content {
       position: relative;
       padding: 0 $spacing;
+      
+      .home {
+        text-align: center;
+        font-size: 1.6rem;
+        letter-spacing: .3rem;
+        .home_static {
+            width: 600px;
+            margin: 5rem;
+            border: 2px solid $color-1;
+            ///
+            position:absolute;
+            //background: $color-2;
+            ///
+            
+            &:hover {
+                opacity: 0;
+            }
+        }
+        .home_active {
+            width: 600px;
+            margin: 5rem;
+            border: 2px solid $color-1;
+        }
+      }
   
-      &__section {
+      &_section {
         position: absolute;
         top: 0;
         left: 0;

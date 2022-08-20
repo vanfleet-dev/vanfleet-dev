@@ -1,23 +1,18 @@
-html {
-  box-sizing: border-box;
+@font-face {
+  font-family: "Public Pixel";
+  src: url("./font/PublicPixel.ttf");
 }
-
 *,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-::-moz-selection {
-  background: yellow;
-}
-
-::selection {
-  background: yellow;
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
+  font-size: 62.5%;
   width: 100%;
   height: 100%;
 }
@@ -26,11 +21,9 @@ body {
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: system, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  background-color: #202124;
-  color: #fafafa;
-  font-size: 16px;
+  font-family: "Public Pixel";
+  background-color: #140f0c;
+  color: #e47d36;
   line-height: 1.5;
 }
 
@@ -43,19 +36,15 @@ a {
   transition: color 0.25s ease;
 }
 
-p {
-  margin: 0;
-}
-
 .container {
   position: relative;
-  margin: 20px auto;
-  padding: 20px;
-  width: 500px;
+  margin: 10rem auto;
+  padding: 10rem;
+  width: 1200px;
   display: flex;
   align-items: flex-start;
 }
-.container .tabs {
+.container .sections {
   display: block;
   position: relative;
   z-index: 3;
@@ -63,56 +52,67 @@ p {
   width: -moz-max-content;
   width: max-content;
 }
-.container .tabs .tab {
+.container .sections .section {
   width: 100px;
-  height: 40px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 10px 0;
+  height: 10rem;
+  text-align: left;
+  font-size: 2rem;
+  padding: 4rem 1rem;
   transition: all 0.25s ease;
-  border-left: 2px solid #5f6368;
-  color: #5f6368;
+  border-left: 2px solid #6d5334;
+  color: #6d5334;
 }
-.container .tabs .tab:hover {
-  color: #fff;
+.container .sections .section:hover {
+  color: #e47d36;
 }
-.container .tabs .tab.active {
-  color: #fff;
+.container .sections .section.active {
+  color: #e47d36;
 }
-.container .tabs .tab.tab-1.active ~ .highlighter {
-  transform: translateY(0px);
+.container .sections .section.section-1.active ~ .highlighter {
+  transform: translateY(0rem);
 }
-.container .tabs .tab.tab-2.active ~ .highlighter {
-  transform: translateY(40px);
+.container .sections .section.section-2.active ~ .highlighter {
+  transform: translateY(10rem);
 }
-.container .tabs .tab.tab-3.active ~ .highlighter {
-  transform: translateY(80px);
+.container .sections .section.section-3.active ~ .highlighter {
+  transform: translateY(20rem);
 }
-.container .tabs .highlighter {
+.container .sections .highlighter {
   display: block;
-  background: #fff;
-  width: 2px;
-  height: 40px;
+  background: #e47d36;
+  width: 3px;
+  height: 10rem;
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(0);
   transition: transform 0.2s ease;
   transition-delay: 0.1s;
   z-index: 10;
 }
-.container .tabs a:first-of-type {
-  border-top-left-radius: 2px;
-}
-.container .tabs a:last-of-type {
-  border-top-right-radius: 2px;
-}
 .container .content {
   position: relative;
-  padding: 0 20px;
+  padding: 0 10rem;
 }
-.container .content__section {
+.container .content .home {
+  text-align: center;
+  font-size: 1.6rem;
+  letter-spacing: 0.3rem;
+}
+.container .content .home .home_static {
+  width: 600px;
+  margin: 5rem;
+  border: 2px solid #e47d36;
+  position: absolute;
+}
+.container .content .home .home_static:hover {
+  opacity: 0;
+}
+.container .content .home .home_active {
+  width: 600px;
+  margin: 5rem;
+  border: 2px solid #e47d36;
+}
+.container .content_section {
   position: absolute;
   top: 0;
   left: 0;
@@ -120,7 +120,7 @@ p {
   z-index: 0;
   transition: opacity 0s ease;
 }
-.container .content__section.visible {
+.container .content_section.visible {
   position: relative;
   opacity: 1;
   width: 100%;

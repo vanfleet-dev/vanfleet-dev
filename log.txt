@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+8-19-22
+1: Completed lessons 51-60 for code camp's basic javascript course. 
+2: Continued work on game website. Added a new font, colors, added an animated image to home page, cleaned up code, formating changes.
+
 8-18-22
 1: Completed lessons 41-50 for code camp's basic javascript course.
 2: Began working on space shooter game webiste. 

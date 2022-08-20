@@ -1,26 +1,26 @@
-const tabs = document.querySelector('.tabs');
+const sections = document.querySelector('.sections');
 
-tabs.addEventListener('click', function(e){
+sections.addEventListener('click', function(e){
     handleClick(e);
 });
-// tabs.addEventListener('click', e => handleClick(e));
+// sections.addEventListener('click', e => handleClick(e));
 
 function handleClick(e) {
   const target = e.target;
-  const tabNum = target.dataset.tab;
-  const activeTab = document.querySelector('.tabs .active');
+  const sectionNum = target.dataset.section;
+  const activesection = document.querySelector('.sections .active');
   const activeContent = document.querySelector('.content .visible');
-  const currentContent = document.querySelector(`.content__section[data-tab='${tabNum}']`);
+  const currentContent = document.querySelector(`.content_section[data-section='${sectionNum}']`);
   
-  if (!tabNum) {
+  if (!sectionNum) {
     return;
   }
   
-  activeTab.classList.remove('active');
+  activesection.classList.remove('active');
   target.classList.add('active');
   activeContent.classList.remove('visible');
   currentContent.classList.add('visible');
 }
 
 
-console.log(tabs)
+console.log(sections)
