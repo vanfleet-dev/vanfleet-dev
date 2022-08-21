@@ -36,24 +36,27 @@ a {
   transition: color 0.25s ease;
 }
 
+br {
+  content: " ";
+  display: block;
+  margin: 2rem;
+}
+
 .container {
   position: relative;
-  margin: 10rem auto;
-  padding: 10rem;
-  width: 1200px;
+  margin: 10rem;
+  width: 1000px;
   display: flex;
   align-items: flex-start;
+  margin: 5rem auto;
+  padding: 3rem;
 }
 .container .sections {
-  display: block;
   position: relative;
   z-index: 3;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 .container .sections .section {
-  width: 100px;
+  width: 80px;
   height: 10rem;
   text-align: left;
   font-size: 2rem;
@@ -77,6 +80,12 @@ a {
 .container .sections .section.section-3.active ~ .highlighter {
   transform: translateY(20rem);
 }
+.container .sections .section.section-4.active ~ .highlighter {
+  transform: translateY(30rem);
+}
+.container .sections .section.section-5.active ~ .highlighter {
+  transform: translateY(40rem);
+}
 .container .sections .highlighter {
   display: block;
   background: #e47d36;
@@ -91,26 +100,79 @@ a {
 }
 .container .content {
   position: relative;
-  padding: 0 10rem;
 }
 .container .content .home {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   letter-spacing: 0.3rem;
 }
 .container .content .home .home_static {
-  width: 600px;
+  position: absolute;
+  width: 700px;
   margin: 5rem;
   border: 2px solid #e47d36;
-  position: absolute;
 }
 .container .content .home .home_static:hover {
   opacity: 0;
 }
 .container .content .home .home_active {
-  width: 600px;
+  width: 700px;
   margin: 5rem;
   border: 2px solid #e47d36;
+}
+.container .content .about {
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+}
+.container .content .about .tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .content .about .tabs input[type=radio] {
+  display: none;
+}
+.container .content .about .tabs input[type=radio]:checked + label {
+  border: 3px solid #e47d36;
+}
+.container .content .about .tabs input[type=radio]:checked + label + .tab {
+  display: block;
+}
+.container .content .about .tabs label {
+  order: 1;
+  display: block;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  border: 2px solid #6d5334;
+  cursor: pointer;
+}
+.container .content .about .tabs .tab {
+  order: 99;
+  flex-grow: 1;
+  width: 800px;
+  display: none;
+  padding: 2rem;
+  border: 2px solid #e47d36;
+}
+.container .content .about .tabs .brief_title {
+  margin: 3rem;
+}
+.container .content .about .tabs .brief_main {
+  font-size: 1.2rem;
+}
+.container .content .about .tabs .brief_legal {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+}
+@media (max-width: 45em) {
+  .container .content .about .tabs .tab,
+.container .content .about .tabs label {
+    order: initial;
+  }
+  .container .content .about .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
 }
 .container .content_section {
   position: absolute;
