@@ -26,7 +26,7 @@
             <div class="content">
           
               <div class="content_section home visible" data-section="1">
-                <p>Open Source 2D Rougelike Space Shooter</p>
+                <p class="title">Open Source 2D Rougelike Space Shooter</p>
                 <image class="home_static" src="./images/space_shooter_1.png"></image>
                 <image class="home_active" src="./images/space_shooter_1.gif"></image>
                 
@@ -38,31 +38,50 @@
                     <input type="radio" name="tabs" id="tab_1" checked="checked">
                     <label for="tab_1">BRIEFING</label>
                     <div class="tab">
-                        <h1 class="brief_title">Welcome to SPACE SHOOTER.</h1>
+                        <!-- <h1 class="brief_title">Welcome to SPACE SHOOTER.</h1> -->
+                        <p class="brief_header">INTERNAL MAIL SYSTEM:</p>
+                        <p class="inbox" >*** <span>INBOX</span> ***</p>
+                        <p class="from"><span>FROM:</span> management.sector200@solmining.com</p>
+                        <p class="to"><span>TO:</span> employee.id2234325464@solmining.com</p>
+                        <p class="subject"><span>SUBJECT:</span> Onboarding Brief</p>
                         <p class="brief_main">
-                            You have been assinged to solar system 223 to fulfill your contractual obligations with Sol Mining Co. <br />
-                            We have detected signifigant drone activity in the area. <br />
-                            This could cause some unexpected interuptions to your mining operations.<br />
-                            As you know death does not free you from your contractual obligations.<br />
-                            Sol Mining Co. is proud to provide our employees industry standard stack re-compiles, body replacements and ship lease policies for when the drones inevitably turn you into dust.* <br />
-                            Suit up, its time to fly.
-                        </p>  
-                        <p class="brief_legal">* Sol Mining Co. holds no resposibility for lost ship upgrades at the time of death.<br /></p>       
+                          Hello Employee 2234325464, <br />
+                          You have been assinged to solar system 223 to fulfill your contractual obligations with Sol Mining Co. <br />
+                          We have detected signifigant drone activity in the area. <br />
+                          This could cause some unexpected interuptions to your mining operations.<br />
+                          As you know death does not free you from your contractual obligations.<br />
+                          Sol Mining Co. is proud to provide our employees industry standard stack re-compiles, body replacements and ship lease policies for when the drones inevitably turn you into dust.* <br />
+                          Suit up, its time to fly. <br />
+                          Yours always, <br />
+                          Sector 200 Management Team <br />
+                          <span class="brief_legal">* Sol Mining Co. holds no resposibility for lost ship upgrades at the time of death.</span>
+                        </p>       
                     </div>
                     
                     <input type="radio" name="tabs" id="tab_2">
                     <label for="tab_2">SHIP</label>
                     <div class="tab">
-                        <h1>SHIP SPECS:</h1>
-                        <p>
-                            The company issue ship for this solar system is a dual purpose fighter and miner. <br />
-                            CONTROLS: <br />
-                            * Travel mode: <kbd>A</kbd> and <kbd>D</kbd> rotate, <kbd>W</kbd> and <kbd>S</kbd> thrusters. <br />
-                            * Precision mode: Hold <kbd>SpaceBar</kbd> , press <kbd>A</kbd> , <kbd>D</kbd> , <kbd>W</kbd> , <kbd>S</kbd> for thrusters, ship follows cursor. <br />
-                            * Shoot: <kbd>LMB</kbd> Shooting activates precision mode. <br />
-                            * Docking: <kbd>RMB</kbd> <br />
-                            * Map: <kbd>Shift</kbd> <br />
-                        </p>                    
+                      <div class="ship_container">
+                        <p class="ship_header">SHIP SPECS:</p>
+                        <p class="ship_main">
+                          The company issue ship for this solar system is the MK-1. <br />
+                          A dual purpose fighter and miner. <br />
+                          CONTROLS: <br />
+                          * Travel mode: <kbd>A</kbd> and <kbd>D</kbd> rotate, <kbd>W</kbd> and <kbd>S</kbd> thrusters. <br />
+                          * Precision mode: Hold <kbd>SpaceBar</kbd> , press <kbd>A</kbd> , <kbd>D</kbd> , <kbd>W</kbd> , <kbd>S</kbd> for thrusters, ship follows cursor. <br />
+                          * Shoot: <kbd>LMB</kbd> Shooting activates precision mode. <br />
+                          * Docking: <kbd>RMB</kbd> <br />
+                          * Map: <kbd>Shift</kbd> <br />
+                        </p>
+                        <div class="ship_image_container">
+                          <image class="ship_1_active ship_image" src="./images/space_shooter_ship_close_1.gif"></image>
+                          <image class="ship_2_active ship_image" src="./images/space_shooter_ship_far_1.gif"></image>
+                        </div>
+                        <div class="ship_image_overlay_container">
+                          <p class="ship_1_overlay ship_image_overlay">FILE#: 139.a [TRAINING ARCHIVE]</p>
+                          <p class="ship_2_overlay ship_image_overlay">FILE#: 139.b [TRAINING ARCHIVE]</p>
+                        </div>
+                      </div>
                     </div>
     
                     <input type="radio" name="tabs" id="tab_3">
@@ -70,6 +89,8 @@
                     <div class="tab">
                         <h1>MINING:</h1>
                         <p>Gluten-free you probably haven't heard of them jianbing pitchfork pabst. Kombucha occupy iPhone live-edge beard iceland freegan small batch before they sold out DIY marfa chillwave sustainable taiyaki bushwick. Meggings franzen kogi, next level fingerstache +1 kitsch YOLO activated charcoal craft beer adaptogen twee. Yuccie tumeric irony heirloom, shoreditch kinfolk swag cold-pressed 90's chicharrones.</p>
+                        <image class="mine_1_active mine_image" src="./images/space_shooter_mine_close_1.gif"></image>
+                        <image class="mine_2_active mine_image" src="./images/space_shooter_mine_far_1.gif"></image>  
                     </div>
 
                     <input type="radio" name="tabs" id="tab_4">
@@ -82,8 +103,14 @@
                     <input type="radio" name="tabs" id="tab_5">
                     <label for="tab_5">HAZARDS</label>
                     <div class="tab">
-                        <h1>DRONES:</h1>
-                        <p>Gluten-free you probably haven't heard of them jianbing pitchfork pabst. Kombucha occupy iPhone live-edge beard iceland freegan small batch before they sold out DIY marfa chillwave sustainable taiyaki bushwick. Meggings franzen kogi, next level fingerstache +1 kitsch YOLO activated charcoal craft beer adaptogen twee. Yuccie tumeric irony heirloom, shoreditch kinfolk swag cold-pressed 90's chicharrones.</p>
+                        <h1 class="hazards_title">DRONES:</h1>
+                        <p class="hazards_main">
+                          Per the terms of our contract Sol Mining Co. has conducted a reconissance of Solar System 223 for your conveinence.<br />
+                          223 is teaming with drones dead set on protecting the abundance of asteroids found here. The source of these drones is unknown. <br />
+                          There seems to be a never ending stream filtering into 223. The more we mine the more there are. <br />
+                          Expect frequent causualties <br />
+                          <image class="enemies_active" src="./images/space_shooter_enemies.gif"></image>
+                        </p>
                     </div>
 
                     <input type="radio" name="tabs" id="tab_6">

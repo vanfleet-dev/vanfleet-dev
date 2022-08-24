@@ -103,13 +103,17 @@ br {
 }
 .container .content .home {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   letter-spacing: 0.3rem;
+}
+.container .content .home .title {
+  margin: 3rem 10rem 5rem 10rem;
 }
 .container .content .home .home_static {
   position: absolute;
   width: 700px;
-  margin: 5rem;
+  height: 500px;
+  margin: 10rem;
   border: 2px solid #e47d36;
 }
 .container .content .home .home_static:hover {
@@ -117,7 +121,8 @@ br {
 }
 .container .content .home .home_active {
   width: 700px;
-  margin: 5rem;
+  height: 500px;
+  margin: 10rem;
   border: 2px solid #e47d36;
 }
 .container .content .about {
@@ -150,18 +155,147 @@ br {
   flex-grow: 1;
   width: 800px;
   display: none;
-  padding: 2rem;
+  padding: 0 2rem;
   border: 2px solid #e47d36;
 }
-.container .content .about .tabs .brief_title {
-  margin: 3rem;
+.container .content .about .tabs .brief_header {
+  text-align: center;
+  margin: 1rem auto;
+  border: 3px dotted #6d5334;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.container .content .about .tabs .inbox {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: none;
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+  -webkit-animation: blink 3s linear infinite;
+          animation: blink 3s linear infinite;
+}
+.container .content .about .tabs .inbox span {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  81% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  81% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.container .content .about .tabs .from {
+  margin: 1rem auto;
+  border: 2px dotted #6d5334;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+.container .content .about .tabs .from span {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+.container .content .about .tabs .to {
+  margin: 1rem auto;
+  border: 2px dotted #6d5334;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+.container .content .about .tabs .to span {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+.container .content .about .tabs .subject {
+  margin: 1rem auto;
+  border: 2px dotted #6d5334;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+.container .content .about .tabs .subject span {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 .container .content .about .tabs .brief_main {
   font-size: 1.2rem;
+  border-left: 3px dotted #6d5334;
+  border-right: 3px dotted #6d5334;
+  padding: 2rem;
+  margin: 1rem;
 }
-.container .content .about .tabs .brief_legal {
+.container .content .about .tabs .brief_main .brief_legal {
   margin-top: 3rem;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  padding: 1rem;
+}
+.container .content .about .tabs .ship_container {
+  position: relative;
+}
+.container .content .about .tabs .ship_container .ship_header {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+.container .content .about .tabs .ship_container .ship_main {
+  height: 750px;
+}
+.container .content .about .tabs .ship_container .ship_image_container .ship_1_active {
+  position: absolute;
+  left: 10px;
+  top: 500px;
+  width: 350px;
+  border: 4px dotted #6d5334;
+}
+.container .content .about .tabs .ship_container .ship_image_container .ship_2_active {
+  position: absolute;
+  left: 400px;
+  top: 500px;
+  width: 350px;
+  border: 4px dotted #6d5334;
+}
+.container .content .about .tabs .ship_container .ship_image_overlay_container .ship_1_overlay {
+  position: absolute;
+  left: 20px;
+  top: 730px;
+  font-size: 1rem;
+}
+.container .content .about .tabs .ship_container .ship_image_overlay_container .ship_2_overlay {
+  position: absolute;
+  left: 410px;
+  top: 730px;
+  font-size: 1rem;
+}
+.container .content .about .tabs .mine_image {
+  display: inline-block;
+  width: 350px;
+}
+.container .content .about .tabs .enemies_active {
+  margin: 3rem;
+  height: 400px;
 }
 @media (max-width: 45em) {
   .container .content .about .tabs .tab,
