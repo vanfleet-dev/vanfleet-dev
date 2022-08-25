@@ -1,7 +1,10 @@
 vanfleet-dev log
 
+8-24-22
+1: Cuntinued work on game website. Worked on about section content and formatting.
+
 8-23-22
-1: Cuntinued work on game website. Add animated gif files to about section. Worked on about and home secitons formatting.
+1: Cuntinued work on game website. Added animated gif files to about section. Worked on about and home secitons formatting.
 
 8-22-22
 1: Completed lessons 71-79 for code camp's basic javascript course.

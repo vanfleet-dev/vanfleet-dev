@@ -165,7 +165,7 @@ br {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
   font-size: 1.5rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 .container .content .about .tabs .inbox {
   text-align: center;
@@ -212,7 +212,7 @@ br {
   margin: 1rem auto;
   border: 2px dotted #6d5334;
   font-size: 1.2rem;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .container .content .about .tabs .from span {
   -webkit-text-decoration: underline dotted;
@@ -222,7 +222,7 @@ br {
   margin: 1rem auto;
   border: 2px dotted #6d5334;
   font-size: 1.2rem;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .container .content .about .tabs .to span {
   -webkit-text-decoration: underline dotted;
@@ -232,17 +232,18 @@ br {
   margin: 1rem auto;
   border: 2px dotted #6d5334;
   font-size: 1.2rem;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .container .content .about .tabs .subject span {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
 }
 .container .content .about .tabs .brief_main {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
   border-left: 3px dotted #6d5334;
   border-right: 3px dotted #6d5334;
-  padding: 2rem;
+  padding: 4.5rem;
   margin: 1rem;
 }
 .container .content .about .tabs .brief_main .brief_legal {
@@ -260,38 +261,160 @@ br {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
 }
-.container .content .about .tabs .ship_container .ship_main {
-  height: 750px;
+.container .content .about .tabs .ship_container .specs_1 {
+  text-align: center;
+  font-size: 1.5rem;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  padding: 3rem 1rem 1rem 0rem;
+}
+.container .content .about .tabs .ship_container .specs_2 {
+  border: 1px dotted #6d5334;
+  padding: 2rem 0rem 2rem 1rem;
+}
+.container .content .about .tabs .ship_container .controls_1 {
+  text-align: center;
+  font-size: 1.5rem;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  padding: 4rem 1rem 1rem 0rem;
+}
+.container .content .about .tabs .ship_container .controls_2 {
+  border: 1px dotted #6d5334;
+  padding: 2rem 0rem 2rem 1rem;
+}
+.container .content .about .tabs .ship_container .filler {
+  height: 300px;
 }
 .container .content .about .tabs .ship_container .ship_image_container .ship_1_active {
   position: absolute;
   left: 10px;
-  top: 500px;
+  top: 532px;
+  top: 570px;
   width: 350px;
-  border: 4px dotted #6d5334;
+  border: 3px dotted #6d5334;
 }
 .container .content .about .tabs .ship_container .ship_image_container .ship_2_active {
   position: absolute;
   left: 400px;
-  top: 500px;
+  top: 570px;
   width: 350px;
-  border: 4px dotted #6d5334;
+  border: 3px dotted #6d5334;
 }
 .container .content .about .tabs .ship_container .ship_image_overlay_container .ship_1_overlay {
   position: absolute;
   left: 20px;
-  top: 730px;
-  font-size: 1rem;
+  top: 800px;
+  font-size: 1.2rem;
 }
 .container .content .about .tabs .ship_container .ship_image_overlay_container .ship_2_overlay {
   position: absolute;
   left: 410px;
-  top: 730px;
-  font-size: 1rem;
+  top: 800px;
+  font-size: 1.2rem;
 }
-.container .content .about .tabs .mine_image {
-  display: inline-block;
+.container .content .about .tabs .mine_container {
+  position: relative;
+}
+.container .content .about .tabs .mine_container .mine_header {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+.container .content .about .tabs .mine_container .procedure_1 {
+  text-align: center;
+  font-size: 1.5rem;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  padding: 3rem 1rem 1rem 0rem;
+}
+.container .content .about .tabs .mine_container .procedure_2 {
+  border: 1px dotted #6d5334;
+  padding: 3rem 0rem 3rem 1rem;
+  margin-top: 3rem;
+}
+.container .content .about .tabs .mine_container .filler {
+  height: 384px;
+}
+.container .content .about .tabs .mine_container .mine_image_container .mine_1_active {
+  position: absolute;
+  left: 10px;
+  top: 530px;
   width: 350px;
+  border: 3px dotted #6d5334;
+}
+.container .content .about .tabs .mine_container .mine_image_container .mine_2_active {
+  position: absolute;
+  left: 400px;
+  top: 530px;
+  width: 350px;
+  border: 3px dotted #6d5334;
+}
+.container .content .about .tabs .mine_container .mine_image_overlay_container .mine_1_overlay {
+  position: absolute;
+  left: 20px;
+  top: 800px;
+  font-size: 1.2rem;
+}
+.container .content .about .tabs .mine_container .mine_image_overlay_container .mine_2_overlay {
+  position: absolute;
+  left: 410px;
+  top: 800px;
+  font-size: 1.2rem;
+}
+.container .content .about .tabs .station_container {
+  position: relative;
+}
+.container .content .about .tabs .station_container .station_header {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+.container .content .about .tabs .station_container .procedure_1 {
+  text-align: center;
+  font-size: 1.5rem;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  padding: 3rem 1rem 1rem 0rem;
+  margin: 3rem;
+}
+.container .content .about .tabs .station_container .procedure_2 {
+  border: 1px dotted #6d5334;
+  padding: 4rem 0rem 4rem 1rem;
+}
+.container .content .about .tabs .station_container .station_icon {
+  position: absolute;
+  left: 550px;
+  top: 235px;
+}
+.container .content .about .tabs .upgrades_container {
+  position: relative;
+}
+.container .content .about .tabs .upgrades_container .upgrades_header {
+  text-align: center;
+  font-size: 2rem;
+  margin: 3rem;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+.container .content .about .tabs .upgrades_container .upgrades_main {
+  border: 1px dotted #6d5334;
+  padding: 4rem 15rem 1rem 1rem;
+  margin-bottom: 5rem;
+}
+.container .content .about .tabs .upgrades_container .upgrade_icon {
+  position: absolute;
+  left: 640px;
+  top: 90px;
+}
+.container .content .about .tabs .disclaimer {
+  font-size: 0.8rem;
+  margin-top: 7rem;
+  margin-bottom: 4rem;
 }
 .container .content .about .tabs .enemies_active {
   margin: 3rem;

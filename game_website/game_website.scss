@@ -203,7 +203,7 @@ br {
                   border: 3px dotted $color-3;
                   text-decoration: underline dotted;
                   font-size: 1.5rem;
-                  padding: 1rem;
+                  padding: 2rem;
                 }
 
                 .inbox {
@@ -237,7 +237,7 @@ br {
                   margin: 1rem auto;
                   border: 2px dotted $color-3;
                   font-size: 1.2rem;
-                  padding: 1rem;
+                  padding: 1.5rem;
                   span {
                     text-decoration: underline dotted;
                   }
@@ -247,7 +247,7 @@ br {
                   margin: 1rem auto;
                   border: 2px dotted $color-3;
                   font-size: 1.2rem;
-                  padding: 1rem;
+                  padding: 1.5rem;
                   span {
                     text-decoration: underline dotted;
                   }
@@ -257,17 +257,18 @@ br {
                   margin: 1rem auto;
                   border: 2px dotted $color-3;
                   font-size: 1.2rem;
-                  padding: 1rem;
+                  padding: 1.5rem;
                   span {
                     text-decoration: underline dotted;
                   }
                 }
 
                 .brief_main {
-                  font-size: 1.2rem;
+                  font-size: 1.3rem;
+                  letter-spacing: .3rem;
                   border-left: 3px dotted $color-3;
                   border-right: 3px dotted $color-3;
-                  padding: 2rem;
+                  padding: 4.5rem;
                   margin: 1rem;
                   
                   .brief_legal {
@@ -290,8 +291,32 @@ br {
                     text-decoration: underline dotted;
                   }
 
-                  .ship_main {
-                    height: 750px;
+                  .specs_1 {
+                    text-align: center;
+                    font-size: 1.5rem;
+                    text-decoration: underline dotted;
+                    padding: 3rem 1rem 1rem 0rem;
+                  }
+
+                  .specs_2 {
+                    border: 1px dotted $color-3;
+                    padding: 2rem 0rem 2rem 1rem;
+                  }
+
+                  .controls_1 {
+                    text-align: center;
+                    font-size: 1.5rem;
+                    text-decoration: underline dotted;
+                    padding: 4rem 1rem 1rem 0rem;
+                  }
+
+                  .controls_2 {
+                    border: 1px dotted $color-3;
+                    padding: 2rem 0rem 2rem 1rem;
+                  }
+
+                  .filler {
+                    height: 300px
                   }
 
                   .ship_image_container {
@@ -299,17 +324,18 @@ br {
                     .ship_1_active {
                       position: absolute;
                       left: 10px;
-                      top:  500px;
+                      top:  532px;
+                      top: 570px;
                       width: 350px;
-                      border: 4px dotted $color-3;
+                      border: 3px dotted $color-3;
                     }
 
                     .ship_2_active {
                       position: absolute;
                       left: 400px;
-                      top: 500px;
+                      top: 570px;
                       width: 350px;
-                      border: 4px dotted $color-3;
+                      border: 3px dotted $color-3;
                     }
                   }
 
@@ -318,38 +344,151 @@ br {
                     .ship_1_overlay {
                       position: absolute;
                       left: 20px;
-                      top: 730px;
-                      font-size: 1rem;
+                      top: 800px;
+                      font-size: 1.2rem;
                     }
 
                     .ship_2_overlay {
                       position: absolute;
                       left: 410px;
-                      top: 730px;
-                      font-size: 1rem;
+                      top: 800px;
+                      font-size: 1.2rem;
                     }
                   }
                 } 
 
-
-                //////
-                // .ship_image {
-                //   display: inline-block;
-                //   //margin: 1rem;
-                //   width: 350px;
-                // }
                 /// mine
-                .mine_image {
-                  display: inline-block;
-                  //margin: 1rem;
-                  width: 350px;
+
+                .mine_container {
+                  position: relative;
+
+                  .mine_header {
+                    text-align: center;
+                    font-size: 2rem;
+                    margin: 2rem;
+                    text-decoration: underline dotted;
+                  }
+
+                  .procedure_1 {
+                    text-align: center;
+                    font-size: 1.5rem;
+                    text-decoration: underline dotted;
+                    padding: 3rem 1rem 1rem 0rem;
+                  }
+
+                  .procedure_2 {
+                    border: 1px dotted $color-3;
+                    padding: 3rem 0rem 3rem 1rem;
+                    margin-top: 3rem;
+                  }
+
+                  .filler {
+                    height: 384px;
+                  }
+
+                  .mine_image_container {
+                    
+                    .mine_1_active {
+                      position: absolute;
+                      left: 10px;
+                      top:  530px;
+                      width: 350px;
+                      border: 3px dotted $color-3;
+                    }
+
+                    .mine_2_active {
+                      position: absolute;
+                      left: 400px;
+                      top: 530px;
+                      width: 350px;
+                      border: 3px dotted $color-3;
+                    }
+                  }
+
+                  .mine_image_overlay_container {
+
+                    .mine_1_overlay {
+                      position: absolute;
+                      left: 20px;
+                      top: 800px;
+                      font-size: 1.2rem;
+                    }
+
+                    .mine_2_overlay {
+                      position: absolute;
+                      left: 410px;
+                      top: 800px;
+                      font-size: 1.2rem;
+                    }
+                  }
                 }
-                /// hazards
+                // facilities
+                .station_container {
+                  position: relative;
+
+                  .station_header {
+                    text-align: center;
+                    font-size: 2rem;
+                    margin: 2rem;
+                    text-decoration: underline dotted;
+                  }
+
+                  .procedure_1 {
+                    text-align: center;
+                    font-size: 1.5rem;
+                    text-decoration: underline dotted;
+                    padding: 3rem 1rem 1rem 0rem;
+                    margin: 3rem;
+                  }
+
+                  .procedure_2 {
+                    border: 1px dotted $color-3;
+                    padding: 4rem 0rem 4rem 1rem;
+                  }
+
+                  .station_icon {
+                    position: absolute;
+                    left: 550px;
+                    top: 235px;
+                  }
+                }
+
+                .upgrades_container {
+                  position: relative;
+                  
+                  .upgrades_header {
+                    text-align: center;
+                    font-size: 2rem;
+                    margin: 3rem;
+                    text-decoration: underline dotted;
+                  }
+
+                  .upgrades_main {
+                    border: 1px dotted $color-3;
+                    padding: 4rem 15rem 1rem 1rem;
+                    margin-bottom: 5rem;
+                  }
+
+                  .upgrade_icon {
+                    position: absolute;
+                    left: 640px;
+                    top: 90px;
+                  }
+
+                }
+
+                .disclaimer {
+                  font-size: .8rem;
+                  margin-top: 7rem;
+                  margin-bottom: 4rem;
+                }
+                // hazards
+
                 .enemies_active {
                   margin: 3rem;
                   height: 400px;
                 }
-            }  
+              }  
             
             @media (max-width: 45em) {
                 .tabs .tab,
