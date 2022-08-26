@@ -1,5 +1,8 @@
 vanfleet-dev log
 
+8-25-22
+1: Cuntinued work on game website. Finished about section. Cleaning up about section markup.
+
 8-24-22
 1: Cuntinued work on game website. Worked on about section content and formatting.
 

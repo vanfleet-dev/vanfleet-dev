@@ -34,7 +34,7 @@ body {
   font-family: "Public Pixel";
   background-color: $color-2;
   color: $color-1;
-  line-height: 1.5;
+  line-height: 2.5rem;
 }
 
 a {
@@ -50,7 +50,36 @@ br {
     display: block;
     margin: 2rem;;
 }
-  
+
+/////////////////////////////////////////////////////
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+  text-decoration: underline dotted;
+}
+
+.sub-section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: underline dotted;
+  padding: 2rem 0;
+}
+
+.sub-section-body {
+  border: 1px dotted $color-3;
+  padding: 2rem 1rem;
+}
+
+/////////////////////////////////////////////////////
+
+@mixin position ($position-var, $left-var, $top-var) {
+  position: $position-var;
+  left: $left-var;
+  top: $top-var;
+}
+
 /////////////////////////////////////////////////////
   
 .container {
@@ -59,14 +88,12 @@ br {
   width: 1000px;
   display: flex;
   align-items: flex-start;
-  margin: 5rem auto;
+  margin: 0 auto;
   padding: 3rem;
   
     .sections {
-      //display: block;
       position: relative;
       z-index: 3;
-      //width: max-content;
   
         .section {
           width: 80px;
@@ -104,23 +131,14 @@ br {
           position: absolute;
           top: 0;
           left: 0;
-          //transform: translateY(0);  
           transition: transform 0.2s ease;
           transition-delay: 0.1s;
           z-index: 10;
         }
-  
-        //   a:first-of-type {
-        //     border-top-left-radius: 2px;
-        //   }
-        //   a:last-of-type {
-        //     border-top-right-radius: 2px;
-        //   }
     }
   
     .content {
       position: relative;
-      //padding: 0 $spacing;
       
         .home {
           text-align: center;
@@ -192,10 +210,7 @@ br {
 
 /// about tabs content //////////////////////////////////////////////////////////////////
 
-                /// briefing
-                // .brief_title {
-                //     margin: 3rem;
-                // }
+                /// mail
 
                 .brief_header {
                   text-align: center;
@@ -279,81 +294,34 @@ br {
                 }
 
                 /// ship
-                
 
                 .ship_container {
                   position: relative;
-
-                  .ship_header {
-                    text-align: center;
-                    font-size: 2rem;
-                    margin: 2rem;
-                    text-decoration: underline dotted;
-                  }
-
-                  .specs_1 {
-                    text-align: center;
-                    font-size: 1.5rem;
-                    text-decoration: underline dotted;
-                    padding: 3rem 1rem 1rem 0rem;
-                  }
-
-                  .specs_2 {
-                    border: 1px dotted $color-3;
-                    padding: 2rem 0rem 2rem 1rem;
-                  }
-
-                  .controls_1 {
-                    text-align: center;
-                    font-size: 1.5rem;
-                    text-decoration: underline dotted;
-                    padding: 4rem 1rem 1rem 0rem;
-                  }
-
-                  .controls_2 {
-                    border: 1px dotted $color-3;
-                    padding: 2rem 0rem 2rem 1rem;
-                  }
 
                   .filler {
                     height: 300px
                   }
 
-                  .ship_image_container {
-                    
-                    .ship_1_active {
-                      position: absolute;
-                      left: 10px;
-                      top:  532px;
-                      top: 570px;
-                      width: 350px;
-                      border: 3px dotted $color-3;
-                    }
-
-                    .ship_2_active {
-                      position: absolute;
-                      left: 400px;
-                      top: 570px;
-                      width: 350px;
-                      border: 3px dotted $color-3;
-                    }
+                  .ship_1_gif {
+                    @include position (absolute, 10px, 570px);
+                    width: 350px;
+                    border: 3px dotted $color-3;
                   }
 
-                  .ship_image_overlay_container {
+                  .ship_2_gif {
+                    @include position (absolute, 400px, 570px);
+                    width: 350px;
+                    border: 3px dotted $color-3;
+                  }
 
-                    .ship_1_overlay {
-                      position: absolute;
-                      left: 20px;
-                      top: 800px;
-                      font-size: 1.2rem;
-                    }
+                  .ship_1_overlay {
+                    @include position (absolute, 20px, 800px);
+                    font-size: 1.2rem;
+                  }
 
-                    .ship_2_overlay {
-                      position: absolute;
-                      left: 410px;
-                      top: 800px;
-                      font-size: 1.2rem;
-                    }
+                  .ship_2_overlay {
+                    @include position (absolute, 410px, 800px);
+                    font-size: 1.2rem;
                   }
                 } 
 
@@ -362,117 +330,47 @@ br {
                 .mine_container {
                   position: relative;
 
-                  .mine_header {
-                    text-align: center;
-                    font-size: 2rem;
-                    margin: 2rem;
-                    text-decoration: underline dotted;
-                  }
-
-                  .procedure_1 {
-                    text-align: center;
-                    font-size: 1.5rem;
-                    text-decoration: underline dotted;
-                    padding: 3rem 1rem 1rem 0rem;
-                  }
-
-                  .procedure_2 {
-                    border: 1px dotted $color-3;
-                    padding: 3rem 0rem 3rem 1rem;
-                    margin-top: 3rem;
-                  }
-
                   .filler {
                     height: 384px;
                   }
-
-                  .mine_image_container {
-                    
-                    .mine_1_active {
-                      position: absolute;
-                      left: 10px;
-                      top:  530px;
-                      width: 350px;
-                      border: 3px dotted $color-3;
-                    }
-
-                    .mine_2_active {
-                      position: absolute;
-                      left: 400px;
-                      top: 530px;
-                      width: 350px;
-                      border: 3px dotted $color-3;
-                    }
+ 
+                  .mine_1_gif {
+                    @include position (absolute, 10px, 530px);
+                    width: 350px;
+                    border: 3px dotted $color-3;
                   }
 
-                  .mine_image_overlay_container {
+                  .mine_2_gif {
+                    @include position (absolute, 400px, 530px);
+                    width: 350px;
+                    border: 3px dotted $color-3;
+                  }
 
-                    .mine_1_overlay {
-                      position: absolute;
-                      left: 20px;
-                      top: 800px;
-                      font-size: 1.2rem;
-                    }
+                  .mine_1_overlay {
+                    @include position (absolute, 20px, 800px);
+                    font-size: 1.2rem;
+                  }
 
-                    .mine_2_overlay {
-                      position: absolute;
-                      left: 410px;
-                      top: 800px;
-                      font-size: 1.2rem;
-                    }
+                  .mine_2_overlay {
+                    @include position (absolute, 410px, 800px);
+                    font-size: 1.2rem;
                   }
                 }
+
                 // facilities
                 .station_container {
                   position: relative;
 
-                  .station_header {
-                    text-align: center;
-                    font-size: 2rem;
-                    margin: 2rem;
-                    text-decoration: underline dotted;
-                  }
-
-                  .procedure_1 {
-                    text-align: center;
-                    font-size: 1.5rem;
-                    text-decoration: underline dotted;
-                    padding: 3rem 1rem 1rem 0rem;
-                    margin: 3rem;
-                  }
-
-                  .procedure_2 {
-                    border: 1px dotted $color-3;
-                    padding: 4rem 0rem 4rem 1rem;
-                  }
-
                   .station_icon {
-                    position: absolute;
-                    left: 550px;
-                    top: 235px;
+                    @include position (absolute, 550px, 235px);
                   }
                 }
 
                 .upgrades_container {
                   position: relative;
-                  
-                  .upgrades_header {
-                    text-align: center;
-                    font-size: 2rem;
-                    margin: 3rem;
-                    text-decoration: underline dotted;
-                  }
-
-                  .upgrades_main {
-                    border: 1px dotted $color-3;
-                    padding: 4rem 15rem 1rem 1rem;
-                    margin-bottom: 5rem;
-                  }
 
                   .upgrade_icon {
-                    position: absolute;
-                    left: 640px;
-                    top: 90px;
+                    @include position (absolute, 640px, 90px);
                   }
 
                 }
@@ -482,11 +380,27 @@ br {
                   margin-top: 7rem;
                   margin-bottom: 4rem;
                 }
-                // hazards
+                // recon
 
-                .enemies_active {
-                  margin: 3rem;
-                  height: 400px;
+                .recon_container {
+                  position: relative;
+
+                  .recon_briefing {
+                    width: 40rem;
+                    line-height: 2.5rem;
+                  }
+
+                  .recon_gif {
+                    @include position (absolute, 360px, 390px);
+                    margin: 3rem;
+                    height: 250px;
+                    border: 3px dotted $color-3;
+                  }
+
+                  .recon_overlay {
+                    @include position (absolute, 395px, 645px);
+                    font-size: 1rem;
+                  }
                 }
               }  
             
@@ -523,4 +437,3 @@ br {
         }
     }
 }
-  

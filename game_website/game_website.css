@@ -24,7 +24,7 @@ body {
   font-family: "Public Pixel";
   background-color: #140f0c;
   color: #e47d36;
-  line-height: 1.5;
+  line-height: 2.5rem;
 }
 
 a {
@@ -42,13 +42,34 @@ br {
   margin: 2rem;
 }
 
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+.sub-section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  padding: 2rem 0;
+}
+
+.sub-section-body {
+  border: 1px dotted #6d5334;
+  padding: 2rem 1rem;
+}
+
 .container {
   position: relative;
   margin: 10rem;
   width: 1000px;
   display: flex;
   align-items: flex-start;
-  margin: 5rem auto;
+  margin: 0 auto;
   padding: 3rem;
 }
 .container .sections {
@@ -254,60 +275,30 @@ br {
 .container .content .about .tabs .ship_container {
   position: relative;
 }
-.container .content .about .tabs .ship_container .ship_header {
-  text-align: center;
-  font-size: 2rem;
-  margin: 2rem;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-.container .content .about .tabs .ship_container .specs_1 {
-  text-align: center;
-  font-size: 1.5rem;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  padding: 3rem 1rem 1rem 0rem;
-}
-.container .content .about .tabs .ship_container .specs_2 {
-  border: 1px dotted #6d5334;
-  padding: 2rem 0rem 2rem 1rem;
-}
-.container .content .about .tabs .ship_container .controls_1 {
-  text-align: center;
-  font-size: 1.5rem;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  padding: 4rem 1rem 1rem 0rem;
-}
-.container .content .about .tabs .ship_container .controls_2 {
-  border: 1px dotted #6d5334;
-  padding: 2rem 0rem 2rem 1rem;
-}
 .container .content .about .tabs .ship_container .filler {
   height: 300px;
 }
-.container .content .about .tabs .ship_container .ship_image_container .ship_1_active {
+.container .content .about .tabs .ship_container .ship_1_gif {
   position: absolute;
   left: 10px;
-  top: 532px;
   top: 570px;
   width: 350px;
   border: 3px dotted #6d5334;
 }
-.container .content .about .tabs .ship_container .ship_image_container .ship_2_active {
+.container .content .about .tabs .ship_container .ship_2_gif {
   position: absolute;
   left: 400px;
   top: 570px;
   width: 350px;
   border: 3px dotted #6d5334;
 }
-.container .content .about .tabs .ship_container .ship_image_overlay_container .ship_1_overlay {
+.container .content .about .tabs .ship_container .ship_1_overlay {
   position: absolute;
   left: 20px;
   top: 800px;
   font-size: 1.2rem;
 }
-.container .content .about .tabs .ship_container .ship_image_overlay_container .ship_2_overlay {
+.container .content .about .tabs .ship_container .ship_2_overlay {
   position: absolute;
   left: 410px;
   top: 800px;
@@ -316,49 +307,30 @@ br {
 .container .content .about .tabs .mine_container {
   position: relative;
 }
-.container .content .about .tabs .mine_container .mine_header {
-  text-align: center;
-  font-size: 2rem;
-  margin: 2rem;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-.container .content .about .tabs .mine_container .procedure_1 {
-  text-align: center;
-  font-size: 1.5rem;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  padding: 3rem 1rem 1rem 0rem;
-}
-.container .content .about .tabs .mine_container .procedure_2 {
-  border: 1px dotted #6d5334;
-  padding: 3rem 0rem 3rem 1rem;
-  margin-top: 3rem;
-}
 .container .content .about .tabs .mine_container .filler {
   height: 384px;
 }
-.container .content .about .tabs .mine_container .mine_image_container .mine_1_active {
+.container .content .about .tabs .mine_container .mine_1_gif {
   position: absolute;
   left: 10px;
   top: 530px;
   width: 350px;
   border: 3px dotted #6d5334;
 }
-.container .content .about .tabs .mine_container .mine_image_container .mine_2_active {
+.container .content .about .tabs .mine_container .mine_2_gif {
   position: absolute;
   left: 400px;
   top: 530px;
   width: 350px;
   border: 3px dotted #6d5334;
 }
-.container .content .about .tabs .mine_container .mine_image_overlay_container .mine_1_overlay {
+.container .content .about .tabs .mine_container .mine_1_overlay {
   position: absolute;
   left: 20px;
   top: 800px;
   font-size: 1.2rem;
 }
-.container .content .about .tabs .mine_container .mine_image_overlay_container .mine_2_overlay {
+.container .content .about .tabs .mine_container .mine_2_overlay {
   position: absolute;
   left: 410px;
   top: 800px;
@@ -367,25 +339,6 @@ br {
 .container .content .about .tabs .station_container {
   position: relative;
 }
-.container .content .about .tabs .station_container .station_header {
-  text-align: center;
-  font-size: 2rem;
-  margin: 2rem;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-.container .content .about .tabs .station_container .procedure_1 {
-  text-align: center;
-  font-size: 1.5rem;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  padding: 3rem 1rem 1rem 0rem;
-  margin: 3rem;
-}
-.container .content .about .tabs .station_container .procedure_2 {
-  border: 1px dotted #6d5334;
-  padding: 4rem 0rem 4rem 1rem;
-}
 .container .content .about .tabs .station_container .station_icon {
   position: absolute;
   left: 550px;
@@ -393,18 +346,6 @@ br {
 }
 .container .content .about .tabs .upgrades_container {
   position: relative;
-}
-.container .content .about .tabs .upgrades_container .upgrades_header {
-  text-align: center;
-  font-size: 2rem;
-  margin: 3rem;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-.container .content .about .tabs .upgrades_container .upgrades_main {
-  border: 1px dotted #6d5334;
-  padding: 4rem 15rem 1rem 1rem;
-  margin-bottom: 5rem;
 }
 .container .content .about .tabs .upgrades_container .upgrade_icon {
   position: absolute;
@@ -416,9 +357,26 @@ br {
   margin-top: 7rem;
   margin-bottom: 4rem;
 }
-.container .content .about .tabs .enemies_active {
+.container .content .about .tabs .recon_container {
+  position: relative;
+}
+.container .content .about .tabs .recon_container .recon_briefing {
+  width: 40rem;
+  line-height: 2.5rem;
+}
+.container .content .about .tabs .recon_container .recon_gif {
+  position: absolute;
+  left: 360px;
+  top: 390px;
   margin: 3rem;
-  height: 400px;
+  height: 250px;
+  border: 3px dotted #6d5334;
+}
+.container .content .about .tabs .recon_container .recon_overlay {
+  position: absolute;
+  left: 395px;
+  top: 645px;
+  font-size: 1rem;
 }
 @media (max-width: 45em) {
   .container .content .about .tabs .tab,

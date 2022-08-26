@@ -12,33 +12,24 @@
     <body>
         <div class="container">
             <div class="sections">
-          
               <a class="section section-1 active" href="#" data-section="1">HOME</a>
               <a class="section section-2" href="#" data-section="2">ABOUT</a>
               <a class="section section-3" href="#" data-section="3">MAP</a>
               <a class="section section-4" href="#" data-section="4">INSTALL</a>
               <a class="section section-5" href="#" data-section="5">CONTACT</a>
-          
               <span class="highlighter"></span>
-          
             </div>
-          
             <div class="content">
-          
               <div class="content_section home visible" data-section="1">
                 <p class="title">Open Source 2D Rougelike Space Shooter</p>
                 <image class="home_static" src="./images/space_shooter_1.png"></image>
                 <image class="home_active" src="./images/space_shooter_1.gif"></image>
-                
               </div>
-          
               <div class="content_section about" data-section="2">
-                <!-- internal tabs test -->
                 <div class="tabs">
                     <input type="radio" name="tabs" id="tab_1" checked="checked">
                     <label for="tab_1">MAIL</label>
                     <div class="tab">
-                        <!-- <h1 class="brief_title">Welcome to SPACE SHOOTER.</h1> -->
                         <p class="brief_header">INTERNAL MAIL SYSTEM:</p>
                         <p class="inbox" >*** <span>INBOX</span> ***</p>
                         <p class="from"><span>FROM:</span> management.sector200@solmining.com</p>
@@ -57,78 +48,66 @@
                           <span class="brief_legal">* Sol Mining Co. holds no resposibility for lost ship upgrades at the time of death.</span>
                         </p>       
                     </div>
-                    
                     <input type="radio" name="tabs" id="tab_2">
                     <label for="tab_2">SHIP</label>
                     <div class="tab">
                       <div class="ship_container">
-                          <p class="ship_header">SHIP SPECS:</p>
-                          <p class="ship_main">
-                            The company issue ship for solar system 223 is the MK-1. <br />
-                            A dual purpose fighter and miner. All Mk-1 factory direct ships come standard with travel mode for covering long distances and precision mode for combat and mining. <br />
-                          </p>
-                          <p class="specs_1">MK-1 SPECS:</p>
-                          <p class="specs_2">SPEED: 1000 WEAPON: 50 HEALTH: 200 MINING: 100 CARGO: 100</p>
-                          <p class="controls">
-                          <p class="controls_1"> CONTROLS: </p>
-                          <p class="controls_2">
-                            * TRAVEL MODE: <kbd>A</kbd> and <kbd>D</kbd> rotate, <kbd>W</kbd> and <kbd>S</kbd> thrusters. <br />
-                            * PRECISION MODE: Hold <kbd>SpaceBar</kbd> , press <kbd>A</kbd> , <kbd>D</kbd> , <kbd>W</kbd> , <kbd>S</kbd> for thrusters, ship follows cursor. <br />
-                            * SHOOT: <kbd>LMB</kbd> Shooting activates precision mode. <br />
-                            * DOCKING: <kbd>RMB</kbd> <br />
-                            * SAT RECOND: <kbd>Shift</kbd>
-                          </p>
-                          <p class="filler"></p>
-                          <div class="ship_image_container">
-                            <image class="ship_1_active ship_image" src="./images/space_shooter_ship_close_1.gif"></image>
-                            <image class="ship_2_active ship_image" src="./images/space_shooter_ship_far_1.gif"></image>
-                          </div>
-                          <div class="ship_image_overlay_container">
-                            <p class="ship_1_overlay ship_image_overlay">ARCHIVE/TRANING/139.a.file</p>
-                            <p class="ship_2_overlay ship_image_overlay">ARCHIVE/TRANING/139.b.file</p>
-                          </div>
+                        <p class="title">SHIP SPECS:</p>
+                        <p>
+                          The company issue ship for solar system 223 is the MK-1. <br />
+                          A dual purpose fighter and miner. All Mk-1 factory direct ships come standard with travel mode, precision mode, and our award winning warranty.<br />
+                        </p>
+                        <p class="sub-section-title">MK-1 SPECS:</p>
+                        <p class="sub-section-body">SPEED: 1000 WEAPON: 50 HEALTH: 200 MINING: 100 CARGO: 100</p>
+                        <p class="sub-section-title"> CONTROLS: </p>
+                        <p class="sub-section-body">
+                          * TRAVEL MODE: <kbd>A</kbd> and <kbd>D</kbd> rotate, <kbd>W</kbd> and <kbd>S</kbd> for thrusters. <br />
+                          * PRECISION MODE: Hold <kbd>SpaceBar</kbd> , press <kbd>A</kbd> , <kbd>D</kbd> , <kbd>W</kbd> , <kbd>S</kbd> for thrusters, ship follows cursor. <br />
+                          * WEAPON: <kbd>LMB</kbd> Using your weapon activates precision mode. <br />
+                          * DOCK / UNDOCK: <kbd>RMB</kbd> <br />
+                          * RECON SAT: <kbd>Shift</kbd>
+                        </p>
+                        <p class="filler"></p>
+                        <image class="ship_1_gif" src="./images/space_shooter_ship_close_1.gif"></image>
+                        <image class="ship_2_gif" src="./images/space_shooter_ship_far_1.gif"></image>
+                        <p class="ship_1_overlay">ARCHIVE/TRANING/139.a.file</p>
+                        <p class="ship_2_overlay">ARCHIVE/TRANING/139.b.file</p>
                       </div>
                     </div>
-    
                     <input type="radio" name="tabs" id="tab_3">
                     <label for="tab_3">MINING</label>
                     <div class="tab">
                       <div class="mine_container">
-                        <p class="mine_header">MINING:</p>
-                        <p class="mine_main">
+                        <p class="title">MINING:</p>
+                        <p>
                           As an employee of Sol Mining Co. your sole purpose in life is getting us as many asteroids as possible.<br />
                           Keep the asteroids rolling in and life will be good for you.<br /> 
                           Solar System 223 asteroids are high in carbon, iron, titanium, aluminum, and vanadium.<br />
                         </p>
-                        <p class="procedure_1"> MINING PROCEDURE:</p>
-                        <p class="procedure_2">
+                        <p class="sub-section-title"> MINING PROCEDURE:</p>
+                        <p class="sub-section-body">
                           1: IDENTIFY an asteroid using your HUD.<br />
                           2: DOCK (<kbd>RMB</kbd>) with the asteroid. <br />
                           3: MINE the asteroid. <br />
                           4: UNDOCK with (<kbd>RMB</kbd>). 
                         </p>
                         <p class="filler"></p>
-                        <div class="mine_image_container">
-                          <image class="mine_1_active mine_image" src="./images/space_shooter_mine_close_1.gif"></image>
-                          <image class="mine_2_active mine_image" src="./images/space_shooter_mine_far_1.gif"></image>
-                        </div>
-                        <div class="mine_image_overlay_container">
-                          <p class="mine_1_overlay mine_image_overlay">ARCHIVE/TRANING/812.a.file</p>
-                          <p class="mine_2_overlay mine_image_overlay">ARCHIVE/TRANING/812.b.file</p>
-                        </div>
+                          <image class="mine_1_gif" src="./images/space_shooter_mine_close_1.gif"></image>
+                          <image class="mine_2_gif" src="./images/space_shooter_mine_far_1.gif"></image>
+                          <p class="mine_1_overlay">ARCHIVE/TRANING/812.a.file</p>
+                          <p class="mine_2_overlay">ARCHIVE/TRANING/812.b.file</p>
                       </div>
                     </div>
-
                     <input type="radio" name="tabs" id="tab_4">
                     <label for="tab_4">FACILITIES</label>
                     <div class="tab">
                       <div class="station_container">
-                        <p class="station_header">STATION:</p>
-                        <p class="station_main">
+                        <p class="title">STATION:</p>
+                        <p>
                           Solar System 223 is equiped with a S class sun station. Featuring Sol Mining Co.'s patent pending plasma fusion core, cemet based solar heatsinks, a 200MW 30GHZ RX/TX, and a 500 ton light lift. <br />
                         </p>
-                        <p class="procedure_1">ASTEROID DEPOSIT PROCEDURE*:</p>
-                        <p class="procedure_2">
+                        <p class="sub-section-title">ASTEROID DEPOSIT PROCEDURE*:</p>
+                        <p class="sub-section-body">
                           1: APPROACH the light lift.<br />
                           2: DOCK with (<kbd>RMB</kbd>).<br />
                           3: DEPOSIT asteroids.<br /> 
@@ -137,8 +116,8 @@
                         <img class="station_icon" src="./images/space_station_10_1.svg" width="170" height="170" />
                       </div>
                       <div class="upgrades_container">
-                        <p class="upgrades_header">UPGRADES:</p>
-                        <p class="upgrades_main">
+                        <p class="title">UPGRADES:</p>
+                        <p class="sub-section-body">
                           Sol Mining Co. offers our employees ships that are fit for all work you might encounter while fulfilling your contractual obligations. <br />
                           But due to popular demand we have reinstated our optional upgrade plan for all employees!*<br />
                         </p>
@@ -152,38 +131,30 @@
                         </p>
                       </div>
                     </div>
-
                     <input type="radio" name="tabs" id="tab_5">
                     <label for="tab_5">RECON</label>
                     <div class="tab">
-                      <p class="recon_sat_title">RECON:</p>
-                        <p class="recon_main">
-                          Per the terms of our contract Sol Mining Co. provides reconissance assets to our in field employees. <br />
-                        </p>
-                        <p class="recon_sat_title">SAT RECON:</p>
-                        <p class="recon_sat">
-                          You will have access to 223's long range optical sat network. <br />
-                          Press <kbd>Shift</kbd> to access the sat network and see a long range view of your surroundings.<br />
-                        </p>
-                        <p class="recon_briefing_title">RECON BRIEFING:</p>
-                        <p class="recon_briefing">
-                          223 is teaming with drones dead set on protecting the abundance of asteroids found here. The source of these drones is unknown. <br />
-                          There seems to be a never ending stream filtering into 223. The more we mine the more there are. <br />
-                        </p>
-                        <image class="enemies_active" src="./images/space_shooter_enemies.gif"></image>
+                      <div class="recon_container">
+                        <p class="title">RECON:</p>
+                          <p>
+                            Per the terms of our contract Sol Mining Co. provides reconissance assets to our in field employees. <br />
+                          </p>
+                          <p class="title">SATELLITE RECON:</p>
+                          <p>You will have access to the long range optical sat network.</p>
+                          <p class="sub-section-title">SAT CONNECT PROCEDURE:</p>
+                          <p class="sub-section-body">Press <kbd>Shift</kbd> to access the sat network and see a long range view of your surroundings.</p>
+                          <p class="title">RECON BRIEFING:</p>
+                          <p class="recon_briefing">
+                            223 is teaming with drones dead set on protecting the abundance of asteroids found here. <br />
+                            The source of these drones is unknown. <br />
+                            There seems to be a never ending stream filtering into 223. The more we mine the more there are. <br />
+                          </p>
+                          <image class="recon_gif" src="./images/space_shooter_enemies.gif"></image>
+                          <p class="recon_overlay">ASSETS/OPTICAL/lrvs.x12y34.file</p>
+                      </div>
                     </div>
                   </div>
-                <!-- end test -->
-
-
-                <!-- <p class="briefing">
-                    Welcome to Solar System 233. This isn't some academy simulator like you are used too, time to jump into the deep end kid. Solar System 223 will push you to your limit and beyond. <br />
-                    Death is not final around here. You have a contract to fulfill with our employer Sol Mining Co. If the swarms of drones that guard the asteroids we want turn you into dust, your stack will be re-compiled into a new body and we will toss you into a new ship. But be warned all your upgrades will be lost. <br />
-                    Suit up its time to fly.
-                </p> -->
-
               </div>
-          
               <div class="content_section map" data-section="3">
                 <p>Gluten-free you probably haven't heard of them jianbing pitchfork pabst. Kombucha occupy iPhone live-edge beard iceland freegan small batch before they sold out DIY marfa chillwave sustainable taiyaki bushwick. Meggings franzen kogi, next level fingerstache +1 kitsch YOLO activated charcoal craft beer adaptogen twee. Yuccie tumeric irony heirloom, shoreditch kinfolk swag cold-pressed 90's chicharrones.</p>
               </div>
