@@ -34,7 +34,7 @@ body {
   font-family: "Public Pixel";
   background-color: $color-2;
   color: $color-1;
-  line-height: 2.5rem;
+  line-height: 2.3rem;
 }
 
 a {
@@ -208,7 +208,7 @@ br {
                     border: 2px solid $color-1;
                 }
 
-/// about tabs content //////////////////////////////////////////////////////////////////
+                /// about tabs content //////////////////////////////////////////////////////////////////
 
                 /// mail
 
@@ -358,6 +358,7 @@ br {
                 }
 
                 // facilities
+                
                 .station_container {
                   position: relative;
 
@@ -380,6 +381,7 @@ br {
                   margin-top: 7rem;
                   margin-bottom: 4rem;
                 }
+
                 // recon
 
                 .recon_container {
@@ -417,7 +419,188 @@ br {
                 }
             }
         }
-  
+
+        ///// map ////////////////
+      
+        ///mixin 
+        @mixin orbit-setup($color-var, $font-size-orbit-var, $margin-orbit-var) {
+          //border-radius: 50%;
+          //border: 1px solid $color-var;
+          position: absolute;
+          color: $color-1;
+          padding: 2rem;
+          margin: $margin-orbit-var;
+          font-size: $font-size-orbit-var;
+        }
+        //////////////////////MAKE ANIMATION BELOW STEP 2 OF ORBIT WITH VARIABLE FOR DURATION & ANIMATOIN NAME SO YOU CAN MATCH REVERSE AND FORWARD ORBIT AS NEEDED////////////////
+        @mixin orbit-animation() {
+          animation-name: orbit-reverse;
+          animation-duration: 36s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        } 
+        //// end mixin
+        
+        .map {
+
+          .orbit-container {
+            position: absolute;
+            left: 300px;
+            top: 300px;
+
+            ///////////////////
+
+            .orbit-1 {
+              position: absolute;
+              width: 100px;
+              height: 100px;
+              border: 2px solid $color-1;
+              border-radius: 50%;
+              //////////////MAKE A MIXIN FOR STEP 1 OF ORBIT ANIMATION WITH VARIABLE FOR ANIMAITON NAME AND DURATION/////////////////////
+              animation-name: orbit;
+              animation-duration: 36s;
+              animation-iteration-count: infinite;
+              animation-timing-function: linear;
+              ////
+              .orbit-filter {
+                .sat-1 {
+                  @include orbit-setup($color-1, 1rem, 3rem);
+                  @include orbit-animation();
+                  right: 115px;
+                  filter: grayscale(100%) contrast(100%) brightness(150%);
+                }
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 65px;
+                  height: 65px;
+                  top: 44px;
+                  left: -128px;
+                  z-index:2;
+                  background-color: $color-1;
+                  border-radius: 50%;
+                  opacity: 0.65;
+                }
+              }
+            }
+
+            .orbit-2 {
+              position: absolute;
+              width: 100px;
+              height: 100px;
+              border: 2px solid $color-1;
+              border-radius: 50%;
+              animation-name: orbit;
+              animation-duration: 36s;
+              animation-iteration-count: infinite;
+              animation-timing-function: linear;
+              ////
+              .orbit-filter {
+                .sat-2 {
+                  @include orbit-setup($color-1, 1rem, 3rem);
+                  @include orbit-animation();
+                  top: -200px;
+                  //opacity: 0.5;
+                  filter: grayscale(100%) contrast(100%) brightness(150%);////////////////////////////
+                }
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 58px;
+                  height: 58px;
+                  top: -159px;
+                  left: 42px;
+                  z-index:2;
+                  background-color: $color-1;
+                  border-radius: 50%;
+                  opacity: 0.65;
+                }
+              }
+            }
+
+            .orbit-3 {
+              position: absolute;
+              width: 100px;
+              height: 100px;
+              border: 2px solid $color-1;
+              border-radius: 50%;
+              animation-name: orbit;
+              animation-duration: 36s;
+              animation-iteration-count: infinite;
+              animation-timing-function: linear;
+              ////
+              .orbit-filter {
+                .sat-3 {
+                  @include orbit-setup($color-1, 1rem, 3rem);
+                  @include orbit-animation();
+                  top: 200px;
+                  //opacity: 0.5;
+                  filter: grayscale(100%) contrast(100%) brightness(150%);////////////////////////////
+                }
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 50px;
+                  height: 50px;
+                  top: 241px;
+                  left:41px;
+                  z-index:2;
+                  background-color: $color-1;
+                  border-radius: 50%;
+                  opacity: 0.65;
+                }
+              }
+            }
+
+            .orbit-4 {
+              position: absolute;
+              width: 100px;
+              height: 100px;
+              border: 2px solid $color-1;
+              border-radius: 50%;
+              animation-name: orbit;
+              animation-duration: 36s;
+              animation-iteration-count: infinite;
+              animation-timing-function: linear;
+              ////
+              .orbit-filter {
+                .sat-4 {
+                  @include orbit-setup($color-1, 1rem, 3rem);
+                  @include orbit-animation();
+                  right: -115px;
+                  //opacity: 0.5;
+                  filter: grayscale(100%) contrast(100%) brightness(150%);////////////////////////////
+                }
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 35px;
+                  height: 35px;
+                  top: 42px;
+                  left: 133px;
+                  z-index:2;
+                  background-color: $color-1;
+                  border-radius: 50%;
+                  opacity: 0.65;
+                }
+              }
+            }
+          }
+        }
+        
+        @keyframes orbit {
+          to { transform: rotate(360deg) }
+        }
+        
+        @keyframes orbit-reverse {
+          to { transform: rotate(-360deg) }
+        }
+
+        ////end map /////////////
         &_section {
           position: absolute;
           top: 0;

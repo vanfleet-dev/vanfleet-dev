@@ -24,7 +24,7 @@ body {
   font-family: "Public Pixel";
   background-color: #140f0c;
   color: #e47d36;
-  line-height: 2.5rem;
+  line-height: 2.3rem;
 }
 
 a {
@@ -387,6 +387,207 @@ br {
     width: 100%;
     margin-right: 0;
     margin-top: 0.2rem;
+  }
+}
+.container .content .map .orbit-container {
+  position: absolute;
+  left: 300px;
+  top: 300px;
+}
+.container .content .map .orbit-container .orbit-1 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #e47d36;
+  border-radius: 50%;
+  -webkit-animation-name: orbit;
+          animation-name: orbit;
+  -webkit-animation-duration: 36s;
+          animation-duration: 36s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.container .content .map .orbit-container .orbit-1 .orbit-filter .sat-1 {
+  position: absolute;
+  color: #e47d36;
+  padding: 2rem;
+  margin: 3rem;
+  font-size: 1rem;
+  -webkit-animation-name: orbit-reverse;
+          animation-name: orbit-reverse;
+  -webkit-animation-duration: 36s;
+          animation-duration: 36s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  right: 115px;
+  filter: grayscale(100%) contrast(100%) brightness(150%);
+}
+.container .content .map .orbit-container .orbit-1 .orbit-filter::before {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  top: 44px;
+  left: -128px;
+  z-index: 2;
+  background-color: #e47d36;
+  border-radius: 50%;
+  opacity: 0.65;
+}
+.container .content .map .orbit-container .orbit-2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #e47d36;
+  border-radius: 50%;
+  -webkit-animation-name: orbit;
+          animation-name: orbit;
+  -webkit-animation-duration: 36s;
+          animation-duration: 36s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.container .content .map .orbit-container .orbit-2 .orbit-filter .sat-2 {
+  position: absolute;
+  color: #e47d36;
+  padding: 2rem;
+  margin: 3rem;
+  font-size: 1rem;
+  -webkit-animation-name: orbit-reverse;
+          animation-name: orbit-reverse;
+  -webkit-animation-duration: 36s;
+          animation-duration: 36s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  top: -200px;
+  filter: grayscale(100%) contrast(100%) brightness(150%);
+}
+.container .content .map .orbit-container .orbit-2 .orbit-filter::before {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  top: -159px;
+  left: 42px;
+  z-index: 2;
+  background-color: #e47d36;
+  border-radius: 50%;
+  opacity: 0.65;
+}
+.container .content .map .orbit-container .orbit-3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #e47d36;
+  border-radius: 50%;
+  -webkit-animation-name: orbit;
+          animation-name: orbit;
+  -webkit-animation-duration: 36s;
+          animation-duration: 36s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.container .content .map .orbit-container .orbit-3 .orbit-filter .sat-3 {
+  position: absolute;
+  color: #e47d36;
+  padding: 2rem;
+  margin: 3rem;
+  font-size: 1rem;
+  -webkit-animation-name: orbit-reverse;
+          animation-name: orbit-reverse;
+  -webkit-animation-duration: 36s;
+          animation-duration: 36s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  top: 200px;
+  filter: grayscale(100%) contrast(100%) brightness(150%);
+}
+.container .content .map .orbit-container .orbit-3 .orbit-filter::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 241px;
+  left: 41px;
+  z-index: 2;
+  background-color: #e47d36;
+  border-radius: 50%;
+  opacity: 0.65;
+}
+.container .content .map .orbit-container .orbit-4 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #e47d36;
+  border-radius: 50%;
+  -webkit-animation-name: orbit;
+          animation-name: orbit;
+  -webkit-animation-duration: 36s;
+          animation-duration: 36s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.container .content .map .orbit-container .orbit-4 .orbit-filter .sat-4 {
+  position: absolute;
+  color: #e47d36;
+  padding: 2rem;
+  margin: 3rem;
+  font-size: 1rem;
+  -webkit-animation-name: orbit-reverse;
+          animation-name: orbit-reverse;
+  -webkit-animation-duration: 36s;
+          animation-duration: 36s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  right: -115px;
+  filter: grayscale(100%) contrast(100%) brightness(150%);
+}
+.container .content .map .orbit-container .orbit-4 .orbit-filter::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 42px;
+  left: 133px;
+  z-index: 2;
+  background-color: #e47d36;
+  border-radius: 50%;
+  opacity: 0.65;
+}
+@-webkit-keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes orbit-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes orbit-reverse {
+  to {
+    transform: rotate(-360deg);
   }
 }
 .container .content_section {
