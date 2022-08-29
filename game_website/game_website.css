@@ -282,14 +282,14 @@ br {
   position: absolute;
   left: 10px;
   top: 570px;
-  width: 350px;
+  width: 325px;
   border: 3px dotted #6d5334;
 }
 .container .content .about .tabs .ship_container .ship_2_gif {
   position: absolute;
   left: 400px;
   top: 570px;
-  width: 350px;
+  width: 325px;
   border: 3px dotted #6d5334;
 }
 .container .content .about .tabs .ship_container .ship_1_overlay {
@@ -314,14 +314,14 @@ br {
   position: absolute;
   left: 10px;
   top: 530px;
-  width: 350px;
+  width: 325px;
   border: 3px dotted #6d5334;
 }
 .container .content .about .tabs .mine_container .mine_2_gif {
   position: absolute;
   left: 400px;
   top: 530px;
-  width: 350px;
+  width: 325px;
   border: 3px dotted #6d5334;
 }
 .container .content .about .tabs .mine_container .mine_1_overlay {
@@ -369,12 +369,12 @@ br {
   left: 360px;
   top: 390px;
   margin: 3rem;
-  height: 250px;
+  height: 225px;
   border: 3px dotted #6d5334;
 }
 .container .content .about .tabs .recon_container .recon_overlay {
   position: absolute;
-  left: 395px;
+  left: 375px;
   top: 645px;
   font-size: 1rem;
 }
@@ -389,186 +389,173 @@ br {
     margin-top: 0.2rem;
   }
 }
-.container .content .map .orbit-container {
+.container .content .map .station-container {
   position: absolute;
-  left: 300px;
-  top: 300px;
+  left: 365px;
+  top: 465px;
 }
-.container .content .map .orbit-container .orbit-1 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border: 2px solid #e47d36;
-  border-radius: 50%;
-  -webkit-animation-name: orbit;
-          animation-name: orbit;
-  -webkit-animation-duration: 36s;
-          animation-duration: 36s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-.container .content .map .orbit-container .orbit-1 .orbit-filter .sat-1 {
-  position: absolute;
-  color: #e47d36;
-  padding: 2rem;
-  margin: 3rem;
-  font-size: 1rem;
-  -webkit-animation-name: orbit-reverse;
-          animation-name: orbit-reverse;
-  -webkit-animation-duration: 36s;
-          animation-duration: 36s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  right: 115px;
-  filter: grayscale(100%) contrast(100%) brightness(150%);
-}
-.container .content .map .orbit-container .orbit-1 .orbit-filter::before {
-  content: "";
-  position: absolute;
-  width: 65px;
-  height: 65px;
-  top: 44px;
-  left: -128px;
-  z-index: 2;
-  background-color: #e47d36;
-  border-radius: 50%;
-  opacity: 0.65;
-}
-.container .content .map .orbit-container .orbit-2 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border: 2px solid #e47d36;
-  border-radius: 50%;
-  -webkit-animation-name: orbit;
-          animation-name: orbit;
-  -webkit-animation-duration: 36s;
-          animation-duration: 36s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-.container .content .map .orbit-container .orbit-2 .orbit-filter .sat-2 {
-  position: absolute;
-  color: #e47d36;
-  padding: 2rem;
-  margin: 3rem;
-  font-size: 1rem;
-  -webkit-animation-name: orbit-reverse;
-          animation-name: orbit-reverse;
-  -webkit-animation-duration: 36s;
-          animation-duration: 36s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  top: -200px;
-  filter: grayscale(100%) contrast(100%) brightness(150%);
-}
-.container .content .map .orbit-container .orbit-2 .orbit-filter::before {
-  content: "";
-  position: absolute;
-  width: 58px;
-  height: 58px;
-  top: -159px;
-  left: 42px;
-  z-index: 2;
-  background-color: #e47d36;
-  border-radius: 50%;
-  opacity: 0.65;
-}
-.container .content .map .orbit-container .orbit-3 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border: 2px solid #e47d36;
-  border-radius: 50%;
-  -webkit-animation-name: orbit;
-          animation-name: orbit;
-  -webkit-animation-duration: 36s;
-          animation-duration: 36s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-.container .content .map .orbit-container .orbit-3 .orbit-filter .sat-3 {
-  position: absolute;
-  color: #e47d36;
-  padding: 2rem;
-  margin: 3rem;
-  font-size: 1rem;
-  -webkit-animation-name: orbit-reverse;
-          animation-name: orbit-reverse;
-  -webkit-animation-duration: 36s;
-          animation-duration: 36s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  top: 200px;
-  filter: grayscale(100%) contrast(100%) brightness(150%);
-}
-.container .content .map .orbit-container .orbit-3 .orbit-filter::before {
-  content: "";
-  position: absolute;
+.container .content .map .station-container .station-1 {
   width: 50px;
   height: 50px;
-  top: 241px;
-  left: 41px;
-  z-index: 2;
+  z-index: 300;
+  filter: grayscale(100%) contrast(100%) brightness(100%);
+}
+.container .content .map .sun-container {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border: 3px solid #e47d36;
+}
+.container .content .map .sun-container .orbit-filter .sun-1 {
+  position: absolute;
+  top: 300px;
+  left: 312px;
+  width: 150px;
+  height: 150px;
+  filter: grayscale(60%) contrast(60%) brightness(90%);
+}
+.container .content .map .sun-container .orbit-filter::before {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  z-index: 200;
   background-color: #e47d36;
-  border-radius: 50%;
-  opacity: 0.65;
+  opacity: 0.15;
 }
-.container .content .map .orbit-container .orbit-4 {
+.container .content .map .orbit-container {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  border: 2px solid #e47d36;
-  border-radius: 50%;
-  -webkit-animation-name: orbit;
-          animation-name: orbit;
-  -webkit-animation-duration: 36s;
-          animation-duration: 36s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  top: 400px;
+  left: 550px;
+  background-color: #e47d36;
 }
-.container .content .map .orbit-container .orbit-4 .orbit-filter .sat-4 {
+.container .content .map .orbit-container .orbit-planet-1 {
+  border: 2px dotted green;
+  border-radius: 50%;
+  z-index: 99;
+  right: 157px;
+  top: 16px;
   position: absolute;
-  color: #e47d36;
-  padding: 2rem;
-  margin: 3rem;
-  font-size: 1rem;
   -webkit-animation-name: orbit-reverse;
           animation-name: orbit-reverse;
-  -webkit-animation-duration: 36s;
-          animation-duration: 36s;
+  -webkit-animation-duration: 23s;
+          animation-duration: 23s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  right: -115px;
-  filter: grayscale(100%) contrast(100%) brightness(150%);
 }
-.container .content .map .orbit-container .orbit-4 .orbit-filter::before {
-  content: "";
+.container .content .map .orbit-container .orbit-planet-1 .orbit-filter .planet-1 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 60px;
+  filter: grayscale(90%) contrast(70%) brightness(100%);
+  -webkit-animation-name: orbit;
+          animation-name: orbit;
+  -webkit-animation-duration: 23s;
+          animation-duration: 23s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.container .content .map .orbit-container .orbit-planet-2 {
+  border: 2px dotted green;
+  border-radius: 50%;
+  z-index: 99;
+  right: 157px;
+  top: 16px;
+  position: absolute;
+  -webkit-animation-name: orbit;
+          animation-name: orbit;
+  -webkit-animation-duration: 34s;
+          animation-duration: 34s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.container .content .map .orbit-container .orbit-planet-2 .orbit-filter .planet-2 {
   position: absolute;
   width: 35px;
   height: 35px;
-  top: 42px;
-  left: 133px;
-  z-index: 2;
-  background-color: #e47d36;
+  right: 140px;
+  filter: grayscale(90%) contrast(70%) brightness(100%);
+  -webkit-animation-name: orbit-reverse;
+          animation-name: orbit-reverse;
+  -webkit-animation-duration: 34s;
+          animation-duration: 34s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.container .content .map .orbit-container .orbit-moon-1 {
+  border: 2px dotted green;
   border-radius: 50%;
-  opacity: 0.65;
+  z-index: 99;
+  right: 157px;
+  top: 16px;
+  position: absolute;
+  -webkit-animation-name: orbit-reverse;
+          animation-name: orbit-reverse;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.container .content .map .orbit-container .orbit-moon-1 .orbit-filter .moon-1 {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  right: 35px;
+  filter: grayscale(90%) contrast(70%) brightness(100%);
+  -webkit-animation-name: orbit;
+          animation-name: orbit;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.container .content .map .orbit-container .orbit-planet-3 {
+  border: 2px dotted green;
+  border-radius: 50%;
+  z-index: 99;
+  right: 157px;
+  top: 16px;
+  position: absolute;
+  -webkit-animation-name: orbit-reverse;
+          animation-name: orbit-reverse;
+  -webkit-animation-duration: 49s;
+          animation-duration: 49s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.container .content .map .orbit-container .orbit-planet-3 .orbit-filter .planet-3 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  right: 250px;
+  filter: grayscale(90%) contrast(70%) brightness(100%);
+  -webkit-animation-name: orbit;
+          animation-name: orbit;
+  -webkit-animation-duration: 49s;
+          animation-duration: 49s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.container .content .map .filler {
+  width: 800px;
+  height: 800px;
 }
 @-webkit-keyframes orbit {
   to {

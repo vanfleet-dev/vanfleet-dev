@@ -304,13 +304,13 @@ br {
 
                   .ship_1_gif {
                     @include position (absolute, 10px, 570px);
-                    width: 350px;
+                    width: 325px;
                     border: 3px dotted $color-3;
                   }
 
                   .ship_2_gif {
                     @include position (absolute, 400px, 570px);
-                    width: 350px;
+                    width: 325px;
                     border: 3px dotted $color-3;
                   }
 
@@ -336,13 +336,13 @@ br {
  
                   .mine_1_gif {
                     @include position (absolute, 10px, 530px);
-                    width: 350px;
+                    width: 325px;
                     border: 3px dotted $color-3;
                   }
 
                   .mine_2_gif {
                     @include position (absolute, 400px, 530px);
-                    width: 350px;
+                    width: 325px;
                     border: 3px dotted $color-3;
                   }
 
@@ -395,12 +395,12 @@ br {
                   .recon_gif {
                     @include position (absolute, 360px, 390px);
                     margin: 3rem;
-                    height: 250px;
+                    height: 225px;
                     border: 3px dotted $color-3;
                   }
 
                   .recon_overlay {
-                    @include position (absolute, 395px, 645px);
+                    @include position (absolute, 375px, 645px);
                     font-size: 1rem;
                   }
                 }
@@ -421,174 +421,108 @@ br {
         }
 
         ///// map ////////////////
-      
-        ///mixin 
-        @mixin orbit-setup($color-var, $font-size-orbit-var, $margin-orbit-var) {
-          //border-radius: 50%;
-          //border: 1px solid $color-var;
-          position: absolute;
-          color: $color-1;
-          padding: 2rem;
-          margin: $margin-orbit-var;
-          font-size: $font-size-orbit-var;
+
+        @mixin orbit-body-setup($class-var, $anim-name-var1, $anim-name-var2, $anim-dur-var, $size-var, $direction-var, $direction-value-var){
+
+          .orbit-#{$class-var} {
+            // testing
+            border: 2px dotted green;
+            border-radius: 50%;
+            z-index: 99;
+            //
+
+            // moon center position. needs to be added to arguments.
+            right: 157px;
+            top: 16px;
+            //
+
+            position: absolute;
+            animation-name: $anim-name-var1;
+            animation-duration: $anim-dur-var;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            .orbit-filter {
+
+              .#{$class-var} {
+                position: absolute;
+                width: $size-var;
+                height: $size-var;
+                #{$direction-var}: $direction-value-var;
+                filter: grayscale(90%) contrast(70%) brightness(100%);
+                animation-name: $anim-name-var2;
+                animation-duration: $anim-dur-var;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+              }
+            } 
+          }
         }
-        //////////////////////MAKE ANIMATION BELOW STEP 2 OF ORBIT WITH VARIABLE FOR DURATION & ANIMATOIN NAME SO YOU CAN MATCH REVERSE AND FORWARD ORBIT AS NEEDED////////////////
-        @mixin orbit-animation() {
-          animation-name: orbit-reverse;
-          animation-duration: 36s;
-          animation-iteration-count: infinite;
-          animation-timing-function: linear;
-        } 
-        //// end mixin
-        
+
+        // end mixin
+
         .map {
+
+          .station-container {
+            position: absolute;
+            left: 365px;
+            top: 465px;
+            
+            .station-1 {
+              width: 50px;
+              height: 50px;
+              z-index: 300;
+              filter: grayscale(100%) contrast(100%) brightness(100%);
+            }
+          }
+
+          .sun-container {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            border: 3px solid $color-1;
+            
+            .orbit-filter {
+
+              .sun-1 {
+                position: absolute;
+                top: 300px;
+                left: 312px;
+                width: 150px;
+                height: 150px;
+                filter: grayscale(60%) contrast(60%) brightness(90%);
+              }
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 800px;
+                height: 800px;
+                z-index: 200;
+                background-color: $color-1;
+                opacity: 0.15;
+              }
+            }
+          }
 
           .orbit-container {
             position: absolute;
-            left: 300px;
-            top: 300px;
+            top: 400px;
+            left: 550px;
+            background-color: $color-1;
+            
+            @include orbit-body-setup(planet-1, orbit-reverse, orbit, 23s, 20px, right, 60px);
+            @include orbit-body-setup(planet-2, orbit, orbit-reverse, 34s, 35px, right, 140px);
+            @include orbit-body-setup(moon-1, orbit-reverse, orbit, 10s, 13px, right, 35px);
+            @include orbit-body-setup(planet-3, orbit-reverse, orbit, 49s, 60px, right, 250px);
+            // @include orbit-body-setup(moon-2, orbit-reverse, orbit, 10s, 20px, right, 35px);
+            // @include orbit-body-setup(moon-3, orbit, orbit-reverse, 10s, 9px, right, 40px);
+            // @include orbit-body-setup(moon-4, orbit-reverse, orbit, 10s, 12px, right, 45px);
+          }
 
-            ///////////////////
-
-            .orbit-1 {
-              position: absolute;
-              width: 100px;
-              height: 100px;
-              border: 2px solid $color-1;
-              border-radius: 50%;
-              //////////////MAKE A MIXIN FOR STEP 1 OF ORBIT ANIMATION WITH VARIABLE FOR ANIMAITON NAME AND DURATION/////////////////////
-              animation-name: orbit;
-              animation-duration: 36s;
-              animation-iteration-count: infinite;
-              animation-timing-function: linear;
-              ////
-              .orbit-filter {
-                .sat-1 {
-                  @include orbit-setup($color-1, 1rem, 3rem);
-                  @include orbit-animation();
-                  right: 115px;
-                  filter: grayscale(100%) contrast(100%) brightness(150%);
-                }
-
-                &::before {
-                  content: "";
-                  position: absolute;
-                  width: 65px;
-                  height: 65px;
-                  top: 44px;
-                  left: -128px;
-                  z-index:2;
-                  background-color: $color-1;
-                  border-radius: 50%;
-                  opacity: 0.65;
-                }
-              }
-            }
-
-            .orbit-2 {
-              position: absolute;
-              width: 100px;
-              height: 100px;
-              border: 2px solid $color-1;
-              border-radius: 50%;
-              animation-name: orbit;
-              animation-duration: 36s;
-              animation-iteration-count: infinite;
-              animation-timing-function: linear;
-              ////
-              .orbit-filter {
-                .sat-2 {
-                  @include orbit-setup($color-1, 1rem, 3rem);
-                  @include orbit-animation();
-                  top: -200px;
-                  //opacity: 0.5;
-                  filter: grayscale(100%) contrast(100%) brightness(150%);////////////////////////////
-                }
-
-                &::before {
-                  content: "";
-                  position: absolute;
-                  width: 58px;
-                  height: 58px;
-                  top: -159px;
-                  left: 42px;
-                  z-index:2;
-                  background-color: $color-1;
-                  border-radius: 50%;
-                  opacity: 0.65;
-                }
-              }
-            }
-
-            .orbit-3 {
-              position: absolute;
-              width: 100px;
-              height: 100px;
-              border: 2px solid $color-1;
-              border-radius: 50%;
-              animation-name: orbit;
-              animation-duration: 36s;
-              animation-iteration-count: infinite;
-              animation-timing-function: linear;
-              ////
-              .orbit-filter {
-                .sat-3 {
-                  @include orbit-setup($color-1, 1rem, 3rem);
-                  @include orbit-animation();
-                  top: 200px;
-                  //opacity: 0.5;
-                  filter: grayscale(100%) contrast(100%) brightness(150%);////////////////////////////
-                }
-
-                &::before {
-                  content: "";
-                  position: absolute;
-                  width: 50px;
-                  height: 50px;
-                  top: 241px;
-                  left:41px;
-                  z-index:2;
-                  background-color: $color-1;
-                  border-radius: 50%;
-                  opacity: 0.65;
-                }
-              }
-            }
-
-            .orbit-4 {
-              position: absolute;
-              width: 100px;
-              height: 100px;
-              border: 2px solid $color-1;
-              border-radius: 50%;
-              animation-name: orbit;
-              animation-duration: 36s;
-              animation-iteration-count: infinite;
-              animation-timing-function: linear;
-              ////
-              .orbit-filter {
-                .sat-4 {
-                  @include orbit-setup($color-1, 1rem, 3rem);
-                  @include orbit-animation();
-                  right: -115px;
-                  //opacity: 0.5;
-                  filter: grayscale(100%) contrast(100%) brightness(150%);////////////////////////////
-                }
-
-                &::before {
-                  content: "";
-                  position: absolute;
-                  width: 35px;
-                  height: 35px;
-                  top: 42px;
-                  left: 133px;
-                  z-index:2;
-                  background-color: $color-1;
-                  border-radius: 50%;
-                  opacity: 0.65;
-                }
-              }
-            }
+          .filler {
+            width: 800px;
+            height: 800px;
           }
         }
         
@@ -601,6 +535,7 @@ br {
         }
 
         ////end map /////////////
+
         &_section {
           position: absolute;
           top: 0;
@@ -620,3 +555,4 @@ br {
         }
     }
 }
+
