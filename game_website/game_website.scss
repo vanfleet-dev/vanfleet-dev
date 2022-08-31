@@ -391,18 +391,33 @@ br {
                     width: 40rem;
                     line-height: 2.5rem;
                   }
-
-                  .recon_gif {
+                  .recon-gif-container {
                     @include position (absolute, 360px, 390px);
-                    margin: 3rem;
-                    height: 225px;
-                    border: 3px dotted $color-3;
+                    border: 3px dotted $color-1;
+                    .recon_gif {
+                      height: 250px;
+                      filter: grayscale(100%) contrast(130%) brightness(150%);
+                    }
+                  }
+                  
+    
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    width: 350px;
+                    height: 250px;
+                    left: 360px;
+                    top: 390px;
+                    z-index: 1;
+                    background-color: $color-1;
+                    opacity: 0.30;
                   }
 
                   .recon_overlay {
                     @include position (absolute, 375px, 645px);
                     font-size: 1rem;
                   }
+
                 }
               }  
             
@@ -421,41 +436,56 @@ br {
         }
 
         ///// map ////////////////
+        /// 
+        // // testing. put inside orbit mixin.
+        // border: 2px dotted green;
+        // border-radius: 50%;
+        // z-index: 99;
+        // //
 
-        @mixin orbit-body-setup($class-var, $anim-name-var1, $anim-name-var2, $anim-dur-var, $size-var, $direction-var, $direction-value-var){
+
+
+        //////////////// add particles for station, add ring to gas, add transform rotation for bodies in mixin. add background stars. add JS for controling gif playback speed. 
+
+
+
+        
+        @mixin orbit-body-setup($class-var, $anim-dur-var, $size-var, $direction-value-var, $direction-value-var1, $direction-value-var2, $orbit-cw, $moon){
 
           .orbit-#{$class-var} {
-            // testing
-            border: 2px dotted green;
-            border-radius: 50%;
-            z-index: 99;
-            //
-
-            // moon center position. needs to be added to arguments.
-            right: 157px;
-            top: 16px;
-            //
-
             position: absolute;
-            animation-name: $anim-name-var1;
             animation-duration: $anim-dur-var;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
 
-            .orbit-filter {
+            @if $moon {
+              right: $direction-value-var1;
+              top: $direction-value-var2;
+            }
 
-              .#{$class-var} {
-                position: absolute;
-                width: $size-var;
-                height: $size-var;
-                #{$direction-var}: $direction-value-var;
-                filter: grayscale(90%) contrast(70%) brightness(100%);
-                animation-name: $anim-name-var2;
-                animation-duration: $anim-dur-var;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
+            @if $orbit-cw {
+              animation-name: orbit-cw;
+            } @else {
+              animation-name: orbit-ccw;
+            }
+
+            .#{$class-var} {
+              position: absolute;
+              z-index: 1;
+              width: $size-var;
+              height: $size-var;
+              right: $direction-value-var;
+              animation-duration: $anim-dur-var;
+              animation-iteration-count: infinite;
+              animation-timing-function: linear;
+              filter: grayscale(100%) contrast(130%) brightness(100%);
+
+              @if $orbit-cw {
+                animation-name: orbit-ccw;
+              } @else {
+                animation-name: orbit-cw;
               }
-            } 
+            }
           }
         }
 
@@ -465,14 +495,14 @@ br {
 
           .station-container {
             position: absolute;
-            left: 365px;
-            top: 465px;
+            left: 375px;
+            top: 480px;
+            z-index: 2;
             
             .station-1 {
               width: 50px;
               height: 50px;
-              z-index: 300;
-              filter: grayscale(100%) contrast(100%) brightness(100%);
+              filter: grayscale(100%) contrast(130%) brightness(100%);
             }
           }
 
@@ -480,17 +510,16 @@ br {
             position: absolute;
             width: 800px;
             height: 800px;
-            border: 3px solid $color-1;
-            
-            .orbit-filter {
+            z-index: 3;
+            border: 3px dotted $color-1;
 
               .sun-1 {
                 position: absolute;
                 top: 300px;
-                left: 312px;
-                width: 150px;
-                height: 150px;
-                filter: grayscale(60%) contrast(60%) brightness(90%);
+                left: 310px;
+                width: 175px;
+                height: 175px;
+                filter: grayscale(90%) contrast(100%) brightness(100%);
               }
 
               &::before {
@@ -498,26 +527,25 @@ br {
                 position: absolute;
                 width: 800px;
                 height: 800px;
-                z-index: 200;
+                z-index: 4;
                 background-color: $color-1;
-                opacity: 0.15;
+                opacity: 0.20;
               }
-            }
           }
 
           .orbit-container {
             position: absolute;
-            top: 400px;
-            left: 550px;
+            top: 435px;
+            left: 400px;
             background-color: $color-1;
             
-            @include orbit-body-setup(planet-1, orbit-reverse, orbit, 23s, 20px, right, 60px);
-            @include orbit-body-setup(planet-2, orbit, orbit-reverse, 34s, 35px, right, 140px);
-            @include orbit-body-setup(moon-1, orbit-reverse, orbit, 10s, 13px, right, 35px);
-            @include orbit-body-setup(planet-3, orbit-reverse, orbit, 49s, 60px, right, 250px);
-            // @include orbit-body-setup(moon-2, orbit-reverse, orbit, 10s, 20px, right, 35px);
-            // @include orbit-body-setup(moon-3, orbit, orbit-reverse, 10s, 9px, right, 40px);
-            // @include orbit-body-setup(moon-4, orbit-reverse, orbit, 10s, 12px, right, 45px);
+            @include orbit-body-setup(planet-1, 32s, 20px, 60px, 0, 0, $orbit-cw: false, $moon: false);
+            @include orbit-body-setup(planet-2, 53s, 35px, 140px,  0, 0, $orbit-cw: true, $moon: false);
+            @include orbit-body-setup(moon-1, 12s, 13px, 35px, 157px, 16px, $orbit-cw: false, $moon: true);
+            @include orbit-body-setup(planet-3, 90s, 60px, 270px,  0, 0, $orbit-cw: false, $moon: false);
+            @include orbit-body-setup(moon-2, 30s, 14px, 76px, 300px, 30px, $orbit-cw: true, $moon: true);
+            @include orbit-body-setup(moon-3, 15s, 18px, 42px, 300px, 30px, $orbit-cw: true, $moon: true);
+            @include orbit-body-setup(moon-4, 30s, 10px, 63px, 300px, 30px, $orbit-cw: false, $moon: true);
           }
 
           .filler {
@@ -526,11 +554,11 @@ br {
           }
         }
         
-        @keyframes orbit {
+        @keyframes orbit-cw {
           to { transform: rotate(360deg) }
         }
         
-        @keyframes orbit-reverse {
+        @keyframes orbit-ccw {
           to { transform: rotate(-360deg) }
         }
 
@@ -555,4 +583,3 @@ br {
         }
     }
 }
-
