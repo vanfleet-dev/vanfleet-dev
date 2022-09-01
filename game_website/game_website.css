@@ -402,6 +402,17 @@ br {
     margin-top: 0.2rem;
   }
 }
+.container .content .map .bg-stars-container {
+  position: absolute;
+  top: -400px;
+  left: -400px;
+  width: 800px;
+  height: 800px;
+  z-index: -1;
+}
+.container .content .map .bg-stars-container .bg-stars {
+  filter: grayscale(70%) contrast(100%) brightness(100%);
+}
 .container .content .map .station-container {
   position: absolute;
   left: 375px;
@@ -441,7 +452,6 @@ br {
   position: absolute;
   top: 435px;
   left: 400px;
-  background-color: #e47d36;
 }
 .container .content .map .orbit-container .orbit-planet-1 {
   position: absolute;
@@ -466,9 +476,7 @@ br {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  filter: grayscale(100%) contrast(130%) brightness(100%);
-  -webkit-animation-name: orbit-cw;
-          animation-name: orbit-cw;
+  filter: grayscale(100%) contrast(130%) brightness(150%);
 }
 .container .content .map .orbit-container .orbit-planet-2 {
   position: absolute;
@@ -494,8 +502,6 @@ br {
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   filter: grayscale(100%) contrast(130%) brightness(100%);
-  -webkit-animation-name: orbit-ccw;
-          animation-name: orbit-ccw;
 }
 .container .content .map .orbit-container .orbit-moon-1 {
   position: absolute;
@@ -522,7 +528,7 @@ br {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  filter: grayscale(100%) contrast(130%) brightness(100%);
+  filter: grayscale(100%) contrast(130%) brightness(140%);
   -webkit-animation-name: orbit-cw;
           animation-name: orbit-cw;
 }
@@ -540,29 +546,27 @@ br {
 .container .content .map .orbit-container .orbit-planet-3 .planet-3 {
   position: absolute;
   z-index: 1;
-  width: 60px;
-  height: 60px;
-  right: 270px;
+  width: 55px;
+  height: 55px;
+  right: 272px;
   -webkit-animation-duration: 90s;
           animation-duration: 90s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  filter: grayscale(100%) contrast(130%) brightness(100%);
-  -webkit-animation-name: orbit-cw;
-          animation-name: orbit-cw;
+  filter: grayscale(100%) contrast(130%) brightness(80%);
 }
 .container .content .map .orbit-container .orbit-moon-2 {
   position: absolute;
-  -webkit-animation-duration: 30s;
-          animation-duration: 30s;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   right: 300px;
-  top: 30px;
+  top: 25px;
   -webkit-animation-name: orbit-cw;
           animation-name: orbit-cw;
 }
@@ -571,14 +575,14 @@ br {
   z-index: 1;
   width: 14px;
   height: 14px;
-  right: 76px;
-  -webkit-animation-duration: 30s;
-          animation-duration: 30s;
+  right: 77px;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  filter: grayscale(100%) contrast(130%) brightness(100%);
+  filter: grayscale(100%) contrast(130%) brightness(120%);
   -webkit-animation-name: orbit-ccw;
           animation-name: orbit-ccw;
 }
@@ -591,23 +595,23 @@ br {
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   right: 300px;
-  top: 30px;
+  top: 25px;
   -webkit-animation-name: orbit-cw;
           animation-name: orbit-cw;
 }
 .container .content .map .orbit-container .orbit-moon-3 .moon-3 {
   position: absolute;
   z-index: 1;
-  width: 18px;
-  height: 18px;
-  right: 42px;
+  width: 16px;
+  height: 16px;
+  right: 44px;
   -webkit-animation-duration: 15s;
           animation-duration: 15s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  filter: grayscale(100%) contrast(130%) brightness(100%);
+  filter: grayscale(100%) contrast(130%) brightness(90%);
   -webkit-animation-name: orbit-ccw;
           animation-name: orbit-ccw;
 }
@@ -620,7 +624,7 @@ br {
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   right: 300px;
-  top: 30px;
+  top: 25px;
   -webkit-animation-name: orbit-ccw;
           animation-name: orbit-ccw;
 }
@@ -639,6 +643,23 @@ br {
   filter: grayscale(100%) contrast(130%) brightness(100%);
   -webkit-animation-name: orbit-cw;
           animation-name: orbit-cw;
+}
+.container .content .map .orbit-container .orbit-ring-1 .ring-1 {
+  position: absolute;
+  z-index: 1;
+  width: 82px;
+  height: 82px;
+  right: 258px;
+  top: -14px;
+  -webkit-animation-name: orbit-cw;
+          animation-name: orbit-cw;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  filter: grayscale(100%) contrast(130%) brightness(500%);
 }
 .container .content .map .filler {
   width: 800px;
