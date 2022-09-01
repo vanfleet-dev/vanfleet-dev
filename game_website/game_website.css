@@ -402,6 +402,15 @@ br {
     margin-top: 0.2rem;
   }
 }
+.container .content .map .bg-stars-container {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  z-index: -1;
+}
+.container .content .map .bg-stars-container .bg-stars {
+  filter: grayscale(70%) contrast(100%) brightness(100%);
+}
 .container .content .map .station-container {
   position: absolute;
   left: 375px;
