@@ -404,6 +404,7 @@ br {
 }
 .container .content .map .bg-stars-container {
   position: absolute;
+  top: 40px;
   width: 800px;
   height: 800px;
   z-index: -1;
