@@ -1,5 +1,8 @@
 vanfleet-dev log
 
+9-1-22
+1: Cuntinued work on game website. Finished install and contact sections. Added new mixin for videos. finazlied layout. cleaned up markdown formatting. 
+
 8-31-22
 1: Cuntinued work on game website. Finished map section.
 

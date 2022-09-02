@@ -22,20 +22,20 @@
             <div class="content">
               <div class="content_section home visible" data-section="1">
                 <p class="title">Open Source 2D Rougelike Space Shooter</p>
-                <image class="home_static" src="./images/space_shooter_1.png"></image>
-                <image class="home_active" src="./images/space_shooter_1.gif"></image>
+                <image class="home-static" src="./images/space_shooter_1.png"></image>
+                <image class="home-active" src="./images/space_shooter_1.gif"></image>
               </div>
               <div class="content_section about" data-section="2">
                 <div class="tabs">
-                    <input type="radio" name="tabs" id="tab_1" checked="checked">
-                    <label for="tab_1">MAIL</label>
+                    <input type="radio" name="tabs" id="tab-1" checked="checked">
+                    <label for="tab-1">MAIL</label>
                     <div class="tab">
-                        <p class="brief_header">INTERNAL MAIL SYSTEM:</p>
+                        <p class="brief-header">INTERNAL MAIL SYSTEM:</p>
                         <p class="inbox" >*** <span>INBOX</span> ***</p>
                         <p class="from"><span>FROM:</span> management.sector200@solmining.com</p>
                         <p class="to"><span>TO:</span> employee.id2234325464@solmining.com</p>
                         <p class="subject"><span>SUBJECT:</span> Onboarding Brief</p>
-                        <p class="brief_main">
+                        <p class="brief-main">
                           Hello Employee 2234325464, <br />
                           You have been assinged to solar system 223 to fulfill your contractual obligations with Sol Mining Co. <br />
                           223 is a class 1 risk zone due to the signifigant drone activity in the area.<br />
@@ -45,21 +45,19 @@
                           Suit up, its time to fly. <br />
                           Yours always, <br />
                           Sector 200 Management Team <br />
-                          <span class="brief_legal">* Sol Mining Co. holds no resposibility for lost ship upgrades at the time of death.</span>
+                          <span class="brief-legal">* Sol Mining Co. holds no resposibility for lost ship upgrades at the time of death.</span>
                         </p>       
                     </div>
-                    <input type="radio" name="tabs" id="tab_2">
-                    <label for="tab_2">SHIP</label>
+                    <input type="radio" name="tabs" id="tab-2">
+                    <label for="tab-2">SHIP</label>
                     <div class="tab">
-                      <div class="ship_container">
+                      <div class="ship-container">
                         <p class="title">SHIP SPECS:</p>
                         <p>
                           The company issue ship for solar system 223 is the MK-1. <br />
                           A dual purpose fighter and miner. All Mk-1 factory direct ships come standard with travel mode, precision mode, and our award winning warranty.<br />
                         </p>
-                        <p class="sub-section-title">MK-1 SPECS:</p>
-                        <p class="sub-section-body">SPEED: 1000 WEAPON: 50 HEALTH: 200 MINING: 100 CARGO: 100</p>
-                        <p class="sub-section-title"> CONTROLS: </p>
+                        <p class="sub-section-title controls"> CONTROLS: </p>
                         <p class="sub-section-body">
                           * TRAVEL MODE: <kbd>A</kbd> and <kbd>D</kbd> rotate, <kbd>W</kbd> and <kbd>S</kbd> for thrusters. <br />
                           * PRECISION MODE: Hold <kbd>SpaceBar</kbd> , press <kbd>A</kbd> , <kbd>D</kbd> , <kbd>W</kbd> , <kbd>S</kbd> for thrusters, ship follows cursor. <br />
@@ -68,44 +66,50 @@
                           * RECON SAT: <kbd>Shift</kbd>
                         </p>
                         <p class="filler"></p>
-                        <image class="ship_1_gif" src="./images/space_shooter_ship_close_1.gif"></image>
-                        <image class="ship_2_gif" src="./images/space_shooter_ship_far_1.gif"></image>
-                        <p class="ship_1_overlay">ARCHIVE/TRANING/139.a.file</p>
-                        <p class="ship_2_overlay">ARCHIVE/TRANING/139.b.file</p>
+                        <div class="ship-1-gif-container">
+                          <img class="ship-1-gif" src="./images/space_shooter_ship_close_1.gif" />
+                          <p class="ship-1-overlay">ARCHIVE/TRANING/812.b.file</p>
+                        </div>
+                        <div class="ship-2-gif-container">
+                          <img class="ship-2-gif" src="./images/space_shooter_ship_far_1.gif" />
+                          <p class="ship-2-overlay">ARCHIVE/TRANING/812.b.file</p>
+                        </div>
                       </div>
                     </div>
-                    <input type="radio" name="tabs" id="tab_3">
-                    <label for="tab_3">MINING</label>
+                    <input type="radio" name="tabs" id="tab-3">
+                    <label for="tab-3">MINING</label>
                     <div class="tab">
-                      <div class="mine_container">
+                      <div class="mine-container">
                         <p class="title">MINING:</p>
                         <p>
                           As an employee of Sol Mining Co. your sole purpose in life is getting us as many asteroids as possible.<br />
                           Keep the asteroids rolling in and life will be good for you.<br /> 
                           Solar System 223 asteroids are high in carbon, iron, titanium, aluminum, and vanadium.<br />
                         </p>
-                        <p class="sub-section-title"> MINING PROCEDURE:</p>
+                        <p class="sub-section-title mining-procedure"> MINING PROCEDURE:</p>
                         <p class="sub-section-body">
                           1: IDENTIFY an asteroid using your HUD.<br />
                           2: DOCK (<kbd>RMB</kbd>) with the asteroid. <br />
                           3: MINE the asteroid. <br />
                           4: UNDOCK with (<kbd>RMB</kbd>). 
                         </p>
+                        <div class="mine-1-gif-container">
+                          <img class="mine-1-gif" src="./images/space_shooter_mine_close_1.gif" />
+                          <p class="mine-1-overlay">ARCHIVE/TRANING/812.b.file</p>
+                        </div>
+                        <div class="mine-2-gif-container">
+                          <img class="mine-2-gif" src="./images/space_shooter_mine_far_1.gif" />
+                          <p class="mine-2-overlay">ARCHIVE/TRANING/812.a.file</p>
+                        </div>
                         <p class="filler"></p>
-                          <image class="mine_1_gif" src="./images/space_shooter_mine_close_1.gif"></image>
-                          <image class="mine_2_gif" src="./images/space_shooter_mine_far_1.gif"></image>
-                          <p class="mine_1_overlay">ARCHIVE/TRANING/812.a.file</p>
-                          <p class="mine_2_overlay">ARCHIVE/TRANING/812.b.file</p>
                       </div>
                     </div>
-                    <input type="radio" name="tabs" id="tab_4">
-                    <label for="tab_4">FACILITIES</label>
+                    <input type="radio" name="tabs" id="tab-4">
+                    <label for="tab-4">FACILITIES</label>
                     <div class="tab">
-                      <div class="station_container">
+                      <div class="station-container">
                         <p class="title">STATION:</p>
-                        <p>
-                          Solar System 223 is equiped with a S class sun station. Featuring Sol Mining Co.'s patent pending plasma fusion core, cemet based solar heatsinks, a 200MW 30GHZ RX/TX, and a 500 ton light lift. <br />
-                        </p>
+                        <p>Solar System 223 is equiped with a S class sun station. Featuring Sol Mining Co.'s patent pending plasma fusion core, cemet based solar heatsinks, a 200MW 30GHZ RX/TX, and a 500 ton light lift.</p>
                         <p class="sub-section-title">ASTEROID DEPOSIT PROCEDURE*:</p>
                         <p class="sub-section-body">
                           1: APPROACH the light lift.<br />
@@ -113,52 +117,52 @@
                           3: DEPOSIT asteroids.<br /> 
                           4: UNDOCK with (<kbd>RMB</kbd>).
                         </p>
-                        <img class="station_icon" src="./images/space_station_1.svg" width="170" height="170" />
+                        <img class="station-icon" src="./images/space_station_1.svg" width="170" height="170" />
                       </div>
-                      <div class="upgrades_container">
+                      <div class="upgrades-container">
                         <p class="title">UPGRADES:</p>
-                        <p class="sub-section-body">
-                          Sol Mining Co. offers our employees ships that are fit for all work you might encounter while fulfilling your contractual obligations. <br />
-                          But due to popular demand we have reinstated our optional upgrade plan for all employees!*<br />
-                        </p>
-                        <img class="upgrade_icon" src="./images/main_ship_1.svg" width="100" height="100" />
+                        <p>Due to popular demand we have reinstated our optional upgrade plan for all employees!*</p>
+                        <img class="upgrade-icon" src="./images/main_ship_1.svg" />
+                        <p class="sub-section-title">UPGRADE CATEGORIES:</p>
+                        <p class="sub-section-body">|  SPEED  |  WEAPON  |  HEALTH  |  MINING  |  CARGO  |</p>
                       </div>
                       <div class="disclaimer">
-                        <p class="disclaimer_text">
+                        <p class="disclaimer-text">
                           *** DISCLAIMER *** <br />
                           *Improper use of the Sun Stations Light Lift when depositing asteroids can result in warranty termination. <br />
+                          *Sol Mining Co. offers our employees ships that are fit for all work you might encounter while fulfilling your contractual obligations. <br />
                           *The use of upgrades are not covered under warranty and are non transferable. SoL Mining Co. does not condone the user of upgrdes in any way.
                         </p>
                       </div>
                     </div>
-                    <input type="radio" name="tabs" id="tab_5">
-                    <label for="tab_5">RECON</label>
+                    <input type="radio" name="tabs" id="tab-5">
+                    <label for="tab-5">RECON</label>
                     <div class="tab">
-                      <div class="recon_container">
+                      <div class="recon-container">
                         <p class="title">RECON:</p>
-                          <p>
-                            Per the terms of our contract Sol Mining Co. provides reconissance assets to our in field employees. <br />
-                          </p>
-                          <p class="title">SATELLITE RECON:</p>
+                          <p>Per the terms of our contract Sol Mining Co. provides reconissance assets to our in field employees. </p>
+                          <p class="title sat-recon">SATELLITE RECON:</p>
                           <p>You will have access to the long range optical sat network.</p>
-                          <p class="sub-section-title">SAT CONNECT PROCEDURE:</p>
+                          <p class="sub-section-title connect-procedure">SAT CONNECT PROCEDURE:</p>
                           <p class="sub-section-body">Press <kbd>Shift</kbd> to access the sat network and see a long range view of your surroundings.</p>
-                          <p class="title">RECON BRIEFING:</p>
-                          <p class="recon_briefing">
+                          <p class="title recon-brief">RECON BRIEFING:</p>
+                          <p class="recon-brief-text">
                             223 is teaming with drones dead set on protecting the abundance of asteroids found here. <br />
                             The source of these drones is unknown. <br />
                             There seems to be a never ending stream filtering into 223. The more we mine the more there are. <br />
                           </p>
                           <div class="recon-gif-container">
-                            <image class="recon_gif" src="./images/space_shooter_enemies.gif"></image>
+                            <image class="recon-gif" src="./images/space_shooter_enemies.gif"></image>
+                            <p class="recon-overlay">ASSETS/OPTICAL/lrvs.x12y34.file</p>
                           </div>
-                          <p class="recon_overlay">ASSETS/OPTICAL/lrvs.x12y34.file</p>
+                          <p class="filler"></p>
                       </div>
                     </div>
                   </div>
               </div>
               <div class="content_section map" data-section="3">
-                <p class="title">SOLAR SYSTEM 223 LONG RANGE OPTICAL SAT FEED:</p>
+                <p class="title sat-feed">SOLAR SYSTEM 223 LONG RANGE OPTICAL SAT FEED:</p>
+                <p class="map-overlay">SAT UPLINK: device=/assets/video0 v4l2src num-buff 1 ! x-raw,640,480, tcpserversink  host=192.168.1.132 port=8181</p>
                   <div class="bg-stars-container">
                     <img class="bg-stars" src="./images/bg-stars.png"/>
                   </div>
@@ -193,17 +197,32 @@
                       </div>
                         <img class="planet-3" src="./images/gas_planet_1.gif" />
                     </div>  
-                    <!-- <div class="bg-stars-container">
-                      <img class="bg-stars" src="./images/bg-stars.png"/>
-                    </div> -->
                   </div>
                   <p class="filler"></p>
               </div>
               <div class="content_section install" data-section="4">
-                <p>Gluten-free you probably haven't heard of them jianbing pitchfork pabst. Kombucha occupy iPhone live-edge beard iceland freegan small batch before they sold out DIY marfa chillwave sustainable taiyaki bushwick. Meggings franzen kogi, next level fingerstache +1 kitsch YOLO activated charcoal craft beer adaptogen twee. Yuccie tumeric irony heirloom, shoreditch kinfolk swag cold-pressed 90's chicharrones.</p>
+                <div class="install-container">
+                  <p class="title">CLIENT DOWNLOAD:</p>
+                  <p class="sub-section-title"> LINUX: </p>
+                  <a href="192.168.1.1" class="sub-section-body download">DOWNLOAD</a>
+                  <p class="sub-section-title"> WINDOWS: </p>
+                  <a href="192.168.1.1" class="sub-section-body download">DOWNLOAD</a>
+                  <p class="sub-section-title"> MACINTOSH: </p>
+                  <a href="192.168.1.1" class="sub-section-body download">DOWNLOAD</a>
+                </div>
               </div>
               <div class="content_section contact" data-section="5">
-                <p>Gluten-free you probably haven't heard of them jianbing pitchfork pabst. Kombucha occupy iPhone live-edge beard iceland freegan small batch before they sold out DIY marfa chillwave sustainable taiyaki bushwick. Meggings franzen kogi, next level fingerstache +1 kitsch YOLO activated charcoal craft beer adaptogen twee. Yuccie tumeric irony heirloom, shoreditch kinfolk swag cold-pressed 90's chicharrones.</p>
+                <div class="contact-container">
+                  <p class="sub-section-title"> DISCORD: </p>
+                  <a href="discord.com" class="sub-section-body contact">JOIN OUR DISCORD</a>
+                  <p class="sub-section-title"> GITHUB: </p>
+                  <a href="https://github.com/vanfleet-dev/Open_Source_2D_Rougelike_Space_Shooter" class="sub-section-body contact">SOURCE CODE</a>
+                  <p class="sub-section-title"> DONATE: </p>
+                  <a href="patreon.com" class="sub-section-body contact">SUPPORT DEVELOPMENT</a>
+                  <p class="sub-section-title"> PRESS: </p>
+                  <a href="192.168.1.1" class="sub-section-body contact">MEDIA KIT</a> <br />
+                  <a href="mailto:someone@example.com" class="sub-section-body contact">REVIEWER KEYS</a>
+                </div> 
               </div>
             </div>
           </div>

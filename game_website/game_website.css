@@ -124,26 +124,28 @@ br {
 }
 .container .content .home {
   text-align: center;
-  font-size: 3rem;
   letter-spacing: 0.3rem;
+  width: 800px;
 }
 .container .content .home .title {
   margin: 3rem 10rem 5rem 10rem;
+  font-size: 3rem;
+  line-height: 4rem;
 }
-.container .content .home .home_static {
+.container .content .home .home-static {
   position: absolute;
   width: 700px;
   height: 500px;
-  margin: 10rem;
+  margin: 15rem;
   border: 2px solid #e47d36;
 }
-.container .content .home .home_static:hover {
+.container .content .home .home-static:hover {
   opacity: 0;
 }
-.container .content .home .home_active {
+.container .content .home .home-active {
   width: 700px;
   height: 500px;
-  margin: 10rem;
+  margin: 15rem;
   border: 2px solid #e47d36;
 }
 .container .content .about {
@@ -179,7 +181,7 @@ br {
   padding: 0 2rem;
   border: 2px solid #e47d36;
 }
-.container .content .about .tabs .brief_header {
+.container .content .about .tabs .brief-header {
   text-align: center;
   margin: 1rem auto;
   border: 3px dotted #6d5334;
@@ -191,7 +193,6 @@ br {
 .container .content .about .tabs .inbox {
   text-align: center;
   margin-top: 2rem;
-  border-top: none;
   font-size: 1.7rem;
   padding-bottom: 1rem;
   -webkit-animation: blink 3s linear infinite;
@@ -259,137 +260,231 @@ br {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
 }
-.container .content .about .tabs .brief_main {
+.container .content .about .tabs .brief-main {
   font-size: 1.3rem;
   letter-spacing: 0.3rem;
   border-left: 3px dotted #6d5334;
   border-right: 3px dotted #6d5334;
-  padding: 4.5rem;
+  padding: 3rem;
   margin: 1rem;
 }
-.container .content .about .tabs .brief_main .brief_legal {
+.container .content .about .tabs .brief-main .brief-legal {
   margin-top: 3rem;
   font-size: 0.75rem;
   padding: 1rem;
 }
-.container .content .about .tabs .ship_container {
+.container .content .about .tabs .ship-container {
   position: relative;
 }
-.container .content .about .tabs .ship_container .filler {
-  height: 300px;
+.container .content .about .tabs .ship-container .controls {
+  margin-top: 10rem;
 }
-.container .content .about .tabs .ship_container .ship_1_gif {
+.container .content .about .tabs .ship-container .filler {
+  height: 379px;
+}
+.container .content .about .tabs .ship-container .ship-1-gif-container {
   position: absolute;
-  left: 10px;
-  top: 570px;
-  width: 325px;
-  border: 3px dotted #6d5334;
+  left: 425px;
+  top: 610px;
+  width: 300px;
+  height: 250px;
 }
-.container .content .about .tabs .ship_container .ship_2_gif {
+.container .content .about .tabs .ship-container .ship-1-gif-container .ship-1-gif {
+  height: 250px;
+  filter: grayscale(100%) contrast(130%) brightness(130%);
+  z-index: 1;
+}
+.container .content .about .tabs .ship-container .ship-1-gif-container::before {
+  content: "";
   position: absolute;
-  left: 400px;
-  top: 570px;
-  width: 325px;
-  border: 3px dotted #6d5334;
+  width: 300px;
+  height: 250px;
+  background-color: #e47d36;
+  opacity: 0.3;
+  z-index: 2;
 }
-.container .content .about .tabs .ship_container .ship_1_overlay {
+.container .content .about .tabs .ship-container .ship-1-overlay {
   position: absolute;
-  left: 20px;
-  top: 800px;
-  font-size: 1.2rem;
+  top: 1px;
+  font-size: 1rem;
+  border: 3px dotted #e47d36;
+  width: 300px;
+  height: 250px;
+  text-align: center;
 }
-.container .content .about .tabs .ship_container .ship_2_overlay {
+.container .content .about .tabs .ship-container .ship-2-gif-container {
   position: absolute;
-  left: 410px;
-  top: 800px;
-  font-size: 1.2rem;
+  left: 35px;
+  top: 610px;
+  width: 300px;
+  height: 250px;
 }
-.container .content .about .tabs .mine_container {
+.container .content .about .tabs .ship-container .ship-2-gif-container .ship-2-gif {
+  height: 250px;
+  filter: grayscale(100%) contrast(130%) brightness(130%);
+  z-index: 1;
+}
+.container .content .about .tabs .ship-container .ship-2-gif-container::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 250px;
+  background-color: #e47d36;
+  opacity: 0.3;
+  z-index: 2;
+}
+.container .content .about .tabs .ship-container .ship-2-overlay {
+  position: absolute;
+  top: 1px;
+  font-size: 1rem;
+  border: 3px dotted #e47d36;
+  width: 300px;
+  height: 250px;
+  text-align: center;
+}
+.container .content .about .tabs .mine-container {
   position: relative;
 }
-.container .content .about .tabs .mine_container .filler {
-  height: 384px;
+.container .content .about .tabs .mine-container .mining-procedure {
+  margin-top: 8rem;
 }
-.container .content .about .tabs .mine_container .mine_1_gif {
+.container .content .about .tabs .mine-container .filler {
+  height: 399px;
+}
+.container .content .about .tabs .mine-container .mine-1-gif-container {
   position: absolute;
-  left: 10px;
-  top: 530px;
-  width: 325px;
-  border: 3px dotted #6d5334;
+  left: 425px;
+  top: 610px;
+  width: 300px;
+  height: 250px;
 }
-.container .content .about .tabs .mine_container .mine_2_gif {
+.container .content .about .tabs .mine-container .mine-1-gif-container .mine-1-gif {
+  height: 250px;
+  filter: grayscale(100%) contrast(130%) brightness(130%);
+  z-index: 1;
+}
+.container .content .about .tabs .mine-container .mine-1-gif-container::before {
+  content: "";
   position: absolute;
-  left: 400px;
-  top: 530px;
-  width: 325px;
-  border: 3px dotted #6d5334;
+  width: 300px;
+  height: 250px;
+  background-color: #e47d36;
+  opacity: 0.3;
+  z-index: 2;
 }
-.container .content .about .tabs .mine_container .mine_1_overlay {
+.container .content .about .tabs .mine-container .mine-1-overlay {
   position: absolute;
-  left: 20px;
-  top: 800px;
-  font-size: 1.2rem;
+  top: 1px;
+  font-size: 1rem;
+  border: 3px dotted #e47d36;
+  width: 300px;
+  height: 250px;
+  text-align: center;
 }
-.container .content .about .tabs .mine_container .mine_2_overlay {
+.container .content .about .tabs .mine-container .mine-2-gif-container {
   position: absolute;
-  left: 410px;
-  top: 800px;
-  font-size: 1.2rem;
+  left: 35px;
+  top: 610px;
+  width: 300px;
+  height: 250px;
 }
-.container .content .about .tabs .station_container {
+.container .content .about .tabs .mine-container .mine-2-gif-container .mine-2-gif {
+  height: 250px;
+  filter: grayscale(100%) contrast(130%) brightness(130%);
+  z-index: 1;
+}
+.container .content .about .tabs .mine-container .mine-2-gif-container::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 250px;
+  background-color: #e47d36;
+  opacity: 0.3;
+  z-index: 2;
+}
+.container .content .about .tabs .mine-container .mine-2-overlay {
+  position: absolute;
+  top: 1px;
+  font-size: 1rem;
+  border: 3px dotted #e47d36;
+  width: 300px;
+  height: 250px;
+  text-align: center;
+}
+.container .content .about .tabs .station-container {
   position: relative;
 }
-.container .content .about .tabs .station_container .station_icon {
+.container .content .about .tabs .station-container .station-icon {
   position: absolute;
   left: 550px;
-  top: 235px;
+  top: 180px;
+  width: 160px;
+  height: 160px;
 }
-.container .content .about .tabs .upgrades_container {
+.container .content .about .tabs .upgrades-container {
   position: relative;
+  margin-top: 7rem;
 }
-.container .content .about .tabs .upgrades_container .upgrade_icon {
+.container .content .about .tabs .upgrades-container .upgrade-icon {
   position: absolute;
-  left: 640px;
-  top: 90px;
+  left: 650px;
+  top: 130px;
+  width: 60px;
+  height: 60px;
 }
 .container .content .about .tabs .disclaimer {
   font-size: 0.8rem;
   margin-top: 7rem;
-  margin-bottom: 4rem;
+  margin-bottom: 4.4rem;
 }
-.container .content .about .tabs .recon_container {
+.container .content .about .tabs .recon-container {
   position: relative;
 }
-.container .content .about .tabs .recon_container .recon_briefing {
+.container .content .about .tabs .recon-container .sat-recon {
+  margin-top: 8rem;
+}
+.container .content .about .tabs .recon-container .connect-procedure {
+  margin-top: 6rem;
+}
+.container .content .about .tabs .recon-container .recon-brief {
+  margin-top: 10rem;
+}
+.container .content .about .tabs .recon-container .recon-brief-text {
   width: 40rem;
   line-height: 2.5rem;
 }
-.container .content .about .tabs .recon_container .recon-gif-container {
-  position: absolute;
-  left: 360px;
-  top: 390px;
-  border: 3px dotted #e47d36;
+.container .content .about .tabs .recon-container .filler {
+  height: 82px;
 }
-.container .content .about .tabs .recon_container .recon-gif-container .recon_gif {
+.container .content .about .tabs .recon-container .recon-gif-container {
+  position: absolute;
+  left: 380px;
+  top: 545px;
+  width: 355px;
+  height: 255px;
+}
+.container .content .about .tabs .recon-container .recon-gif-container .recon-gif {
   height: 250px;
   filter: grayscale(100%) contrast(130%) brightness(150%);
+  z-index: 1;
 }
-.container .content .about .tabs .recon_container::before {
+.container .content .about .tabs .recon-container .recon-gif-container::before {
   content: "";
   position: absolute;
-  width: 350px;
-  height: 250px;
-  left: 360px;
-  top: 390px;
-  z-index: 1;
+  width: 355px;
+  height: 255px;
   background-color: #e47d36;
   opacity: 0.3;
+  z-index: 2;
 }
-.container .content .about .tabs .recon_container .recon_overlay {
+.container .content .about .tabs .recon-container .recon-overlay {
   position: absolute;
-  left: 375px;
-  top: 645px;
+  top: 1px;
   font-size: 1rem;
+  border: 3px dotted #e47d36;
+  width: 355px;
+  height: 255px;
+  text-align: center;
 }
 @media (max-width: 45em) {
   .container .content .about .tabs .tab,
@@ -401,6 +496,18 @@ br {
     margin-right: 0;
     margin-top: 0.2rem;
   }
+}
+.container .content .map .sat-feed {
+  margin: 1rem 0rem 8rem 0rem;
+}
+.container .content .map .map-overlay {
+  position: absolute;
+  font-size: 0.8rem;
+  border: 3px dotted #e47d36;
+  width: 800px;
+  height: 800px;
+  z-index: 10;
+  text-align: center;
 }
 .container .content .map .bg-stars-container {
   position: absolute;
@@ -427,7 +534,6 @@ br {
   width: 800px;
   height: 800px;
   z-index: 3;
-  border: 3px dotted #e47d36;
 }
 .container .content .map .sun-container .sun-1 {
   position: absolute;
@@ -448,8 +554,8 @@ br {
 }
 .container .content .map .orbit-container {
   position: absolute;
-  top: 435px;
-  left: 400px;
+  top: 477px;
+  left: 398px;
 }
 .container .content .map .orbit-container .orbit-planet-1 {
   position: absolute;
@@ -553,7 +659,7 @@ br {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  filter: grayscale(100%) contrast(130%) brightness(80%);
+  filter: grayscale(100%) contrast(130%) brightness(70%);
 }
 .container .content .map .orbit-container .orbit-moon-2 {
   position: absolute;
@@ -682,6 +788,40 @@ br {
   to {
     transform: rotate(-360deg);
   }
+}
+.container .content .install-container {
+  width: 800px;
+  height: 800px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #e47d36;
+}
+.container .content .install-container .download {
+  margin: 7rem;
+  padding: 3rem;
+}
+.container .content .install-container .download:hover {
+  color: #6d5334;
+}
+.container .content .install-container .download.active {
+  color: #6d5334;
+}
+.container .content .contact-container {
+  width: 800px;
+  height: 800px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #e47d36;
+}
+.container .content .contact-container .contact {
+  margin: 3rem;
+  padding: 3rem;
+}
+.container .content .contact-container .contact:hover {
+  color: #6d5334;
+}
+.container .content .contact-container .contact.active {
+  color: #6d5334;
 }
 .container .content_section {
   position: absolute;

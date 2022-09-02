@@ -51,8 +51,6 @@ br {
     margin: 2rem;;
 }
 
-/////////////////////////////////////////////////////
-
 .title {
   text-align: center;
   font-size: 2rem;
@@ -72,12 +70,89 @@ br {
   padding: 2rem 1rem;
 }
 
-/////////////////////////////////////////////////////
+/// mixins //////////////////////////////////////////////////
 
-@mixin position ($position-var, $left-var, $top-var) {
+@mixin position ($position-var, $direction-val-var1, $direction-val-var2) {
   position: $position-var;
-  left: $left-var;
-  top: $top-var;
+  left: $direction-val-var1;
+  top: $direction-val-var2;
+}
+
+@mixin media-setup ($class-var, $direction-val-var1, $direction-val-var2, $width-var, $height-var, $gif-height-var, $contrast-var, $bright-var) {
+  .#{$class-var}-gif-container {
+    position: absolute; 
+    left: $direction-val-var1; 
+    top: $direction-val-var2;
+    width: $width-var;
+    height: $height-var;
+
+    .#{$class-var}-gif {
+      height: $gif-height-var;
+      filter: grayscale(100%) contrast(#{$contrast-var}) brightness($bright-var);
+      z-index: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute; 
+      width: $width-var;
+      height: $height-var;
+      background-color: $color-1;
+      opacity: 0.30;
+      z-index: 2;
+    }
+  }
+
+  .#{$class-var}-overlay {
+    position: absolute;
+    top: 1px;
+    font-size: 1rem;
+    border: 3px dotted $color-1;
+    width: $width-var;
+    height: $height-var;
+    text-align: center;
+  }
+}
+
+@mixin orbit-body-setup($class-var, $anim-dur-var, $size-var, $direction-value-var, $direction-value-var1, $direction-value-var2, $bright-var, $orbit-cw, $moon){
+
+  .orbit-#{$class-var} {
+    position: absolute;
+    animation-duration: $anim-dur-var;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    @if $moon {
+      right: $direction-value-var1;
+      top: $direction-value-var2;
+    }
+
+    @if $orbit-cw {
+      animation-name: orbit-cw;
+    } @else {
+      animation-name: orbit-ccw;
+    }
+
+    .#{$class-var} {
+      position: absolute;
+      z-index: 1;
+      width: $size-var;
+      height: $size-var;
+      right: $direction-value-var;
+      animation-duration: $anim-dur-var;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      filter: grayscale(100%) contrast(130%) brightness(#{$bright-var});
+
+      @if $moon {
+        @if $orbit-cw {
+          animation-name: orbit-ccw;
+        } @else {
+          animation-name: orbit-cw;
+        }
+      }
+    }
+  }
 }
 
 /////////////////////////////////////////////////////
@@ -91,546 +166,498 @@ br {
   margin: 0 auto;
   padding: 3rem;
   
-    .sections {
-      position: relative;
-      z-index: 3;
-  
-        .section {
-          width: 80px;
-          height: $section-height;
-          text-align: left;
-          font-size: 2rem;
-          padding: 4rem 1rem;
-          transition: all 0.25s ease;
-          border-left: 2px solid $color-3;
-          color: $color-3;
-    
-            &:hover {
-              color: $color-1;
-            }
-    
-            &.active {
-              color: $color-1;
-            }
-    
-            @for $i from 1 through 5 {
-                &.section-#{$i}.active {
-                    & ~ .highlighter {
-                      transform: translateY(#{($i*$section-height) - $section-height});
-                    }
-                }
-            }
-            
+  .sections {
+    position: relative;
+    z-index: 3;
+
+    .section {
+      width: 80px;
+      height: $section-height;
+      text-align: left;
+      font-size: 2rem;
+      padding: 4rem 1rem;
+      transition: all 0.25s ease;
+      border-left: 2px solid $color-3;
+      color: $color-3;
+
+      &:hover {
+        color: $color-1;
+      }
+
+      &.active {
+        color: $color-1;
+      }
+
+      @for $i from 1 through 5 {
+        &.section-#{$i}.active {
+          & ~ .highlighter {
+            transform: translateY(#{($i*$section-height) - $section-height});
+          }
         }
-  
-        .highlighter {
-          display: block;
-          background: $color-1;
-          width: 3px;
-          height: $section-height;
-          position: absolute;
-          top: 0;
-          left: 0;
-          transition: transform 0.2s ease;
-          transition-delay: 0.1s;
-          z-index: 10;
-        }
+      }   
     }
   
-    .content {
-      position: relative;
-      
-        .home {
-          text-align: center;
-          font-size: 3rem;
-          letter-spacing: .3rem;
-          
-          .title {
-            margin: 3rem 10rem 5rem 10rem;
-          }
-          
-          .home_static {
-            position: absolute;
-            width: 700px;
-            height: 500px;
-            margin: 10rem;
-
-            border: 2px solid $color-1;
-              
-              &:hover {
-                opacity: 0;
-              }
-          }
-
-          .home_active {
-            width: 700px;
-            height: 500px;
-            margin: 10rem;
-            border: 2px solid $color-1;
-          }
-        }
-
-        .about {
-          font-size: 1.3rem;
-          letter-spacing: .2rem;
-
-            .tabs {
-              display: flex;
-              flex-wrap: wrap;
-
-                input[type="radio"] {
-                    display: none;
-                }
-
-                input[type="radio"]:checked + label {
-                    border: 3px solid $color-1;
-                }
-
-                input[type="radio"]:checked + label + .tab {
-                    display: block;
-                }
-
-                label {
-                  order: 1; // Put the labels first
-                  display: block;
-                  padding: 1rem 2rem;
-                  margin-right: 0.2rem;
-                  border: 2px solid $color-3;
-                  cursor: pointer;
-                }
-
-                .tab {
-                    order: 99; // Put the tabs last
-                    flex-grow: 1;
-                    width: 800px;
-                    display: none;
-                    padding: 0 2rem;
-                    border: 2px solid $color-1;
-                }
-
-                /// about tabs content //////////////////////////////////////////////////////////////////
-
-                /// mail
-
-                .brief_header {
-                  text-align: center;
-                  margin: 1rem auto;
-                  border: 3px dotted $color-3;
-                  text-decoration: underline dotted;
-                  font-size: 1.5rem;
-                  padding: 2rem;
-                }
-
-                .inbox {
-                  text-align: center;
-                  margin-top: 2rem;
-                  border-top: none;
-                  font-size: 1.7rem;
-                  padding-bottom: 1rem;
-                  animation: blink 3s linear infinite;
-                  span {
-                    text-decoration: underline dotted;
-                  }
-                }
-
-                @keyframes blink {
-                  0% {
-                    opacity: 1;
-                  }
-                  80% {
-                    opacity: 1;
-                  }
-                  81% {
-                    opacity: 0;
-                  }
-                  100% {
-                    opacity: 0;
-                  }
-                }
-
-                .from {
-                  margin: 1rem auto;
-                  border: 2px dotted $color-3;
-                  font-size: 1.2rem;
-                  padding: 1.5rem;
-                  span {
-                    text-decoration: underline dotted;
-                  }
-                }
-
-                .to {
-                  margin: 1rem auto;
-                  border: 2px dotted $color-3;
-                  font-size: 1.2rem;
-                  padding: 1.5rem;
-                  span {
-                    text-decoration: underline dotted;
-                  }
-                }
-
-                .subject {
-                  margin: 1rem auto;
-                  border: 2px dotted $color-3;
-                  font-size: 1.2rem;
-                  padding: 1.5rem;
-                  span {
-                    text-decoration: underline dotted;
-                  }
-                }
-
-                .brief_main {
-                  font-size: 1.3rem;
-                  letter-spacing: .3rem;
-                  border-left: 3px dotted $color-3;
-                  border-right: 3px dotted $color-3;
-                  padding: 4.5rem;
-                  margin: 1rem;
-                  
-                  .brief_legal {
-                    margin-top: 3rem;
-                    font-size: .75rem;
-                    padding: 1rem;
-                  }
-                }
-
-                /// ship
-
-                .ship_container {
-                  position: relative;
-
-                  .filler {
-                    height: 300px
-                  }
-
-                  .ship_1_gif {
-                    @include position (absolute, 10px, 570px);
-                    width: 325px;
-                    border: 3px dotted $color-3;
-                  }
-
-                  .ship_2_gif {
-                    @include position (absolute, 400px, 570px);
-                    width: 325px;
-                    border: 3px dotted $color-3;
-                  }
-
-                  .ship_1_overlay {
-                    @include position (absolute, 20px, 800px);
-                    font-size: 1.2rem;
-                  }
-
-                  .ship_2_overlay {
-                    @include position (absolute, 410px, 800px);
-                    font-size: 1.2rem;
-                  }
-                } 
-
-                /// mine
-
-                .mine_container {
-                  position: relative;
-
-                  .filler {
-                    height: 384px;
-                  }
- 
-                  .mine_1_gif {
-                    @include position (absolute, 10px, 530px);
-                    width: 325px;
-                    border: 3px dotted $color-3;
-                  }
-
-                  .mine_2_gif {
-                    @include position (absolute, 400px, 530px);
-                    width: 325px;
-                    border: 3px dotted $color-3;
-                  }
-
-                  .mine_1_overlay {
-                    @include position (absolute, 20px, 800px);
-                    font-size: 1.2rem;
-                  }
-
-                  .mine_2_overlay {
-                    @include position (absolute, 410px, 800px);
-                    font-size: 1.2rem;
-                  }
-                }
-
-                // facilities
-                
-                .station_container {
-                  position: relative;
-
-                  .station_icon {
-                    @include position (absolute, 550px, 235px);
-                  }
-                }
-
-                .upgrades_container {
-                  position: relative;
-
-                  .upgrade_icon {
-                    @include position (absolute, 640px, 90px);
-                  }
-
-                }
-
-                .disclaimer {
-                  font-size: .8rem;
-                  margin-top: 7rem;
-                  margin-bottom: 4rem;
-                }
-
-                // recon
-
-                .recon_container {
-                  position: relative;
-
-                  .recon_briefing {
-                    width: 40rem;
-                    line-height: 2.5rem;
-                  }
-                  .recon-gif-container {
-                    @include position (absolute, 360px, 390px);
-                    border: 3px dotted $color-1;
-                    .recon_gif {
-                      height: 250px;
-                      filter: grayscale(100%) contrast(130%) brightness(150%);
-                    }
-                  }
-                  
+    .highlighter {
+      display: block;
+      background: $color-1;
+      width: 3px;
+      height: $section-height;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.2s ease;
+      transition-delay: 0.1s;
+      z-index: 10;
+    }
+  }
+  
+  .content {
+    position: relative;
     
-                  &::before {
-                    content: "";
-                    position: absolute;
-                    width: 350px;
-                    height: 250px;
-                    left: 360px;
-                    top: 390px;
-                    z-index: 1;
-                    background-color: $color-1;
-                    opacity: 0.30;
-                  }
+    .home {
+      text-align: center;
+      letter-spacing: .3rem;
+      width: 800px;
+      
+      .title {
+        margin: 3rem 10rem 5rem 10rem;
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+      
+      .home-static {
+        position: absolute;
+        width: 700px;
+        height: 500px;
+        margin: 15rem;
+        border: 2px solid $color-1;
+          
+        &:hover {
+          opacity: 0;
+        }
+      }
 
-                  .recon_overlay {
-                    @include position (absolute, 375px, 645px);
-                    font-size: 1rem;
-                  }
+      .home-active {
+        width: 700px;
+        height: 500px;
+        margin: 15rem;
+        border: 2px solid $color-1;
+      }
+    }
 
-                }
-              }  
-            
-            @media (max-width: 45em) {
-                .tabs .tab,
-                .tabs label {
-                  order: initial;
-                }
+    .about {
+      font-size: 1.3rem;
+      letter-spacing: .2rem;
 
-                .tabs label {
-                  width: 100%;
-                  margin-right: 0;
-                  margin-top: 0.2rem;
-                }
-            }
+      .tabs {
+        display: flex;
+        flex-wrap: wrap;
+
+        input[type="radio"] {
+          display: none;
         }
 
-        ///// map ////////////////
-        /// 
-        // // testing. put inside orbit mixin.
-        // border: 2px dotted green;
-        // border-radius: 50%;
-        // z-index: 99;
-        // //
+        input[type="radio"]:checked + label {
+          border: 3px solid $color-1;
+        }
 
+        input[type="radio"]:checked + label + .tab {
+          display: block;
+        }
 
+        label {
+          order: 1;
+          display: block;
+          padding: 1rem 2rem;
+          margin-right: 0.2rem;
+          border: 2px solid $color-3;
+          cursor: pointer;
+        }
 
-        //////////////// add transform rotation for bodies in mixin. add background stars. add JS for controling gif playback speed. 
+        .tab {
+          order: 99;
+          flex-grow: 1;
+          width: 800px;
+          display: none;
+          padding: 0 2rem;
+          border: 2px solid $color-1;
+        }
 
-
-
+        /// about tabs content //////////////////////////////////////
         
-        @mixin orbit-body-setup($class-var, $anim-dur-var, $size-var, $direction-value-var, $direction-value-var1, $direction-value-var2, $bright-var, $orbit-cw, $moon){
+        /// mail
 
-          .orbit-#{$class-var} {
-            
-            position: absolute;
-            animation-duration: $anim-dur-var;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
+        .brief-header {
+          text-align: center;
+          margin: 1rem auto;
+          border: 3px dotted $color-3;
+          text-decoration: underline dotted;
+          font-size: 1.5rem;
+          padding: 2rem;
+        }
 
-            @if $moon {
-              right: $direction-value-var1;
-              top: $direction-value-var2;
-            }
-
-            @if $orbit-cw {
-              animation-name: orbit-cw;
-            } @else {
-              animation-name: orbit-ccw;
-            }
-
-            .#{$class-var} {
-              position: absolute;
-              z-index: 1;
-              width: $size-var;
-              height: $size-var;
-              right: $direction-value-var;
-              animation-duration: $anim-dur-var;
-              animation-iteration-count: infinite;
-              animation-timing-function: linear;
-              filter: grayscale(100%) contrast(130%) brightness(#{$bright-var});
-
-              @if $moon {
-                @if $orbit-cw {
-                  animation-name: orbit-ccw;
-                } @else {
-                  animation-name: orbit-cw;
-                }
-              }
-
-              // @if $orbit-cw {
-              //   animation-name: orbit-ccw;
-              // } @else {
-              //   animation-name: orbit-cw;
-              // }
-            }
+        .inbox {
+          text-align: center;
+          margin-top: 2rem;
+          font-size: 1.7rem;
+          padding-bottom: 1rem;
+          animation: blink 3s linear infinite;
+          span {
+            text-decoration: underline dotted;
           }
         }
 
-        // end mixin
-
-        .map {
-
-          .bg-stars-container {
-            position: absolute;
-            width: 800px;
-            height: 800px;
-            z-index: -1;
-
-            .bg-stars {
-              filter: grayscale(70%) contrast(100%) brightness(100%);
-            
-            }
+        @keyframes blink {
+          0% {
+            opacity: 1;
           }
-
-          .station-container {
-            position: absolute;
-            left: 375px;
-            top: 480px;
-            z-index: 2;
-            
-            .station-1 {
-              width: 50px;
-              height: 50px;
-              filter: grayscale(100%) contrast(130%) brightness(100%);
-            }
+          80% {
+            opacity: 1;
           }
-
-          .sun-container {
-            position: absolute;
-            width: 800px;
-            height: 800px;
-            z-index: 3;
-            border: 3px dotted $color-1;
-
-              .sun-1 {
-                position: absolute;
-                top: 300px;
-                left: 310px;
-                width: 175px;
-                height: 175px;
-                filter: grayscale(90%) contrast(100%) brightness(100%);
-              }
-
-              &::before {
-                content: "";
-                position: absolute;
-                width: 800px;
-                height: 800px;
-                z-index: 4;
-                background-color: $color-1;
-                opacity: 0.20;
-              }
+          81% {
+            opacity: 0;
           }
-
-          .orbit-container {
-            position: absolute;
-            top: 435px;
-            left: 400px;
-            
-            @include orbit-body-setup(planet-1, 32s, 20px, 60px, 0, 0, 150%, $orbit-cw: false, $moon: false);
-            @include orbit-body-setup(planet-2, 53s, 35px, 140px, 0, 0, 100%, $orbit-cw: true, $moon: false);
-            @include orbit-body-setup(moon-1, 12s, 13px, 35px, 157px, 16px, 140%, $orbit-cw: false, $moon: true);
-            @include orbit-body-setup(planet-3, 90s, 55px, 272px, 0, 0, 80%, $orbit-cw: false, $moon: false);
-            @include orbit-body-setup(moon-2, 20s, 14px, 77px, 300px, 25px, 120%, $orbit-cw: true, $moon: true);
-            @include orbit-body-setup(moon-3, 15s, 16px, 44px, 300px, 25px, 90%, $orbit-cw: true, $moon: true);
-            @include orbit-body-setup(moon-4, 30s, 10px, 63px, 300px, 25px, 100%, $orbit-cw: false, $moon: true);
-
-            .orbit-ring-1 {
-
-              .ring-1 {
-                position: absolute;
-                z-index: 1;
-                width: 82px;
-                height: 82px;
-                right: 258px;
-                top: -14px;
-                animation-name: orbit-cw;
-                animation-duration: 25s;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-                filter: grayscale(100%) contrast(130%) brightness(500%);
-              }
-            }
+          100% {
+            opacity: 0;
           }
-          // .bg-stars-container {
-          //   position: absolute;
-          //   top: -400px;
-          //   left: -400px;
-          //   width: 800px;
-          //   height: 800px;
-          //   z-index: 1;
+        }
 
-          //   .bg-stars {
-          //     filter: grayscale(70%) contrast(100%) brightness(100%);
-            
-          //   }
-          // }
+        .from {
+          margin: 1rem auto;
+          border: 2px dotted $color-3;
+          font-size: 1.2rem;
+          padding: 1.5rem;
+          span {
+            text-decoration: underline dotted;
+          }
+        }
 
+        .to {
+          margin: 1rem auto;
+          border: 2px dotted $color-3;
+          font-size: 1.2rem;
+          padding: 1.5rem;
+          span {
+            text-decoration: underline dotted;
+          }
+        }
+
+        .subject {
+          margin: 1rem auto;
+          border: 2px dotted $color-3;
+          font-size: 1.2rem;
+          padding: 1.5rem;
+          span {
+            text-decoration: underline dotted;
+          }
+        }
+
+        .brief-main {
+          font-size: 1.3rem;
+          letter-spacing: .3rem;
+          border-left: 3px dotted $color-3;
+          border-right: 3px dotted $color-3;
+          padding: 3rem;
+          margin: 1rem;
+          
+          .brief-legal {
+            margin-top: 3rem;
+            font-size: .75rem;
+            padding: 1rem;
+          }
+        }
+
+        /// ship
+
+        .ship-container {
+          position: relative;
+
+          .controls {
+            margin-top: 10rem
+          }
 
           .filler {
-            width: 800px;
-            height: 800px;
+            height: 379px
+          }
+
+          @include media-setup (ship-1, 425px, 610px, 300px, 250px, 250px, 130%, 130%);
+          @include media-setup (ship-2, 35px, 610px, 300px, 250px, 250px, 130%, 130%);
+        } 
+
+        /// mine
+
+        .mine-container {
+          position: relative;
+
+          .mining-procedure {
+            margin-top: 8rem;
+          }
+
+          .filler {
+            height: 399px;
+          }
+
+        @include media-setup (mine-1, 425px, 610px, 300px, 250px, 250px, 130%, 130%);
+        @include media-setup (mine-2, 35px, 610px, 300px, 250px, 250px, 130%, 130%);
+        }
+        
+        // facilities
+        
+        .station-container {
+          position: relative;
+
+          .station-icon {
+            @include position (absolute, 550px, 180px);
+            width: 160px;
+            height: 160px;
           }
         }
-        
-        @keyframes orbit-cw {
-          to { transform: rotate(360deg) }
-        }
-        
-        @keyframes orbit-ccw {
-          to { transform: rotate(-360deg) }
+
+        .upgrades-container {
+          position: relative;
+          margin-top: 7rem;
+
+          .upgrade-icon {
+            @include position (absolute, 650px, 130px);
+            width: 60px;
+            height: 60px;
+          }
+
         }
 
-        ////end map /////////////
-
-        &_section {
-          position: absolute;
-          top: 0;
-          left: 0;
-          opacity: 0;
-          z-index: 0;
-          transition: opacity 0s ease;
-  
-            &.visible {
-              position: relative;
-              opacity: 1;
-              width: 100%;
-              height: auto;
-              transition: opacity 0.5s ease;
-              z-index: 2;
-            }
+        .disclaimer {
+          font-size: .8rem;
+          margin-top: 7rem;
+          margin-bottom: 4.4rem;
         }
+
+        // recon
+
+        .recon-container {
+          position: relative;
+
+          .sat-recon {
+            margin-top: 8rem;
+          }
+
+          .connect-procedure {
+            margin-top: 6rem;
+          }
+
+          .recon-brief {
+            margin-top: 10rem;
+            
+          }
+
+          .recon-brief-text {
+            width: 40rem;
+            line-height: 2.5rem;
+          }
+
+          .filler {
+            height: 82px;
+          }
+
+          @include media-setup (recon, 380px, 545px, 355px, 255px, 250px, 130%, 150%);
+
+        }
+      }  
+          
+      @media (max-width: 45em) {
+        .tabs .tab,
+        .tabs label {
+          order: initial;
+        }
+
+        .tabs label {
+          width: 100%;
+          margin-right: 0;
+          margin-top: 0.2rem;
+        }
+      }
     }
+
+      ///// map ////////////////
+      
+      // // orbit center tool. add to orbit divs to see orbit center.
+      // border: 2px dotted green;
+      // border-radius: 50%;
+      // z-index: 99;
+      // //
+
+    .map {
+
+      .sat-feed {
+        margin: 1rem 0rem 8rem 0rem;
+      }
+
+      .map-overlay {
+        position: absolute;
+        font-size: 0.8rem;
+        border: 3px dotted $color-1;
+        width: 800px;
+        height: 800px;
+        z-index: 10;
+        text-align: center;
+      }
+
+      .bg-stars-container {
+        position: absolute;
+        width: 800px;
+        height: 800px;
+        z-index: -1;
+
+        .bg-stars {
+          filter: grayscale(70%) contrast(100%) brightness(100%);
+        }
+      }
+
+      .station-container {
+        position: absolute;
+        left: 375px;
+        top: 480px;
+        z-index: 2;
+        
+        .station-1 {
+          width: 50px;
+          height: 50px;
+          filter: grayscale(100%) contrast(130%) brightness(100%);
+        }
+      }
+
+      .sun-container {
+        position: absolute;
+        width: 800px;
+        height: 800px;
+        z-index: 3;
+
+        .sun-1 {
+          position: absolute;
+          top: 300px;
+          left: 310px;
+          width: 175px;
+          height: 175px;
+          filter: grayscale(90%) contrast(100%) brightness(100%);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 800px;
+          height: 800px;
+          z-index: 4;
+          background-color: $color-1;
+          opacity: 0.20;
+        }
+      }
+
+      .orbit-container {
+        position: absolute;
+        top: 477px;
+        left: 398px;
+        
+        @include orbit-body-setup(planet-1, 32s, 20px, 60px, 0, 0, 150%, $orbit-cw: false, $moon: false);
+        @include orbit-body-setup(planet-2, 53s, 35px, 140px, 0, 0, 100%, $orbit-cw: true, $moon: false);
+        @include orbit-body-setup(moon-1, 12s, 13px, 35px, 157px, 16px, 140%, $orbit-cw: false, $moon: true);
+        @include orbit-body-setup(planet-3, 90s, 55px, 272px, 0, 0, 70%, $orbit-cw: false, $moon: false);
+        @include orbit-body-setup(moon-2, 20s, 14px, 77px, 300px, 25px, 120%, $orbit-cw: true, $moon: true);
+        @include orbit-body-setup(moon-3, 15s, 16px, 44px, 300px, 25px, 90%, $orbit-cw: true, $moon: true);
+        @include orbit-body-setup(moon-4, 30s, 10px, 63px, 300px, 25px, 100%, $orbit-cw: false, $moon: true);
+
+        .orbit-ring-1 {
+
+          .ring-1 {
+            position: absolute;
+            z-index: 1;
+            width: 82px;
+            height: 82px;
+            right: 258px;
+            top: -14px;
+            animation-name: orbit-cw;
+            animation-duration: 25s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            filter: grayscale(100%) contrast(130%) brightness(500%);
+          }
+        }
+      }
+
+      .filler {
+        width: 800px;
+        height: 800px;
+      }
+    }
+    
+    @keyframes orbit-cw {
+      to { transform: rotate(360deg) }
+    }
+    
+    @keyframes orbit-ccw {
+      to { transform: rotate(-360deg) }
+    }
+      
+      /// install /////////////
+      
+    .install-container {
+      width: 800px;
+      height: 800px;
+      text-align: center;
+      font-size: 1.5rem;
+      color: $color-1;
+
+      .download {
+        margin: 7rem;
+        padding: 3rem;
+
+        &:hover {
+          color: $color-3;
+        }
+
+        &.active {
+          color: $color-3;
+        }
+      }
+    }
+      
+      /// contact ///////////
+      
+    .contact-container {
+      width: 800px;
+      height: 800px;
+      text-align: center;
+      font-size: 1.5rem;
+      color: $color-1;
+
+      .contact {
+        margin: 3rem;
+        padding: 3rem;
+
+        &:hover {
+          color: $color-3;
+        }
+
+        &.active {
+          color: $color-3;
+        }
+      }
+    }
+
+    &_section {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 0;
+      transition: opacity 0s ease;
+
+      &.visible {
+        position: relative;
+        opacity: 1;
+        width: 100%;
+        height: auto;
+        transition: opacity 0.5s ease;
+        z-index: 2;
+      }
+    }
+  }
 }
