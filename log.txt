@@ -1,4 +1,6 @@
 vanfleet-dev log
+9-2-22
+1: Completed lessons 80-82 for code camp's basic javascript course.
 
 9-1-22
 1: Cuntinued work on game website. Finished install and contact sections. Added new mixin for videos. finazlied layout. cleaned up markdown formatting. 
