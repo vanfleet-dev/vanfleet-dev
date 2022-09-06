@@ -1,4 +1,8 @@
 vanfleet-dev log
+
+9-5-22
+1: Completed lessons 91-95 for code camp's basic javascript course.
+
 9-4-22
 1: Completed lessons 83-90 for code camp's basic javascript course. 
 
