@@ -1,4 +1,8 @@
 vanfleet-dev log
+
+9-12-22
+1: Started course 10. Sections 1-6. "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu. Integrated the lessons content into written code practise.
+
 9-11-22
 1: Course 9 completed. Watched "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, course 9, sections 17-23, intro to javascript and integrated the lessons content into written code practise.   
 
