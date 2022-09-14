@@ -1,17 +1,20 @@
 vanfleet-dev log
 
+9-13-22
+1: Completed sections 7-8, course 10, intro to javascript "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise.
+
 9-12-22
-1: Started course 10. Sections 1-6. "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu. Integrated the lessons content into written code practise.
+1: Completed sections 1-6, course 10, intro to javascript "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise. 
 
 9-11-22
-1: Course 9 completed. Watched "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, course 9, sections 17-23, intro to javascript and integrated the lessons content into written code practise.   
+1: Course 9 completed. intro to javascript "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise.
 
 9-9-22
-1: Watched "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, course 9, sections 9-16, intro to javascript and integrated the lessons content into written code practise.     
+1: Completed sections 9-16, course 9, intro to javascript "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise.     
 
 9-8-22
 1: Began self guided javascript practise. I am going to attempt to make my own practise functions based on the lessons I watch or reach in these self guided practise sessions. 
-Watched "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, course 9, sections 1-8, intro to javascript and integrated the lessons content into written code practise.  
+Completed sections 1-8, course 9, intro to javascript "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise..  
 
 9-7-22
 1: Completed code camps basic javascript course.
