@@ -521,7 +521,7 @@ br {
 .container .content .map .station-container {
   position: absolute;
   left: 375px;
-  top: 480px;
+  top: 525px;
   z-index: 2;
 }
 .container .content .map .station-container .station-1 {

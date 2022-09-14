@@ -22,13 +22,4 @@ function handleClick(e) {
   currentContent.classList.add('visible');
 }
 
-var a = document.getElementById("gas-1");
- 
-function My_Audio() {
-    a.defaultPlaybackRate = 3.0;
-    a.load();
-    alert(a.defaultPlaybackRate);
-}
-
-
 console.log(sections)
