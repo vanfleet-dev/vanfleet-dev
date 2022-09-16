@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Public Pixel";
+  src: url("./font/PublicPixel.ttf");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Public Pixel";
+  background-color: #2a242b;
+  color: #d7B550;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+}
+
+a {
+  display: inline-block;
+  color: #90d59c;
+  text-decoration: none;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+ul {
+  margin-top: 30rem;
+}
+
+li {
+  padding: 1rem 1rem 0rem 1rem;
+  list-style: none;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+h1 {
+  margin: 1rem 0rem 1rem 0rem;
+  padding-bottom: 1rem;
+  font-size: 2.5rem;
+  text-align: center;
+  border-bottom: 2px solid #ffffb2;
+}
+
+p {
+  margin: 3rem 1rem 1rem 0rem;
+  font-size: 0.8rem;
+}
+
+#isleward {
+  width: 200px;
+  vertical-align: middle;
+  margin: 1rem 1rem 1rem 4rem;
+}
+
+#space-shooter {
+  width: 200px;
+  vertical-align: middle;
+  margin: 1rem 1rem 1rem 4rem;
+}
+
+#ufo-swamp {
+  width: 150px;
+  vertical-align: middle;
+  margin: 1rem 1rem 0rem 7rem;
+}
+
+img {
+  border: 1px solid #ffffb2;
+}/*# sourceMappingURL=styles.css.map */

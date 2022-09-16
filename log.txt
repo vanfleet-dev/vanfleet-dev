@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+9-15-22
+1: Completed sections 1-3, course 10 intermediate javascript "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise.
+2: Setup website for DOM practise.
+
 9-14-22
 1: Course 10 completed, intermediate javascript "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise.
 
