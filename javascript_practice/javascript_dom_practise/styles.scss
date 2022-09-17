@@ -91,4 +91,60 @@ img {
   border: 1px solid $color-8
 }
 
+.invis {
+  visibility: hidden;
+}
+
+.secret-message-container {
+  position: absolute;
+  left: 30rem;
+  top: 14rem;
+  .btn {
+    border: none;
+    background-color: $color-1;
+    margin-left: 2rem;
+    display: inline-block;
+    color: $color-6;
+  }
+  .secret-message {
+    margin-left: 2rem;
+    display: inline-block;
+  }
+
+}
+
+
+.gallery-container {
+  position: absolute;
+  left: 1rem;
+  top: 8rem;
+
+  .gallery-1 {
+    width: 200px;
+    vertical-align: middle;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+  
+  .button-one{
+    width: 20px;
+    transform: rotate(90deg);
+    color: $color-4;
+    margin: 1rem 1rem -1rem 3.5rem;
+  }
+  
+  .button-two {
+    width: 20px;
+    transform: rotate(90deg);
+    color: $color-4;
+    margin: 1rem 1rem -1rem 3.5rem;
+  }
+  
+  .button-three {
+    width: 20px;
+    transform: rotate(90deg);
+    color: $color-4;
+    margin: 1rem 1rem -1rem 3.5rem;
+  }
+}
+
 

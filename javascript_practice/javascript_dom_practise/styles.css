@@ -80,4 +80,54 @@ p {
 
 img {
   border: 1px solid #ffffb2;
+}
+
+.invis {
+  visibility: hidden;
+}
+
+.secret-message-container {
+  position: absolute;
+  left: 30rem;
+  top: 14rem;
+}
+.secret-message-container .btn {
+  border: none;
+  background-color: #2a242b;
+  margin-left: 2rem;
+  display: inline-block;
+  color: #68a8ab;
+}
+.secret-message-container .secret-message {
+  margin-left: 2rem;
+  display: inline-block;
+}
+
+.gallery-container {
+  position: absolute;
+  left: 1rem;
+  top: 8rem;
+}
+.gallery-container .gallery-1 {
+  width: 200px;
+  vertical-align: middle;
+  margin: 1rem 1rem 1rem 1rem;
+}
+.gallery-container .button-one {
+  width: 20px;
+  transform: rotate(90deg);
+  color: #cc7048;
+  margin: 1rem 1rem -1rem 3.5rem;
+}
+.gallery-container .button-two {
+  width: 20px;
+  transform: rotate(90deg);
+  color: #cc7048;
+  margin: 1rem 1rem -1rem 3.5rem;
+}
+.gallery-container .button-three {
+  width: 20px;
+  transform: rotate(90deg);
+  color: #cc7048;
+  margin: 1rem 1rem -1rem 3.5rem;
 }/*# sourceMappingURL=styles.css.map */
