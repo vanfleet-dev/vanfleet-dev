@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Public Pixel";
+  src: url("./font/PublicPixel.ttf");
+}
+
+body {
+  background-color: #ffffb2;
+  font-family: "Public Pixel";
+}
+
+h1 {
+  margin: 30px;
+  text-shadow: 5px 0 #2a242b;
+  font-size: 4rem;
+  color: #90d59c;
+}
+
+p {
+  font-size: 2rem;
+  color: #90d59c;
+  text-shadow: 2px 0 #2a242b;
+}
+
+img {
+  width: 80%;
+}
+
+.dice-container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+
+}
+
+.message-container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.message {
+  font-size: 3rem;
+  color: #90d59c;
+  text-shadow: 2px 0 #2a242b;
+}
