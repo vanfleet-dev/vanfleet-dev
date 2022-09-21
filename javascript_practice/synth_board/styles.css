@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "Public Pixel";
+  src: url("./font/PublicPixel.ttf");
+}
+body {
+  text-align: center;
+  background-color: #2a242b;
+  font-family: "Public Pixel";
+}
+
+h1 {
+  font-size: 5rem;
+  color: #d7B550;
+  text-shadow: 3px 0 #775b5b;
+}
+
+#synth-1 {
+  position: absolute;
+  left: 70px;
+  top: 210px;
+  outline: none;
+  border: 3px solid #d7B550;
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 500;
+  color: #d7B550;
+  text-shadow: 3px 0 #775b5b;
+  border-radius: 5px;
+  width: 55px;
+  height: 125px;
+  margin: 10px;
+  background-color: transparent;
+  z-index: 2;
+  opacity: 100%;
+  font-family: "Public Pixel";
+}
+#synth-1:hover {
+  background-color: #d7B550;
+  color: #2a242b;
+  opacity: 55%;
+}
+
+#synth-2 {
+  position: absolute;
+  left: 195px;
+  top: 210px;
+  outline: none;
+  border: 3px solid #d7B550;
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 500;
+  color: #d7B550;
+  text-shadow: 3px 0 #775b5b;
+  border-radius: 5px;
+  width: 55px;
+  height: 125px;
+  margin: 10px;
+  background-color: transparent;
+  z-index: 2;
+  opacity: 100%;
+  font-family: "Public Pixel";
+}
+#synth-2:hover {
+  background-color: #d7B550;
+  color: #2a242b;
+  opacity: 55%;
+}
+
+#synth-3 {
+  position: absolute;
+  left: 320px;
+  top: 210px;
+  outline: none;
+  border: 3px solid #d7B550;
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 500;
+  color: #d7B550;
+  text-shadow: 3px 0 #775b5b;
+  border-radius: 5px;
+  width: 55px;
+  height: 125px;
+  margin: 10px;
+  background-color: transparent;
+  z-index: 2;
+  opacity: 100%;
+  font-family: "Public Pixel";
+}
+#synth-3:hover {
+  background-color: #d7B550;
+  color: #2a242b;
+  opacity: 55%;
+}
+
+#synth-4 {
+  position: absolute;
+  left: 69px;
+  top: 375px;
+  outline: none;
+  border: 3px solid #d7B550;
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 500;
+  color: #d7B550;
+  text-shadow: 3px 0 #775b5b;
+  border-radius: 5px;
+  width: 85px;
+  height: 60px;
+  margin: 10px;
+  background-color: transparent;
+  z-index: 2;
+  opacity: 100%;
+  font-family: "Public Pixel";
+}
+#synth-4:hover {
+  background-color: #d7B550;
+  color: #2a242b;
+  opacity: 55%;
+}
+
+#synth-5 {
+  position: absolute;
+  left: 155px;
+  top: 375px;
+  outline: none;
+  border: 3px solid #d7B550;
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 500;
+  color: #d7B550;
+  text-shadow: 3px 0 #775b5b;
+  border-radius: 5px;
+  width: 85px;
+  height: 60px;
+  margin: 10px;
+  background-color: transparent;
+  z-index: 2;
+  opacity: 100%;
+  font-family: "Public Pixel";
+}
+#synth-5:hover {
+  background-color: #d7B550;
+  color: #2a242b;
+  opacity: 55%;
+}
+
+#synth-6 {
+  position: absolute;
+  left: 241px;
+  top: 375px;
+  outline: none;
+  border: 3px solid #d7B550;
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 500;
+  color: #d7B550;
+  text-shadow: 3px 0 #775b5b;
+  border-radius: 5px;
+  width: 85px;
+  height: 60px;
+  margin: 10px;
+  background-color: transparent;
+  z-index: 2;
+  opacity: 100%;
+  font-family: "Public Pixel";
+}
+#synth-6:hover {
+  background-color: #d7B550;
+  color: #2a242b;
+  opacity: 55%;
+}
+
+#synth-7 {
+  position: absolute;
+  left: 328px;
+  top: 375px;
+  outline: none;
+  border: 3px solid #d7B550;
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 500;
+  color: #d7B550;
+  text-shadow: 3px 0 #775b5b;
+  border-radius: 5px;
+  width: 85px;
+  height: 60px;
+  margin: 10px;
+  background-color: transparent;
+  z-index: 2;
+  opacity: 100%;
+  font-family: "Public Pixel";
+}
+#synth-7:hover {
+  background-color: #d7B550;
+  color: #2a242b;
+  opacity: 55%;
+}
+
+.synth-img-container {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+}
+.synth-img-container .synth-image {
+  width: 450px;
+  z-index: 0;
+}/*# sourceMappingURL=styles.css.map */

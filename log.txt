@@ -1,5 +1,8 @@
 vanfleet-dev log
 
+9-20-22
+1:Completed sections 1-8, course 13, Advanced javascript and DOM manipulation "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise.
+
 9-19-22
 1: Course 12 completed. Dice game project "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise.
 

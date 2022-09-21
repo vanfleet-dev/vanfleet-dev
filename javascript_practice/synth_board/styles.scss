@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Public Pixel";
+  src: url("./font/PublicPixel.ttf");
+}
+
+body {
+  text-align: center;
+  background-color: #2a242b;
+  font-family: "Public Pixel";
+}
+
+h1 {
+  font-size: 5rem;
+  color: #d7B550;
+  text-shadow: 3px 0 #775b5b;
+
+}
+
+@mixin synth-button ($pos-left, $pos-top, $width, $height, $button-id) {
+
+  ##{$button-id} {
+    position: absolute;
+    left: $pos-left;
+    top: $pos-top;
+    outline: none;
+    border: 3px solid #d7B550;
+    font-size: 1.5rem;
+    line-height: 2;
+    font-weight: 500;
+    color: #d7B550;
+    text-shadow: 3px 0 #775b5b;
+    border-radius: 5px;
+    width: $width;
+    height: $height;
+    margin: 10px;
+    background-color: transparent;
+    z-index: 2;
+    opacity: 100%;
+    font-family: "Public Pixel";
+
+    &:hover {
+      background-color: #d7B550;
+      color: #2a242b;
+      opacity: 55%;
+    }
+  }
+}
+
+@include synth-button (70px, 210px, 55px, 125px, synth-1);
+@include synth-button (195px, 210px, 55px, 125px, synth-2);
+@include synth-button (320px, 210px, 55px, 125px, synth-3);
+@include synth-button (69px, 375px, 85px, 60px, synth-4);
+@include synth-button (155px, 375px, 85px, 60px, synth-5);
+@include synth-button (241px, 375px, 85px, 60px, synth-6);
+@include synth-button (328px, 375px, 85px, 60px, synth-7);
+
+.synth-img-container {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  
+  .synth-image {
+    width: 450px;
+    z-index: 0;
+    //opacity: 10%;
+  }
+}
+
