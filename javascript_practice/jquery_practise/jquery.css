@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Public Pixel";
+  src: url("./font/PublicPixel.ttf");
+}
+body {
+  text-align: center;
+  background-color: #2a242b;
+  font-family: "Public Pixel";
+}
+
+.big-title {
+  font-size: 5rem;
+}
+
+.margin-5 {
+  margin: 5rem;
+}
+
+img {
+  width: 200px;
+  margin: 2rem;
+}
+
+button {
+  background-color: #2a242b;
+  border: 1px solid #d7B550;
+  color: #d7B550;
+}/*# sourceMappingURL=jquery.css.map */
