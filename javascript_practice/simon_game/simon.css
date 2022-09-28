@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Public Pixel";
+  src: url("./font/PublicPixel.ttf");
+}
+body {
+  text-align: center;
+  background-color: #2a242b;
+  font-family: "Public Pixel";
+}
+
+p {
+  color: #ffffb2;
+}
+
+#level-title {
+  font-size: 2rem;
+  margin: 5%;
+  color: #ffffb2;
+}
+
+.container {
+  display: block;
+  margin: auto;
+}
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid #ffffb2;
+  border-radius: 10%;
+}
+
+.game-over {
+  background-color: rgb(141, 34, 34);
+  opacity: 0.8;
+}
+
+.red {
+  background-color: rgb(196, 49, 49);
+}
+
+.green {
+  background-color: rgb(69, 158, 69);
+}
+
+.blue {
+  background-color: rgb(88, 88, 218);
+}
+
+.yellow {
+  background-color: rgb(238, 227, 73);
+}
+
+.pressed {
+  box-shadow: 0 0 20px #ffffb2;
+  background-color: #ffffb2;
+}/*# sourceMappingURL=simon.css.map */
