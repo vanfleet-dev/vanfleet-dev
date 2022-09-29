@@ -1,9 +1,14 @@
 vanfleet-dev log
 
+9-28-22
+1: Cuntinue to work on course 15. Simon game "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu.
+   Still working out the logic.
+2: Updated my javascript notes to include samples of DOM and jquery practise sessions. 
+
 9-27-22
 1: Started course 15. Simon game "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu.
-   Setup the project assets, files
-   Began working on the logic
+   Setup the project assets, files.
+   Began working on the logic.
 
 9-26-22
 1: Course 14 completed, jQuery "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise.
