@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+9-29-22
+
+1: Setup an instance of CapRover on a local server for hosting projects and portfolios. 
+
 9-28-22
 1: Cuntinue to work on course 15. Simon game "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu.
    Still working out the logic.
