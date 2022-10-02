@@ -1,152 +1,83 @@
-
-
-
 let patternArr = [];
 let currentPatternArr = [];
 let playerChoicesArr = [];
-let levelCount = 3;
+let levelCount = 1;
 let moveCount = 0;
-
-for (let i = 0; i < 100; i++) { // make pattern
-    let num = Math.random();
-    num = num * 4;
-    num = Math.floor(num) + 1;
-    if(num === 1) {
-        patternArr.push('green');
-    } else if (num === 2) {
-        patternArr.push('red');
-    } else if (num === 3) {
-        patternArr.push('yellow');
-    } else if (num === 4) {
-        patternArr.push('blue');
-    } 
-}
-
-console.log(`total pattern: ${patternArr}`);
-
 
 $(document).on('keypress', function (event) {
     if ( event.key === "n") {
-
-        if (currentPatternArr.length !== levelCount) {
-            for (;moveCount < levelCount ;) {
-            
-                currentPatternArr.push(patternArr[moveCount]);
-    
-                // let audio = new Audio (`./audio/${currentPatternArr[moveCount]}.mp3`);
-                // audio.play();
-        
-                //$(`#${currentPatternArr[moveCount]}`).addClass('pressed');
-    
-                //$(`#${currentPatternArr[moveCount]}`).removeClass('pressed');
-    
-                moveCount++;
-
-            }
-            
-            if (currentPatternArr.length === levelCount) {
-                moveCount = 0;
-            }
-        };        
-
-        test1 (); //console logs
-
+        generatePattern ();
+        setPattern ();
+        let audio = new Audio (`./audio/${currentPatternArr[0]}.mp3`); 
+        audio.play();
+        $(`#${currentPatternArr[0]}`).fadeTo(200, 0.3, function() { $(this).fadeTo(700, 1.0); });
         $('.btn').on('click', clickCheck);
     }
 });
 
+function generatePattern () {
+    for (let i = 0; i < 100; i++) {
+        let num = Math.random();
+        num = num * 4;
+        num = Math.floor(num) + 1;
+        if(num === 1) {
+            patternArr.push('green');
+        } else if (num === 2) {
+            patternArr.push('red');
+        } else if (num === 3) {
+            patternArr.push('yellow');
+        } else if (num === 4) {
+            patternArr.push('blue');
+        } 
+    }
+}
+
+
+function setPattern () {
+    if (currentPatternArr.length !== levelCount) {
+        for (;moveCount < levelCount ;) {
+            currentPatternArr.push(patternArr[moveCount]);
+            moveCount++;
+        }
+        if (currentPatternArr.length === levelCount) {
+            moveCount = 0;
+        }
+    };
+}
 
 function clickCheck (e) {
     let audio = new Audio (`./audio/${e.target.id}.mp3`); 
     audio.play();
-    $(`#${e.target.id}`).addClass('pressed');
-    setTimeout(function () {
-        $(`#${e.target.id}`).removeClass('pressed');
-    }, 300);
+    $(`#${e.target.id}`).fadeTo(200, 0.3, function() { $(this).fadeTo(700, 1.0); });
 
     if (e.target.id === currentPatternArr[moveCount]) {
         playerChoicesArr.push(e.target.id);
         moveCount++;
         if (playerChoicesArr.length === currentPatternArr.length) {
             levelCount++;
+            $('#level').text(`LEVEL: ${levelCount}`);
             moveCount = 0;
             currentPatternArr = [];
             playerChoicesArr = [];
-        }
-        console.log(`intra move count: ${moveCount}`); //test
-        console.log(`player choices: ${playerChoicesArr}`); //test
+            setPattern();
+            setTimeout(function () {
+                let audio = new Audio (`./audio/${currentPatternArr[currentPatternArr.length - 1]}.mp3`);
+                audio.play();
+                $(`#${currentPatternArr[currentPatternArr.length - 1]}`).fadeTo(200, 0.3, function() { $(this).fadeTo(700, 1.0); });
+            }, 500);
+         }
     } else {
-        $("body").html("<p>GAME OVER<p/>").css("color", "#d7B550").css("font-size", "9rem"); // game over
+        let audio = new Audio (`./audio/wrong.mp3`);
+        audio.play();
+        $("body").css("background-color", "#ffffb2");
+        $('#level').text(`LEVEL: 1`);
+        setTimeout(function () {
+            $("body").css("background-color", "#2a242b");
+        }, 500);
+        patternArr = [];
+        currentPatternArr = [];
+        playerChoicesArr = [];
+        levelCount = 1;
+        moveCount = 0;
     }
-    
-    console.log(`target ID: ${e.target.id}`); //test
 }
-
-
-function moveAmin(val) {
-    // anim ///////
-    let audio = new Audio (`./audio/${e.target.id}.mp3`); 
-    audio.play();
-    $(`#${e.target.id}`).addClass('pressed');
-    setTimeout(function () {
-        $(`#${e.target.id}`).removeClass('pressed');
-    }, 300);
-    //////////////
-};
-
-
-
-function test1 () {
-    console.log(`current pattern: ${currentPatternArr}`);
-    //console.log(`new pattern move: ${patternArr[moveCount]}`);
-    console.log(`levelCount: ${levelCount}`);
-    console.log(`move count: ${moveCount}`);
-};
-
-
-
-function test2 () {
-    console.log(`player choice: ${e.target.id}`);
-    //console.log(`new pattern added: ${patternArr[moveCount]}`);
-    console.log(`current pattern: ${currentPatternArr}`);
-    console.log(`levelCount: ${levelCount}`);
-    console.log(`move count: ${moveCount}`);
-};
-
-
-
-function moveAmin(val) {
-    // anim ///////
-    let audio = new Audio (`./audio/${e.target.id}.mp3`); 
-    audio.play();
-    $(`#${e.target.id}`).addClass('pressed');
-    setTimeout(function () {
-        $(`#${e.target.id}`).removeClass('pressed');
-    }, 300);
-    //////////////
-};
-
-
-
-(e.target.id !== currentPatternArr[moveCount]) 
-
-
-if (i > levelCount) { 
-    i = 0;
-    levelCoun++;
-    currentPatternArr.push(patternArr[levelCount]);
-
-    // anim ///////
-    let currentStep = patternArr[levelCount]; 
-    let audio = new Audio (`./audio/${currentStep}.mp3`);
-    audio.play();
-    $(`#${currentStep}`).addClass('pressed');
-    setTimeout(function () {
-    $(`#${currentStep}`).removeClass('pressed')
-    }, 300);
-    //////////////
-
-    console.log(`levelCount: ${levelCount}`);
-    console.log(`i: ${i}`);
-
-} 
