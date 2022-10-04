@@ -1,6 +1,10 @@
 vanfleet-dev log
 
-9-30-22
+10-3-22
+1: Course 18 completed. node.js "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu. integrated the lessons content into written code practise.
+2: Completed sections 1-5 express, course 19, js with node.js "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu. integrated the lessons content into written code practise.
+
+10-1-22
 1: Completed course 15. Simon game "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu.
 2: Documented CapRover server setup.
 
