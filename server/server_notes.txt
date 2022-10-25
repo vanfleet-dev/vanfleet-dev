@@ -2,8 +2,7 @@
 
 router setup:
 
-setup port forwards for 443, 80, 3000
-// disable 80 and 3000 after initial caprover setup. 
+setup port forwards for 443, 80
 
 ///////////////////////////////////////
 
@@ -29,150 +28,169 @@ apt-get install timeshift
 apt-get install genome-tweaks
 // diable suspend on lid closed.
 
-nano /etc/systemd/logind.conf
-    HandleLidSwitch=ignore
-// change HandleLidSwitch to ignore & uncomment.
-
 settings
-    no suspend on battery
+// no suspend on battery
 
-//////////////////////////////////////
-
-docker install (https://docs.docker.com/engine/install/ubuntu/):
-
-apt-get update
-
-apt-get install ca-certificates curl gnupg lsb-release
-
-mkdir -p /etc/apt/keyrings
-
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-apt-get update
-
-apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-
-///////////////////////////////////////
-
-capRover install (https://caprover.com/docs/get-started.html):
-
-ufw allow 80,443,3000,996,7946,4789,2377/tcp; ufw allow 7946,4789,2377/udp;
+ufw allow 80,443,2375,2376/tcp; ufw allow 2375,2376/udp;
 // setup firewall
 
-docker run -e MAIN_NODE_IP_ADDRESS=0.0.0.0 -p 80:80 -p 443:443 -p 3000:3000 -v /var/run/docker.sock:/var/run/docker.sock -v /captain:/captain caprover/caprover
-// make 0.0.0.0 your local ip address
-
 ///////////////////////////////////////
+ 
+install dokku (https://dokku.com/docs/getting-started/installation/):
 
-caprover cli setup:
-// install on dev system
+wget https://raw.githubusercontent.com/dokku/dokku/v0.28.2/bootstrap.sh
+sudo DOKKU_TAG=v0.28.2 bash bootstrap.sh
 
-npm install -g caprover
+ssh rootuserhere@IP.ADDRESS.HERE
 
-///////////////////////////////////////
+dokku domains:add-global 'domainName.here'
 
-caprover serversetup
- //one time operation to configure server the questions below are asked.
+dokku config:set --global DOKKU_LETSENCRYPT_EMAIL='email@here.com'
 
-? have you already started CapRover container on your server? Yes
-? IP address of your server: (WAN IP)
-? CapRover server root domain: domain.name
-? new CapRover password (min 8 characters): [hidden]
-? enter new CapRover password again: [hidden]
-? "valid" email address to get certificate and enable HTTPS: [your@email.com]
-? CapRover machine name, with whom the login credentials are stored locally: [yourCustomCapRoverMachineName]
+dokku letsencrypt:cron-job --add
 
-// server is then accessible at captain.the.domain
+echo 'CONTENTS_OF_ID_RSA_PUB_FILE' | dokku ssh-keys:add admin
 
 ///////////////////////////////////////
 
 
+deploy node app:
+
+
+*******on development pc*********
+
+the package.json for your app must include:
+"scripts": {
+    "start": "node FILENAME.js"
+  }, 
+
+
+ssh devdock@192.168.1.139
+// type yes to except auth. hit enter 
+
+*********************************
+
+
+*********in ssh on server********
+
+dokku apps:create 'APP NAME GOES HERE' (lower case letters and "-" only)
+// create a new empty app container. 'node-test-1' is used for the app name below.
+
+dokku git:initialize node-test-1
+// enables dokku to build the app from a git push. 
+
+*********************************
+
+
+*******on development pc*********
+
+git init
+// inside app directory top level
+
+git remote add dokku dokku@192.168.1.139:node-test-1
+// adds dokku as a remote push location. (the 1st 'dokku' is arbitrary)
+
+git add .
+// adds all content of the directory to commit cache
+
+git commit -m "commit message"
+// commit before pushing to dokku
+
+git push dokku master
+// you will see messages in the terminal while the app is compiled.
+
+*********************************
+
+
+*********in ssh on server********
+
+dokku logs node-test-1
+// if you app is running you will see the "listening on port" message on the last line.
+
+dokku proxy:ports-set node-test-1 http:80:80
+// assign port proxy. 1st number is external, second is internal. 
+
+*********************************
+
+
+*********in ssh on server********
+
+dokku letsencrypt:enable node-test-1
+// add ssl cert to website. 
+
+*********************************
+
 
 ///////////////////////////////////////
 
-static website deployment:
 
-*the website needs to be functional before deployment. if it does not work on live server it won't deploy.
+deploy static website:
 
-in server admin panel
-  open "Apps"
-  add a name for the new app inside the input box (lower case letters and "-" only)
-  click "Create New App"
-  the new app will be added to the list "Your Apps"
-  click on the app name
-  click on "Enable HTTPS"
-  click "Save & Update"
 
-make a file named "captain-definition" with no extension. 
-  add to the file: 
-  {  
-    "schemaVersion": 2,  
-    "dockerfilePath" :"./Dockerfile"
-  }
+*******on development pc*********
 
-make a file named "Dockerfile" with no extension inside the project directory.
-  add to the file: 
-  FROM nginx:alpine
-  COPY . /usr/share/nginx/html
+add an empty file named '.static' to the websites root directory. 
 
-the server requires a local git repo to be setup && initial commit completed. 
-  inside the project directory run:
-  git init
-  git add .
-  git commit -m "initial commit"
+ssh devdock@192.168.1.139
+// type yes to except auth. hit enter 
 
-use caprover command to deploy website.
-  inside the project directory run:
-  caprover deploy
+*********************************
 
-  prompts:
-  ? select caprover server name
-  ? select name of the app to deploy too
-  ? git branch
 
-the site is deployed at https://"app-name".devdock.me
+*********in ssh on server********
+
+dokku apps:create 'APP NAME GOES HERE' (lower case letters and "-" only)
+// create a new empty app container. 'static-test-1' is used for the app name below.
+
+dokku git:initialize static-test-1
+// enables dokku to build the app from a git push.  
+
+*********************************
+
+
+*******on development pc*********
+
+git init
+// inside app directory top level
+
+git remote add dokku dokku@192.168.1.139:static-test-1
+// adds dokku as a remote push location. (the 1st 'dokku' is arbitrary)
+
+git add .
+// adds all content of the directory to commit cache
+
+git commit -m "commit message"
+// commit before pushing to dokku
+
+git push dokku master
+// you will see messages in the terminal while the app is compiled.
+
+*********************************
+
+
+*********in ssh on server********
+
+dokku letsencrypt:enable static-test-1
+// add ssl cert to website.
+
+*********************************
+
 
 ///////////////////////////////////////
 
-node app deployment:
 
-* package.json must have a start script for main js file.
 
-in server admin panel
-  open "Apps"
-  add a name for the new app inside the input box (lower case letters and "-" only)
-  click "Create New App"
-  the new app will be added to the list "Your Apps"
-  click on the app name
-  click on "Enable HTTPS"
-  make "container HTTP port" = 443
-  click "Force HTTPS by redirecting all HTTP traffic to HTTPS"
-  click "Save & Update"
 
-make a file named "captain-definition" with no extension. 
-  add to the file: 
-  {  
-    "schemaVersion": 2,  
-    "templateId" :"node/'NODE VERSION HERE'"
-  }
 
-the server requires a local git repo to be setup && initial commit completed. 
-  inside the project directory run:
-  git init
-  git add .
-  git commit -m "initial commit"
 
-use caprover command to deploy website.
-  inside the project directory run:
-  caprover deploy
 
-  prompts:
-  ? select caprover server name
-  ? select name of the app to deploy too
-  ? git branch
 
-the site is deployed at https://"app-name".devdock.me
+
+*******on development pc*********
+
+
+*********************************
+*********in ssh on server********
+
+
+*********************************

@@ -1,4 +1,11 @@
 vanfleet-dev log
+
+10-24-22
+1: Added node practise notes to master javascript notes. 
+2: Setup an instance of Dokku on a local server for hosting project and portfolios.
+3: Deployed a test static website and node app using Dokku.
+4: Documented static site and node app delpoy steps in server notes.
+
 10-7-22
 1: Course 19 completed. Express.js with Node.js "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu. integrated the lessons content into written code practise.
 2: Deployed a test static website and node app on CapRover server.
