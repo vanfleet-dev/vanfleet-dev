@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+10-25-22
+1: Completed sections 1-8, course 19, API's "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise.
+2: Began writing a mars rover data api project. 
+
 10-24-22
 1: Added node practise notes to master javascript notes. 
 2: Setup an instance of Dokku on a local server for hosting project and portfolios.
