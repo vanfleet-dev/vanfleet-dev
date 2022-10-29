@@ -13,6 +13,7 @@ app.get('/', function (req, res) {
 
 app.post('/', function(req, res){
 
+    const apiKey = 'sxGzbagD91y0XKdRDFNCOrwk8oZogDeRA1CIkIVH';
     const camera = req.body.cameraInput;
     const sol = 10;
     const earthDate = '2012-08-06';
