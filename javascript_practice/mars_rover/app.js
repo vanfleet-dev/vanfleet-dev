@@ -1,6 +1,18 @@
+// https://github.com/chrisccerami/mars-photo-api
+
+// https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=sxGzbagD91y0XKdRDFNCOrwk8oZogDeRA1CIkIVH
+// // returns current photos from all cameras
+
+// https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=sxGzbagD91y0XKdRDFNCOrwk8oZogDeRA1CIkIVH&camera=FHAZ
+// // returns most current photos from a specific camera
+
+// https://api.nasa.gov/mars-photos/api/v1/manifests/Curiosity?api_key=sxGzbagD91y0XKdRDFNCOrwk8oZogDeRA1CIkIVH
+// // returns a manifest of all activity from a specific rover
+
+
 const express = require('express');
 const http = require('https');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser'); 
 
 const app = express();
 
@@ -11,30 +23,30 @@ app.get('/', function (req, res) {
 
 });
 
-app.post('/', function(req, res){
+app.post('/', function(req, res){ //when root of website is accessed this is "posted" (the response) to the client.
 
     const apiKey = 'sxGzbagD91y0XKdRDFNCOrwk8oZogDeRA1CIkIVH';
-    const camera = req.body.cameraInput;
+    const camera = req.body.cameraInput; // the request comes from a form in the html. in this case what camera type the user input into the form. 
     const sol = 10;
     const earthDate = '2012-08-06';
 
-    const urlImages = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${apiKey}&camera=${camera}&sol=${sol}`;
+    const urlImages = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${apiKey}&camera=${camera}&sol=${sol}`; // api url with concat for endpoints.
 
-    http.get(urlImages, function(response) {
+    http.get(urlImages, function(response) { // this function parses the api response as a json, then saves and displays data from the json in the client. 
         let images = ''
-        response.on('data', data => {
+        response.on('data', data => { // '.on' w/ 'data' and the '.on' w/ 'end' below are used like async to give the API host server time to send the full API response. 
             images += data;
         });
         response.on('end', () => {
-            const roverImages = JSON.parse(images)
+            const roverImages = JSON.parse(images) // parse api
             let sol = roverImages.photos[0].sol;
             let earthDate = roverImages.photos[0].earth_date;
             let image0 = roverImages.photos[0].img_src;
             let image1 = roverImages.photos[1].img_src;
             let image2 = roverImages.photos[2].img_src;
-            res.write(`<p>Mission Day: ${sol}, Earth Date: ${earthDate}</p>`); //test
+            res.write(`<p>Mission Day: ${sol}, Earth Date: ${earthDate}</p>`); // write concat html to be displayed to the client
             res.write(`<img src='${image0}'/><img src='${image1}'/><img src='${image2}'/>`);
-            res.send();
+            res.send(); // only send once in post. 
         });
     });
 
