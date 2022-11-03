@@ -1,18 +1,22 @@
+// Initial Setup:
+
+// run inside of the directory where you want the app to be compiled. last input is the app / directory name :
+
+// npx create-react-app react-test-app
+
+// remove source and public directories and replace with template directories
+
+// run inside of app directory to test:
+
+// npm start
+
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client'; //react 8
+// import ReactDOM from 'react-dom'; // react 7
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
+const root = ReactDOM.createRoot(document.getElementById('root')); //react 8 
+root.render(<App />);
 
-
-
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
-
-//ReactDOM.render(<h1>Hello World!</h1>, document.getElementById('root'));
+//ReactDOM.render(<App />, document.getElementById('root')); // react 7

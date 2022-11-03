@@ -2,3 +2,12 @@ body {
     color:rgb(203, 201, 75);
     background-color: rgb(36, 31, 39);
 }
+
+.notnum {
+    color:rgb(203, 122, 75)
+}
+
+img {
+    width: 100px;
+    padding: 3px;
+}
