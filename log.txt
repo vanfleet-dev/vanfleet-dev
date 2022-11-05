@@ -1,5 +1,8 @@
 vanfleet-dev log
 
+11-4-22
+1: Completed sections 10-14, course 33, React.js "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise.
+
 11-2-22
 1: Completed sections 6-9, course 33, React.js "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise.
 

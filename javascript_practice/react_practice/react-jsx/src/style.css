@@ -1,13 +1,29 @@
 body {
-    color:rgb(203, 201, 75);
-    background-color: rgb(36, 31, 39);
+    color:#cbc94b;
+    background-color: #241f27;
 }
 
 .notnum {
-    color:rgb(203, 122, 75)
+    color:#cb7a4b;
 }
 
 img {
     width: 100px;
     padding: 3px;
+}
+
+.spring {
+    color:#afed59;
+}
+
+.summer {
+    color:#f1ee3b;
+}
+
+.fall {
+    color:#d16b30;
+}
+
+.winter {
+    color:#4b9acb;
 }
