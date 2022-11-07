@@ -1,7 +1,12 @@
 import './style.css';
 import Seasons from './components/Seasons'; // import component used on line 92
-import PI, {doublePi, triplePi} from './components/Pi.jsx'; // multi import from component used on line 94
-import * as pi2 from './components/Pi.jsx'; // multi import form component use on line 98 
+import PI, {doublePi, triplePi} from './components/pi.js'; // multi import from component used on line 94
+import * as pi2 from './components/pi.js'; // multi import form component use on line 98 
+import Card from './components/Card';
+import CardProp from './components/CardProp';
+import CardProp2 from './components/CardProp2';
+import contacts from './contacts.js';
+import CardMaker from './components/CardMaker';
 
 const number = 3;
 
@@ -50,6 +55,14 @@ let season = pickSeason(month);
 
 console.log(season);
 
+function createCard(contact) { // contact holds each object as .map loops though the array in contacts.js
+  return <CardMaker 
+    user={contact.user} // 'user' is now accessed and used by CardMaker as a prop. See CardMaker.jsx
+    img={contact.img}
+
+  />
+}
+
 function App() {
   return (
     <div className='App'>
@@ -96,6 +109,28 @@ function App() {
 
         {/* multi import example 2. in this example all imports from the target component are added into an object */}
         <p>{pi2.default} / {pi2.doublePi()} / {pi2.triplePi()}</p>
+
+        {/* hardcoded component. The data inside cannot be easily modified */}
+        <Card />
+
+        {/* example of the same component using props (properties). this one being easily editable */}
+        <CardProp 
+          name='NAME' 
+          phone='8675309' 
+          email='email@email.email' 
+          img='https://imgs.search.brave.com/8kpvcdgLd1R5CscP6_lt8WM5A0DE7SuIVXmQBTGcR4E/rs:fit:844:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5I/SlVUZmJvbUE1dU5o/VVQ3dFJ4QV9RSGFF/SyZwaWQ9QXBp'
+        />
+        
+        {/* this example shows data being taken from an array in contacts.js, then passed to a component (CardProp2). */}
+        <CardProp2 
+          user={contacts[0].user}
+          img={contacts[0].img}
+          phone={contacts[0].phone}
+          email={contacts[0].email}
+        />
+
+        {/* .map will loop through an array of objects so each objects data can be used.*/}
+        {contacts.map(createCard)}
 
     </div>
   );
