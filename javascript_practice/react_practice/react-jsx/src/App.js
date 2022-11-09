@@ -1,7 +1,7 @@
 import './style.css';
 import Seasons from './components/Seasons'; // import component used on line 92
-import PI, {doublePi, triplePi} from './components/pi.js'; // multi import from component used on line 94
-import * as pi2 from './components/pi.js'; // multi import form component use on line 98 
+import PI, {doublePi, triplePi} from './pi.js'; // multi import from js file used on line 94
+import * as pi2 from './pi.js'; // multi import from js file used on line 98 
 import Card from './components/Card';
 import CardProp from './components/CardProp';
 import CardProp2 from './components/CardProp2';
@@ -56,10 +56,13 @@ let season = pickSeason(month);
 console.log(season);
 
 function createCard(contact) { // contact holds each object as .map loops though the array in contacts.js
-  return <CardMaker 
+  return <CardMaker
+    key={contact.id}
+    id={contact.id} // key must be a unique value that all the objects being mapped contain. for instance an id number.
     user={contact.user} // 'user' is now accessed and used by CardMaker as a prop. See CardMaker.jsx
     img={contact.img}
-
+    phone={contact.phone}
+    email={contact.email}
   />
 }
 
