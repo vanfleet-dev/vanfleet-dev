@@ -7,6 +7,7 @@ import CardProp from './components/CardProp';
 import CardProp2 from './components/CardProp2';
 import contacts from './contacts.js';
 import CardMaker from './components/CardMaker';
+import LikeBtn from './components/LikeBtn';
 
 const number = 3;
 
@@ -65,6 +66,9 @@ function createCard(contact) { // contact holds each object as .map loops though
     email={contact.email}
   />
 }
+
+const ternaryOperator = true; // used as a boolean (true or false) input for the ternary operator example.
+const andOperator = 1;
 
 function App() {
   return (
@@ -134,6 +138,24 @@ function App() {
 
         {/* .map will loop through an array of objects so each objects data can be used.*/}
         {contacts.map(createCard)}
+
+        {/* ternary operator, what renders is based on the state of the boolean. 
+        1st is a boolean variable being checked for true or false
+        2nd the ? is checking is the boolean is true
+        3rd the '<Seasons />' is in the 'true' position. this can take any input
+        4th the : is equal to || 
+        5th the 'contacts.map(createCard)' is in the false position
+        */}
+        {ternaryOperator ? <Seasons /> : contacts.map(createCard)}
+
+        {/* this will only display is the boolean is true */}
+        {ternaryOperator ? <Seasons /> : null}
+
+        {/* && operator if the expression is true then the code following the && is run */}
+        {andOperator < 2 && <Seasons />}
+
+        {/* hooks useState destructuring, see <LikeBtn /> for notes*/}
+        <LikeBtn />
 
     </div>
   );

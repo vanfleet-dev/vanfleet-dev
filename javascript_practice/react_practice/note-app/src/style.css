@@ -16,10 +16,11 @@ $color-8: #ffffb2; */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
-  html {
     font-family: "Public Pixel";
   }
+  /* html {
+    font-family: "Public Pixel";
+  } */
   body {
     background: #ffffb2;
     padding: 0 16px;
@@ -70,3 +71,31 @@ $color-8: #ffffb2; */
     word-wrap: break-word;
   }
   
+
+  form {
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+  }
+
+  input {
+    background: #90d59c;
+    color: #775b5b;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+    border: none;
+  }
+
+  button {
+    background: #90d59c;
+    color: #775b5b;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+    border-color: #775b5b;
+    border-width: 1px;
+  }
