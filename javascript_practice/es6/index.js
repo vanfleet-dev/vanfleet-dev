@@ -3,6 +3,7 @@
 import data from './data.js' // import example, imports the data saved in an array as an object for use in this js file. 
 import pi, {doublePi, triplePi} from './pi.js' // multi import. this example imported the 'default' (pi), as well as two other values from the same js file.
 import * as pi2 from './pi.js' // import everything from the target js file.
+import animals from './data1.js'
 
 function dataImport(data) { // access and use a value from the imported data
     console.log(data);
@@ -165,3 +166,23 @@ const arrowFunction = numbers7.map((num) => { // arrow function
 const anonFunction = numbers7.map(function(num) { // anonymous function
     return num * num;
 });
+
+
+// destructuring 
+
+const [cat, dog] = animals;  // in array any name because it is a new variable
+// in this example cat === animals[0] 
+
+// const {name, sound} = cat; // names must match the keys you are accessing
+// in this example name === animals[0].name
+
+// const { name: catName, sound: catSound } = cat; // you can rename with this syntax
+
+// const {name = 'fluffy', sound = 'purr'} = cat; // you can use this syntax to provide a default.
+// in case the data has a missing value, the default will be provided and prevent errors. 
+
+const {name, sound, feeding: {food, water} } = cat; //this syntax and the syntax below achieve the same result for feeding.
+
+//const {food, water} = feeding;
+
+console.log(food);

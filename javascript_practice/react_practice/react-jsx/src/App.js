@@ -8,6 +8,8 @@ import CardProp2 from './components/CardProp2';
 import contacts from './contacts.js';
 import CardMaker from './components/CardMaker';
 import LikeBtn from './components/LikeBtn';
+import Time from './components/Time';
+import Form from './components/Form';
 
 const number = 3;
 
@@ -154,8 +156,14 @@ function App() {
         {/* && operator if the expression is true then the code following the && is run */}
         {andOperator < 2 && <Seasons />}
 
-        {/* hooks useState destructuring, see <LikeBtn /> for notes*/}
+        {/* hooks, state, and destructuring, see <LikeBtn /> for notes*/}
         <LikeBtn />
+
+        {/* another example of events, hooks, state, and destructuring */}
+        <Time />
+
+        {/* forms */}
+        <Form />
 
     </div>
   );
