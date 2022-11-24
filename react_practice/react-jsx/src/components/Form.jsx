@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from '../../../note-app/node_modules/@types/react';
 
 function Form() {
 

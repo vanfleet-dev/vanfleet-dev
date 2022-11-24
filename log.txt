@@ -1,5 +1,9 @@
 vanfleet-dev log
 
+11-23-22
+1: Completed sections 36-38, course 33, React.js "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise.
+2: Continued work on note app. user gui for login form and sign up form added. Added transition to signup from login form. Added form validation to signup form.   
+
 11-10-22
 1: Completed sections 31-35, course 33, React.js "The Complete 2022 Web Development Bootcamp" by Dr. Angela Yu, integrated the lessons content into written code practise.
 

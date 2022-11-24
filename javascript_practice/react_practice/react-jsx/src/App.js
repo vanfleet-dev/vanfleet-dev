@@ -10,6 +10,9 @@ import CardMaker from './components/CardMaker';
 import LikeBtn from './components/LikeBtn';
 import Time from './components/Time';
 import Form from './components/Form';
+import Form2 from './components/Form2';
+import ClassComponent from './components/ClassComponent';
+import HookComponent from './components/HookComponent';
 
 const number = 3;
 
@@ -162,8 +165,14 @@ function App() {
         {/* another example of events, hooks, state, and destructuring */}
         <Time />
 
-        {/* forms */}
+        {/* forms single input */}
         <Form />
+
+        {/* forms 2  multi input / 'complex state' */}
+        <Form2 />
+        {/* class vs hook syntax diff */}
+        <ClassComponent />
+        <HookComponent />
 
     </div>
   );
